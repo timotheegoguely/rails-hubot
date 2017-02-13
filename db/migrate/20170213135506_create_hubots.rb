@@ -5,7 +5,7 @@ class CreateHubots < ActiveRecord::Migration[5.0]
       t.integer :age
       t.string :gender
       t.string :model
-      t.string :category
+      t.string :type
       t.text :description
       t.date :year
       t.string :origin
