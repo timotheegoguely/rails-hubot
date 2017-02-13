@@ -7,6 +7,6 @@ class User < ApplicationRecord
   # Validations
   validates :first_name, presence: true, uniqueness: { case_sensitive: false }
   validates :last_name, presence: true, uniqueness: { case_sensitive: false, scope: :first_name, message: "This user already exists" }
-  validates :gender, presence: true, inclusion: { in: %w(male female), message: "%{value} is not a valid gender" }
+  validates :gender, presence: true, inclusion: { in: %w(male female), allow_nil: false, message: "%{value} is not a valid gender" }
   validates :email, presence: true, uniqueness: { case_sensitive: false }, on: :create
 end
