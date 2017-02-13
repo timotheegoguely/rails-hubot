@@ -9,7 +9,7 @@ class Hubot < ApplicationRecord
   validates :model, presence: true, allow_blank: false
   validates :age, numericality: { only_integer: true }
   validates :turing_test_score, numericality: { only_integer: true }, inclusion: { in: (1..100).to_a }
-  validates :price, numericality: { only_integer: true }
+  validates :price_per_hour, numericality: { only_integer: true }
   validates :autonomy, numericality: true
   validates :charging_time, numericality: true
   validates :gender, inclusion: { in: ["male","female"], message:"%{value} is not a valid gender", allow_nil: false }
