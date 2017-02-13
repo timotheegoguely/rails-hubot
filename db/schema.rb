@@ -15,6 +15,18 @@ ActiveRecord::Schema.define(version: 20170213152816) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "bookings", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "hubot_id"
+    t.datetime "check_in"
+    t.datetime "check_out"
+    t.float    "total_price"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.index ["hubot_id"], name: "index_bookings_on_hubot_id", using: :btree
+    t.index ["user_id"], name: "index_bookings_on_user_id", using: :btree
+  end
+
   create_table "hubots", force: :cascade do |t|
     t.string   "name"
     t.integer  "age"
@@ -47,8 +59,10 @@ ActiveRecord::Schema.define(version: 20170213152816) do
     t.text     "content"
     t.integer  "rating"
     t.boolean  "is_from_owner"
+    t.integer  "booking_id"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
+    t.index ["booking_id"], name: "index_reviews_on_booking_id", using: :btree
   end
 
   create_table "users", force: :cascade do |t|
@@ -75,5 +89,8 @@ ActiveRecord::Schema.define(version: 20170213152816) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
+  add_foreign_key "bookings", "hubots"
+  add_foreign_key "bookings", "users"
   add_foreign_key "hubots", "users"
+  add_foreign_key "reviews", "bookings"
 end
