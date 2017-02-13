@@ -5,6 +5,7 @@ class Hubot < ApplicationRecord
   # Validations
   validates :name, presence: true, allow_blank: false
   validates :category, presence: true, allow_blank: false
+  validates :manufacturer, presence: true, allow_blank: false
   validates :model, presence: true, allow_blank: false
   validates :age, numericality: { only_integer: true }
   validates :turing_test_score, numericality: { only_integer: true }, inclusion: { in: (1..100).to_a }
