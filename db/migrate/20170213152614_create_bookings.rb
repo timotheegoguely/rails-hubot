@@ -6,7 +6,6 @@ class CreateBookings < ActiveRecord::Migration[5.0]
       t.datetime :check_in
       t.datetime :check_out
       t.float :total_price
-      t.references :review, foreign_key: true
 
       t.timestamps
     end
