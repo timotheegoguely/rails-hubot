@@ -10,10 +10,38 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170213142707) do
 
+ActiveRecord::Schema.define(version: 20170213145759) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "hubots", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "age"
+    t.string   "gender"
+    t.string   "model"
+    t.string   "category"
+    t.text     "description"
+    t.date     "year"
+    t.string   "origin"
+    t.float    "weight"
+    t.float    "height"
+    t.float    "autonomy"
+    t.float    "charging_time"
+    t.integer  "turing_test_score"
+    t.string   "accessories"
+    t.string   "composition"
+    t.string   "maintenance"
+    t.boolean  "availability",      default: true
+    t.string   "skin_color"
+    t.integer  "deposit"
+    t.integer  "price"
+    t.integer  "user_id"
+    t.datetime "created_at",                       null: false
+    t.datetime "updated_at",                       null: false
+    t.string   "manufacturer"
+    t.index ["user_id"], name: "index_hubots_on_user_id", using: :btree
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "",    null: false
@@ -39,4 +67,5 @@ ActiveRecord::Schema.define(version: 20170213142707) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
+  add_foreign_key "hubots", "users"
 end
