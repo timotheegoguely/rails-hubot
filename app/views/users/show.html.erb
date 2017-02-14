@@ -1,14 +1,57 @@
-<h3><%= @user.first_name + " " + @user.last_name %></h3>
-<p><%= @user.description %></p>
+<% content_for(:title_tag) do %>
+  <%= @user.first_name ? @user.first_name : 'anonymous' %> <%= @user.last_name ? @user.last_name : '' %>
+<% end %>
 
 
-<ul>
-  <% @user.hubots.each do |hubot|  %>
-    <li>
-      <%= hubot.name %>
-      <%= hubot.category %>
-      <%= hubot.model %>
-      <%= hubot.description %>
-    </li>
+<div class="container" style="padding-top: 50px">
+  <h1>
+    <%= @user.first_name ? @user.first_name : 'Anonymous' %> <%= @user.last_name ? @user.last_name : '' %>
+  </h1>
+  <div class="row">
+    <div class="col-md-2 ">
+      <%= image_tag "johndoe.jpg", class:"avatar-xxlarge" %>
+    </div>
+    <div class="col-md-10" style="background: #F8F7F7">
+      <span>
+        <i class="fa fa-envelope-o" aria-hidden="true"></i>   <%= @user.email %>
+        <% if @user.phone_number %>
+             |   <i class="fa fa-mobile" aria-hidden="true"></i>   <%= @user.phone_number %>
+        <% end %>
+      </span>
+      <p><%= @user.description %></p>
+    </div>
+  </div>
+
+  <% if @user.hubots.count > 0 %>
+    <div class="row" style="padding-top: 50px">
+
+      <div class="col-md-offset-2 col-md-8 text-center">
+        <h4><%= @user.first_name ? @user.first_name : 'Anonymous' %> <%= @user.last_name ? @user.last_name : '' %>'s best hubot (in reviews)</h4>
+        <%= link_to hubots_user_path do %>
+          Show all <%= @user.first_name ? @user.first_name : 'Anonymous' %> <%= @user.last_name ? @user.last_name : '' %>'s hubots
+        <% end %>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-offset-3 col-md-6">
+        <div class="card" style="background-image: linear-gradient(rgba(100,200,0,0.3), rgba(350,100,0,0.2)); margin: 50px;">
+          <div class="card-category"><%= @user.hubots[0].category %></div>
+          <div class="card-description">
+            <h2><%= @user.hubots[0].name %></h2>
+            <p><%= @user.hubots[0].model %><br><%= @user.hubots[0].manufacturer %></p>
+          </div>
+          <%= image_tag "hubot.jpg", class:"card-user avatar-xxlarge" %>
+          <a class="card-link" href="#" ></a>
+        </div>
+      </div>
+
+    </div>
+
+
+  <% else %>
+    <h4><%= @user.first_name ? @user.first_name : 'Anonymous' %> <%= @user.last_name ? @user.last_name : '' %> has no hubot to rent :'( </h4>
   <% end %>
-</ul>
+
+</div>
+
