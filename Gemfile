@@ -16,6 +16,7 @@ gem 'font-awesome-sass'
 gem 'simple_form'
 gem 'autoprefixer-rails'
 gem 'devise'
+gem 'omniauth-twitter', :github => 'arunagw/omniauth-twitter'
 
 group :development, :test do
   gem 'binding_of_caller'
