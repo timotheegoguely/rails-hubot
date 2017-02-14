@@ -8,14 +8,18 @@
   </h1>
   <div class="row">
     <% @user.hubots.each do |hubot| %>
-    <div class="card">
-      <%= hubot.name %>
-      <%= hubot.category %>
-      <%= hubot.model %>
-      <%= hubot.manufacturer %>
+      <div class="col-xs-12 col-sm-4">
+        <div class="card" style="background-image: linear-gradient(rgba(100,200,0,0.3), rgba(350,100,0,0.2)); margin: 50px;">
+          <div class="card-category"><%= hubot.category %></div>
+          <div class="card-description">
+            <h2><%= hubot.name %></h2>
+            <p><%= hubot.model %><br><%= hubot.manufacturer %></p>
+          </div>
+          <%= image_tag "hubot.jpg", class:"card-user avatar-xlarge" %>
+          <a class="card-link" href="#" ></a>
+        </div>
     </div>
-    <% end %>
-  </div>
+  <% end %>
 </div>
 
 

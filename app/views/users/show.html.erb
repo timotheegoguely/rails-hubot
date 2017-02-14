@@ -22,25 +22,36 @@
     </div>
   </div>
 
-  <div class="row" style="padding-top: 50px">
+  <% if @user.hubots.count > 0 %>
+    <div class="row" style="padding-top: 50px">
 
-    <% if @user.hubots.count > 0 %>
-
-      <h4><%= @user.first_name ? @user.first_name : 'Anonymous' %> <%= @user.last_name ? @user.last_name : '' %>'s best hubot (in reviews)</h4>
-      <%= link_to hubots_user_path do %>
-        Show all <%= @user.first_name ? @user.first_name : 'Anonymous' %> <%= @user.last_name ? @user.last_name : '' %>'s hubots
-      <% end %>
-      <div class="card">
-      <%= @user.hubots[0].name %>
-      <%= @user.hubots[0].category %>
-      <%= @user.hubots[0].model %>
-      <%= @user.hubots[0].manufacturer %>
+      <div class="col-md-offset-2 col-md-8 text-center">
+        <h4><%= @user.first_name ? @user.first_name : 'Anonymous' %> <%= @user.last_name ? @user.last_name : '' %>'s best hubot (in reviews)</h4>
+        <%= link_to hubots_user_path do %>
+          Show all <%= @user.first_name ? @user.first_name : 'Anonymous' %> <%= @user.last_name ? @user.last_name : '' %>'s hubots
+        <% end %>
       </div>
-      <% else %>
-        <h4><%= @user.first_name ? @user.first_name : 'Anonymous' %> <%= @user.last_name ? @user.last_name : '' %> has no hubot to rent :'( </h4>
-      <% end %>
+    </div>
 
-  </div>
+    <div class="row">
+      <div class="col-md-offset-3 col-md-6">
+        <div class="card" style="background-image: linear-gradient(rgba(100,200,0,0.3), rgba(350,100,0,0.2)); margin: 50px;">
+          <div class="card-category"><%= @user.hubots[0].category %></div>
+          <div class="card-description">
+            <h2><%= @user.hubots[0].name %></h2>
+            <p><%= @user.hubots[0].model %><br><%= @user.hubots[0].manufacturer %></p>
+          </div>
+          <%= image_tag "hubot.jpg", class:"card-user avatar-xxlarge" %>
+          <a class="card-link" href="#" ></a>
+        </div>
+      </div>
+
+    </div>
+
+
+  <% else %>
+    <h4><%= @user.first_name ? @user.first_name : 'Anonymous' %> <%= @user.last_name ? @user.last_name : '' %> has no hubot to rent :'( </h4>
+  <% end %>
 
 </div>
 
