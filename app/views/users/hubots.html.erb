@@ -1,0 +1,43 @@
+<% content_for(:title_tag) do %>
+  <%= @user.first_name ? @user.first_name : 'anonymous' %> <%= @user.last_name ? @user.last_name : '' %>'s hubots'
+<% end %>
+
+<div class="container">
+  <h1>
+    <%= @user.first_name ? @user.first_name : 'Anonymous' %> <%= @user.last_name ? @user.last_name : '' %>'s hubots
+  </h1>
+  <div class="row">
+    <% @user.hubots.each do |hubot| %>
+    <div class="card">
+      <%= hubot.name %>
+      <%= hubot.category %>
+      <%= hubot.model %>
+      <%= hubot.manufacturer %>
+    </div>
+    <% end %>
+  </div>
+</div>
+
+
+<table class="table table-striped table-responsive" style="">
+  <thead>
+    <th></th>
+    <th>Category</th>
+    <th>Model</th>
+    <th>Manufacturer</th>
+  </thead>
+  <t>
+    <% @user.hubots.each do |hubot|  %>
+      <tr>
+        <th scope="row">
+          <%= link_to hubot_path do %>
+            <%= image_tag "hubot.jpg", class:"avatar-large" %> <%= hubot.name %>
+          <% end %>
+        </td>
+        <td><%= hubot.category %></td>
+        <td><%= hubot.model %></td>
+        <td><%= hubot.manufacturer %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
