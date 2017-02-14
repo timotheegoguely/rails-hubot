@@ -1,5 +1,9 @@
 class HubotsController < ApplicationController
-  skip_before_action :authenticate_user!, only: :show
+  skip_before_action :authenticate_user!, only: [ :index, :search, :show ]
+
+  def search
+    @hubots = Hubot.where(category: params[:category])
+  end
 
   def index
     @hubots = Hubot.all
@@ -23,6 +27,7 @@ class HubotsController < ApplicationController
       render 'new'
     end
   end
+
 
   private
 
