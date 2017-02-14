@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
 
-  before_action :set_user only: [ :show, :edit, :update ]
+  skip_before_action :authenticate_user!, only: :show
+  before_action :set_user, only: [ :show, :edit, :update, :hubots ]
 
   # GET /users/new
   def new
@@ -33,17 +34,17 @@ class UsersController < ApplicationController
 
   # GET /users/:id/hubots
   def hubots
-    @user.hubots.all
   end
 
   private
+
+  def set_user
+    @user = User.find(params[:id])
+  end
 
   def user_params
     params.require(:user).permit(:email)
   end
 
-  def set_user
-      @user = User.find(params[:id])
-  end
 
 end
