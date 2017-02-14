@@ -1,2 +1,13 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="banner">
+  <div class="banner-background">
+    <%= (1..10).each do |number| %>
+      <%= link_to hubot_path(number) do %>
+        <div class="banner-img" style="background-image: linear-gradient(-225deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.2) 100%), url(<%= asset_path "avatars/#{number}.jpg" %>);"></div>
+      <% end %>
+    <% end %>
+  </div>
+  <div class="banner-content">
+    <h1>Need a Hubot?</h1>
+    <a class="btn btn-primary btn-lg">Search</a>
+  </div>
+</div>
