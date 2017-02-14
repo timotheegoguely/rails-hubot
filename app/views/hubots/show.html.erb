@@ -1,15 +1,19 @@
 <h1>Hubot description:</h1>
 
 <ul>
-  <li><%= @hubot.name %></li>
-  <li><%= @hubot.age %></li>
-  <li><%= @hubot.gender %></li>
-  <li><%= @hubot.skin_color %></li>
-  <li><%= @hubot.category %></li>
-  <li><%= @hubot.manufacturer %></li>
-  <li><%= @hubot.model %></li>
-  <li><%= @hubot.turing_test_score %></li>
-  <li><%= @hubot.price_per_hour %></li>
-  <li><%= @hubot.autonomy %></li>
-  <li><%= @hubot.charging_time %></li>
+  <li>Name: <%= @hubot.name %></li>
+  <li>Age: <%= @hubot.age %></li>
+  <li>Gender: <%= @hubot.gender %></li>
+  <li>Skin color: <%= @hubot.skin_color %></li>
+  <li>Category: <%= @hubot.category %></li>
+  <li>Manufacturer: <%= @hubot.manufacturer %></li>
+  <li>Model: <%= @hubot.model %></li>
+  <li>Turing test score: <%= @hubot.turing_test_score %></li>
+  <li>Autonomy: <%= @hubot.autonomy %> hours</li>
+  <li>Charging time: <%= @hubot.charging_time %> hours</li>
+  <li>Price per hour: <%= @hubot.price_per_hour %> $</li>
 </ul>
+
+<hr>
+
+<%= link_to "← Back", hubots_path, class: "btn btn-default" %>

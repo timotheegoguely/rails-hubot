@@ -2,6 +2,11 @@
 
 <% @hubots.each do |hubot| %>
   <h2><%= hubot.name %></h2>
-  <%= link_to 'Hubot description', hubot_path(hubot) %>
+  <%= link_to 'Hubot description', hubot_path(hubot) %> <br>
+  <%= link_to 'Hubot edit', edit_hubot_path(hubot) %> <br>
+  <%= link_to 'Delete', hubot_path(hubot), method: :delete, data: {confirm: "Do you really want to delete your Hubot ?"} %>
 <% end %>
 
+<hr>
+
+<%= link_to 'Add a new Hubot', new_hubot_path, class: "btn btn-default" %>

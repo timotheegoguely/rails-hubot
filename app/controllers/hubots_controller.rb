@@ -22,6 +22,22 @@ class HubotsController < ApplicationController
     end
   end
 
+  def edit
+    @hubot = Hubot.find(params[:id])
+  end
+
+  def update
+    hubot = Hubot.find(params[:id])
+    hubot.update(hubot_params)
+    redirect_to hubots_path(hubot)
+  end
+
+  def destroy
+    @hubot = Hubot.find(params[:id])
+    @hubot.destroy
+    redirect_to hubots_path(@hubot)
+  end
+
   private
 
   def hubot_params
