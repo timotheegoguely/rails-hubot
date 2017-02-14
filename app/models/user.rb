@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  has_many :hubots
+  has_many :hubots, dependent: :destroy
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable

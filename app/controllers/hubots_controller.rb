@@ -2,7 +2,7 @@ class HubotsController < ApplicationController
   skip_before_action :authenticate_user!, only: [ :index, :search, :show ]
 
   def search
-    @hubots = Hubot.where(category: params[:category])
+    @hubots = Hubot.where("category LIKE ?", params[:category])
   end
 
   def index
