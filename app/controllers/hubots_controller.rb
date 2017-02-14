@@ -19,15 +19,30 @@ class HubotsController < ApplicationController
   end
 
   def create
-    hubot = Hubot.new(hubot_params)
-    hubot.user = current_user
-    if hubot.save
-      redirect_to hubots_path(hubot)
+    @hubot = Hubot.new(hubot_params)
+    @hubot.user = current_user
+    if @hubot.save
+      redirect_to hubots_path(@hubot)
     else
       render 'new'
     end
   end
 
+  def edit
+    @hubot = Hubot.find(params[:id])
+  end
+
+  def update
+    @hubot = Hubot.find(params[:id])
+    @hubot.update(hubot_params)
+    redirect_to hubots_path(@hubot)
+  end
+
+  def destroy
+    @hubot = Hubot.find(params[:id])
+    @hubot.destroy
+    redirect_to hubots_path(@hubot)
+  end
 
   private
 
