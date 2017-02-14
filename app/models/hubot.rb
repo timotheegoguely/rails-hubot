@@ -14,4 +14,14 @@ class Hubot < ApplicationRecord
   validates :charging_time, numericality: true
   validates :gender, inclusion: { in: ["male","female"], message:"%{value} is not a valid gender", allow_nil: false }
   validates :skin_color, inclusion: { in: ["white","asian","brown","black"], message:"%{value} is not a valid skin color", allow_nil: false }
+
+  CATEGORIES = [
+    "Sport coach",
+    "Guardian",
+    "Family Bot",
+    "Personal shopper",
+    "Sexbot",
+    "Social",
+    "Collector"
+  ]
 end
