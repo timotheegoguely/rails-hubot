@@ -1,0 +1,14 @@
+<%= simple_form_for (@hubot) do |f| %>
+  <%= f.input :name %>
+  <%= f.input :age %>
+  <%= f.input :gender, as: :radio_buttons, collection: ["female", "male"] %>
+  <%= f.input :skin_color, collection: [ "white", "asian", "brown", "black"] %>
+  <%= f.input :category %>
+  <%= f.input :manufacturer %>
+  <%= f.input :model %>
+  <%= f.input :turing_test_score %>
+  <%= f.input :autonomy %>
+  <%= f.input :charging_time %>
+  <%= f.input :price_per_hour %>
+  <%= f.button :submit %>
+<% end %>
