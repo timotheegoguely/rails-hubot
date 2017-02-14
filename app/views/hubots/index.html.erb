@@ -1,0 +1,7 @@
+<h1>Hubots list</h1>
+
+<% @hubots.each do |hubot| %>
+  <h2><%= hubot.name %></h2>
+  <%= link_to 'Hubot description', hubot_path(hubot) %>
+<% end %>
+
