@@ -8,4 +8,5 @@ Rails.application.routes.draw do
     end
   end
   resources :hubots, only: [ :index, :show, :new, :create, :edit, :update, :destroy ]
+  get 'search', to: 'hubots#search'
 end
