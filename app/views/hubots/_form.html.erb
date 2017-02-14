@@ -1,7 +1,8 @@
-<%= simple_form_for (@hubot) do |f| %>
+<%= simple_form_for (@hubot), html: { class: 'form-horizontal' },
+  wrapper: :horizontal_form do |f| %>
   <%= f.input :name %>
   <%= f.input :age %>
-  <%= f.input :gender, as: :radio_buttons, collection: ["female", "male"] %>
+  <%= f.input :gender, as: :radio_buttons, collection: ["female", "male"], :item_wrapper_class => 'inline' %>
   <%= f.input :skin_color, collection: [ "white", "asian", "brown", "black"] %>
   <%= f.input :category %>
   <%= f.input :manufacturer %>
