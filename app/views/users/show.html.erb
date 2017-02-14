@@ -1,0 +1,14 @@
+<h3><%= @user.first_name + " " + @user.last_name %></h3>
+<p><%= @user.description %></p>
+
+
+<ul>
+  <% @user.hubots.each do |hubot|  %>
+    <li>
+      <%= hubot.name %>
+      <%= hubot.category %>
+      <%= hubot.model %>
+      <%= hubot.description %>
+    </li>
+  <% end %>
+</ul>
