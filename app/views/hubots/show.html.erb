@@ -1,4 +1,14 @@
-<h1>Hubot description:</h1>
+<% content_for(:title_tag) do %>
+  <%= @hubot.name %>
+<% end %>
+
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url(<%= asset_path "0#{rand(1)}.jpg" %>);">
+  <div class="banner-content">
+    <%=  %>
+    <h1><%= @hubot.name %></h1>
+    <p><%= @hubot.age %> years old</p>
+  </div>
+</div>
 
 <ul>
   <li>Name: <%= @hubot.name %></li>
@@ -17,13 +27,3 @@
 <hr>
 
 <%= link_to "← Back", hubots_path, class: "btn btn-default" %>
-
-
-
-
-<%= simple_form_for [@hubot, @booking] do |f| %>
-  <%= f.input :check_in %>
-  <%= f.input :check_out %>
-  <%= f.button :submit %>
-<% end %>
-
