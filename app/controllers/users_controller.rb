@@ -5,6 +5,7 @@ class UsersController < ApplicationController
 
   # GET /users/:id
   def show
+    @user_coordinates = { lat: @user.latitude, lng: @user.longitude }
   end
 
   # GET /users/:id/hubots
