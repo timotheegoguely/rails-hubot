@@ -1,17 +1,82 @@
+.padded {
+  padding: 80px 0px;
+}
+
+.wrapper {
+  width: 100vw;
+}
+
+.wrapper-flex {
+  display: flex;
+  width: 100vw;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
 .container-flex {
   display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
 }
 
 .flex {
   display: flex;
-  width: 50vw;
 }
 
-.feature-img {
-  background-size: cover;
-  background-position: center center;
+.feature {
+  width: 100vw;
+  &-img {
+    background-size: cover;
+    background-position: right center;
+    width: 100vw;
+    height: 33.33vw;
+    max-height: 320px;
+  }
+  &-content {
+    width: 100vw;
+    padding: 64px;
+    color: rgba(0,0,0,0.618);
+  }
 }
 
-.feature-content {
-  padding: 64px;
+#intro {
+  background-color: $brand-color;
+  color: white;
+  h3 {
+    margin-top: 0px;
+  }
+}
+
+#fauvea {
+  background-color: rgba(234,236,235,0);
+}
+#jumbojim {
+  background-color: rgba(251,242,235,0);
+}
+#louie {
+  background-color: rgba(208,225,225,0);
+}
+#karl {
+  background-color: rgba(237,221,207,0);
+}
+
+
+@media screen and (min-width: 1080px) {
+  .container-flex {
+    flex-direction: row;
+  }
+  .feature {
+    height: auto;
+    height: 320px;
+    &-img {
+      width: 50vw;
+      height: auto;
+    }
+    &-content {
+      width: 50vw;
+      height: auto;
+    }
+  }
+  .switch-order {
+    flex-direction: row-reverse;
+  }
 }
