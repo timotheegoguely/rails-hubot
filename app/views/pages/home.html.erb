@@ -98,15 +98,17 @@
   </div>
 </div>
 
-<script type="text/javascript">
-  $(function () {
-    $('#datetimepicker').datetimepicker({
-      icons: {
-        time: "fa fa-clock-o",
-        date: "fa fa-calendar",
-        up: "fa fa-arrow-up",
-        down: "fa fa-arrow-down"
-      }
+<% content_for(:after_js) do %>
+  <%= javascript_tag do %>
+    $(function () {
+      $('#datetimepicker').datetimepicker({
+        icons: {
+          time: "fa fa-clock-o",
+          date: "fa fa-calendar",
+          up: "fa fa-arrow-up",
+          down: "fa fa-arrow-down"
+        }
+      });
     });
-  });
-</script>
+  <% end %>
+<% end %>
