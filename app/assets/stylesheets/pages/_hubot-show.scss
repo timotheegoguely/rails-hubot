@@ -1,0 +1,21 @@
+.hubot-name {
+  font-size: 64px;
+  font-weight: bold;
+}
+.hubot-model {
+  text-transform: uppercase;
+  color: rgba(0,0,0,.5);
+}
+.hubot-category {
+  color: rgba(0,0,0,.5);
+}
+.hubot-description {
+  color: rgba(0,0,0,.8);
+}
+
+.hubot-details {
+  .detail {
+    display: inline-block;
+    min-width: 10em;
+  }
+}
