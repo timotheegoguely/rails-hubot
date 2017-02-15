@@ -4,7 +4,7 @@ class BookingsController < ApplicationController
     @booking = Booking.new(booking_params)
     @booking.hubot = @hubot
     @booking.user = current_user
-    @booking.total_price = (:check_out - :check_in) * @hubot.price_per_hour
+    @booking.total_price = (@booking.check_out - @booking.check_in) * @hubot.price_per_hour
   end
 
   private
