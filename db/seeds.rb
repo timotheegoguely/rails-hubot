@@ -23,7 +23,7 @@ hubot1 = Hubot.create!(
   manufacturer: "Atsugi Robotics",
   year: DateTime.new(2010,1,1),
   origin: "South Africa",
-  category: "Coach",
+  category: "Sport coach",
   weight: 57,
   height: 186,
   autonomy: 22,
@@ -74,7 +74,7 @@ hubot3 = Hubot.create!(
   manufacturer: "Atsugi Robotics",
   year: DateTime.new(2007,01,01),
   origin: "South Corea",
-  category: "Housemaid",
+  category: "Sport coach",
   weight: 33,
   height: 163,
   autonomy: 22,
@@ -124,7 +124,7 @@ hubot5 = Hubot.create!(
   manufacturer: "Atsugi Robotics",
   year: DateTime.new(2001,1,1),
   origin: "Ukraine",
-  category: "Guard",
+  category: "Guardian",
   weight: 72,
   height: 190,
   autonomy: 22,
@@ -150,7 +150,7 @@ hubot6 = Hubot.create!(
   manufacturer: "Atsugi Robotics",
   year: DateTime.new(2011,01,01),
   origin: "South Korea",
-  category: "Veterinary",
+  category: "Sexbot",
   weight: 35,
   height: 160,
   autonomy: 20,
@@ -162,7 +162,250 @@ hubot6 = Hubot.create!(
   user_id: user6.id
 )
 hubot7 = Hubot.create!(
-  name: "Ruby",
+  name: "Erika",
+  age: 25,
+  description: "SÉRIE LIMITÉE (200 exemplaires seulement) \n\n
+    Designée par Ora Ïto, haleine senteur coriandre, équipée d’un audioguide de tous les musées d’art contemporain d’Europe (+ MOMA), Wish est LE bot people. Elle rentre dans tous les clubs et connaît par leur prénom tous les autres Hubot de luxe existants. Avec Wish, finies les files d’attente et les videurs irrespectueux ! Grâce à ses connexions, elle vous ouvrira toutes les portes. \n\n
+    Mais Wish ne changera pas seulement vos soirées. Certes, ce Hubot de luxe vous permet d’être invité chaque année à l’anniversaire de Karl Lagerfeld, mais il sait également faire de chaque instant de votre morne quotidien un moment d’exception. Wish documentera votre vie sur son compte Instagram (97 000 followers dès l’achat) et fera sa plus belle duckface à vos côtés. \n
+    Assise, lascive, sur votre canapé, Wish vous aidera à vous sentir hors du commun. \n
+    Le saviez-vous ? Grâce au hashtag #wish, une photo de vous mangeant du muesli peut récolter 650 like ! \n
+    Promotion : pour toute commande avant le 6 juillet, discographie de AIR et filmographie de Sofia Coppola pour un euro ! \n
+    Ce Hubot est destiné aux avant-gardistes amoureux des beaux objets et en quête d’exception.",
+  gender: "female",
+  skin_color: "white",
+  model: "Wish",
+  manufacturer: "Atsugi Robotics",
+  year: DateTime.new(2013,01,01),
+  origin: "Sweden",
+  category: "Sport coach",
+  weight: 35,
+  height: 170,
+  autonomy: 8,
+  charging_time: 2,
+  turing_test_score: 47,
+  price_per_hour: 300,
+  composition: "Plastic (56 %), metal (2 %), synthetic materials (23 %), kevlar (19 %)",
+  maintenance: "By hand",
+  user_id: user6.id
+)
+hubot8 = Hubot.create!(
+  name: "Martines",
+  age: 25,
+  description: "SÉRIE LIMITÉE (200 exemplaires seulement) \n\n
+    Designée par Ora Ïto, haleine senteur coriandre, équipée d’un audioguide de tous les musées d’art contemporain d’Europe (+ MOMA), Wish est LE bot people. Elle rentre dans tous les clubs et connaît par leur prénom tous les autres Hubot de luxe existants. Avec Wish, finies les files d’attente et les videurs irrespectueux ! Grâce à ses connexions, elle vous ouvrira toutes les portes. \n\n
+    Mais Wish ne changera pas seulement vos soirées. Certes, ce Hubot de luxe vous permet d’être invité chaque année à l’anniversaire de Karl Lagerfeld, mais il sait également faire de chaque instant de votre morne quotidien un moment d’exception. Wish documentera votre vie sur son compte Instagram (97 000 followers dès l’achat) et fera sa plus belle duckface à vos côtés. \n
+    Assise, lascive, sur votre canapé, Wish vous aidera à vous sentir hors du commun. \n
+    Le saviez-vous ? Grâce au hashtag #wish, une photo de vous mangeant du muesli peut récolter 650 like ! \n
+    Promotion : pour toute commande avant le 6 juillet, discographie de AIR et filmographie de Sofia Coppola pour un euro ! \n
+    Ce Hubot est destiné aux avant-gardistes amoureux des beaux objets et en quête d’exception.",
+  gender: "female",
+  skin_color: "white",
+  model: "Wish",
+  manufacturer: "Atsugi Robotics",
+  year: DateTime.new(2013,01,01),
+  origin: "Sweden",
+  category: "Family bot",
+  weight: 35,
+  height: 170,
+  autonomy: 8,
+  charging_time: 2,
+  turing_test_score: 47,
+  price_per_hour: 300,
+  composition: "Plastic (56 %), metal (2 %), synthetic materials (23 %), kevlar (19 %)",
+  maintenance: "By hand",
+  user_id: user6.id
+)
+hubot9 = Hubot.create!(
+  name: "Carlos",
+  age: 25,
+  description: "SÉRIE LIMITÉE (200 exemplaires seulement) \n\n
+    Designée par Ora Ïto, haleine senteur coriandre, équipée d’un audioguide de tous les musées d’art contemporain d’Europe (+ MOMA), Wish est LE bot people. Elle rentre dans tous les clubs et connaît par leur prénom tous les autres Hubot de luxe existants. Avec Wish, finies les files d’attente et les videurs irrespectueux ! Grâce à ses connexions, elle vous ouvrira toutes les portes. \n\n
+    Mais Wish ne changera pas seulement vos soirées. Certes, ce Hubot de luxe vous permet d’être invité chaque année à l’anniversaire de Karl Lagerfeld, mais il sait également faire de chaque instant de votre morne quotidien un moment d’exception. Wish documentera votre vie sur son compte Instagram (97 000 followers dès l’achat) et fera sa plus belle duckface à vos côtés. \n
+    Assise, lascive, sur votre canapé, Wish vous aidera à vous sentir hors du commun. \n
+    Le saviez-vous ? Grâce au hashtag #wish, une photo de vous mangeant du muesli peut récolter 650 like ! \n
+    Promotion : pour toute commande avant le 6 juillet, discographie de AIR et filmographie de Sofia Coppola pour un euro ! \n
+    Ce Hubot est destiné aux avant-gardistes amoureux des beaux objets et en quête d’exception.",
+  gender: "male",
+  skin_color: "white",
+  model: "Wish",
+  manufacturer: "Atsugi Robotics",
+  year: DateTime.new(2013,01,01),
+  origin: "Sweden",
+  category: "Guardian",
+  weight: 35,
+  height: 170,
+  autonomy: 8,
+  charging_time: 2,
+  turing_test_score: 47,
+  price_per_hour: 300,
+  composition: "Plastic (56 %), metal (2 %), synthetic materials (23 %), kevlar (19 %)",
+  maintenance: "By hand",
+  user_id: user6.id
+)
+hubot10 = Hubot.create!(
+  name: "Michou",
+  age: 55,
+  description: "SÉRIE LIMITÉE (200 exemplaires seulement) \n\n
+    Designée par Ora Ïto, haleine senteur coriandre, équipée d’un audioguide de tous les musées d’art contemporain d’Europe (+ MOMA), Wish est LE bot people. Elle rentre dans tous les clubs et connaît par leur prénom tous les autres Hubot de luxe existants. Avec Wish, finies les files d’attente et les videurs irrespectueux ! Grâce à ses connexions, elle vous ouvrira toutes les portes. \n\n
+    Mais Wish ne changera pas seulement vos soirées. Certes, ce Hubot de luxe vous permet d’être invité chaque année à l’anniversaire de Karl Lagerfeld, mais il sait également faire de chaque instant de votre morne quotidien un moment d’exception. Wish documentera votre vie sur son compte Instagram (97 000 followers dès l’achat) et fera sa plus belle duckface à vos côtés. \n
+    Assise, lascive, sur votre canapé, Wish vous aidera à vous sentir hors du commun. \n
+    Le saviez-vous ? Grâce au hashtag #wish, une photo de vous mangeant du muesli peut récolter 650 like ! \n
+    Promotion : pour toute commande avant le 6 juillet, discographie de AIR et filmographie de Sofia Coppola pour un euro ! \n
+    Ce Hubot est destiné aux avant-gardistes amoureux des beaux objets et en quête d’exception.",
+  gender: "male",
+  skin_color: "white",
+  model: "Wish",
+  manufacturer: "Atsugi Robotics",
+  year: DateTime.new(2013,01,01),
+  origin: "Sweden",
+  category: "Collector",
+  weight: 35,
+  height: 170,
+  autonomy: 8,
+  charging_time: 2,
+  turing_test_score: 47,
+  price_per_hour: 300,
+  composition: "Plastic (56 %), metal (2 %), synthetic materials (23 %), kevlar (19 %)",
+  maintenance: "By hand",
+  user_id: user6.id
+)
+hubot11 = Hubot.create!(
+  name: "Antoine",
+  age: 27,
+  description: "SÉRIE LIMITÉE (200 exemplaires seulement) \n\n
+    Designée par Ora Ïto, haleine senteur coriandre, équipée d’un audioguide de tous les musées d’art contemporain d’Europe (+ MOMA), Wish est LE bot people. Elle rentre dans tous les clubs et connaît par leur prénom tous les autres Hubot de luxe existants. Avec Wish, finies les files d’attente et les videurs irrespectueux ! Grâce à ses connexions, elle vous ouvrira toutes les portes. \n\n
+    Mais Wish ne changera pas seulement vos soirées. Certes, ce Hubot de luxe vous permet d’être invité chaque année à l’anniversaire de Karl Lagerfeld, mais il sait également faire de chaque instant de votre morne quotidien un moment d’exception. Wish documentera votre vie sur son compte Instagram (97 000 followers dès l’achat) et fera sa plus belle duckface à vos côtés. \n
+    Assise, lascive, sur votre canapé, Wish vous aidera à vous sentir hors du commun. \n
+    Le saviez-vous ? Grâce au hashtag #wish, une photo de vous mangeant du muesli peut récolter 650 like ! \n
+    Promotion : pour toute commande avant le 6 juillet, discographie de AIR et filmographie de Sofia Coppola pour un euro ! \n
+    Ce Hubot est destiné aux avant-gardistes amoureux des beaux objets et en quête d’exception.",
+  gender: "male",
+  skin_color: "white",
+  model: "Wish",
+  manufacturer: "Atsugi Robotics",
+  year: DateTime.new(2013,01,01),
+  origin: "Belgium",
+  category: "Social",
+  weight: 35,
+  height: 170,
+  autonomy: 8,
+  charging_time: 2,
+  turing_test_score: 47,
+  price_per_hour: 300,
+  composition: "Plastic (56 %), metal (2 %), synthetic materials (23 %), kevlar (19 %)",
+  maintenance: "By hand",
+  user_id: user6.id
+)
+hubot12 = Hubot.create!(
+  name: "Michel",
+  age: 19,
+  description: "SÉRIE LIMITÉE (200 exemplaires seulement) \n\n
+    Designée par Ora Ïto, haleine senteur coriandre, équipée d’un audioguide de tous les musées d’art contemporain d’Europe (+ MOMA), Wish est LE bot people. Elle rentre dans tous les clubs et connaît par leur prénom tous les autres Hubot de luxe existants. Avec Wish, finies les files d’attente et les videurs irrespectueux ! Grâce à ses connexions, elle vous ouvrira toutes les portes. \n\n
+    Mais Wish ne changera pas seulement vos soirées. Certes, ce Hubot de luxe vous permet d’être invité chaque année à l’anniversaire de Karl Lagerfeld, mais il sait également faire de chaque instant de votre morne quotidien un moment d’exception. Wish documentera votre vie sur son compte Instagram (97 000 followers dès l’achat) et fera sa plus belle duckface à vos côtés. \n
+    Assise, lascive, sur votre canapé, Wish vous aidera à vous sentir hors du commun. \n
+    Le saviez-vous ? Grâce au hashtag #wish, une photo de vous mangeant du muesli peut récolter 650 like ! \n
+    Promotion : pour toute commande avant le 6 juillet, discographie de AIR et filmographie de Sofia Coppola pour un euro ! \n
+    Ce Hubot est destiné aux avant-gardistes amoureux des beaux objets et en quête d’exception.",
+  gender: "male",
+  skin_color: "white",
+  model: "Wish",
+  manufacturer: "Atsugi Robotics",
+  year: DateTime.new(2013,01,01),
+  origin: "France",
+  category: "Social",
+  weight: 35,
+  height: 170,
+  autonomy: 8,
+  charging_time: 2,
+  turing_test_score: 47,
+  price_per_hour: 300,
+  composition: "Plastic (56 %), metal (2 %), synthetic materials (23 %), kevlar (19 %)",
+  maintenance: "By hand",
+  user_id: user6.id
+)
+hubot13 = Hubot.create!(
+  name: "Alain",
+  age: 45,
+  description: "SÉRIE LIMITÉE (200 exemplaires seulement) \n\n
+    Designée par Ora Ïto, haleine senteur coriandre, équipée d’un audioguide de tous les musées d’art contemporain d’Europe (+ MOMA), Wish est LE bot people. Elle rentre dans tous les clubs et connaît par leur prénom tous les autres Hubot de luxe existants. Avec Wish, finies les files d’attente et les videurs irrespectueux ! Grâce à ses connexions, elle vous ouvrira toutes les portes. \n\n
+    Mais Wish ne changera pas seulement vos soirées. Certes, ce Hubot de luxe vous permet d’être invité chaque année à l’anniversaire de Karl Lagerfeld, mais il sait également faire de chaque instant de votre morne quotidien un moment d’exception. Wish documentera votre vie sur son compte Instagram (97 000 followers dès l’achat) et fera sa plus belle duckface à vos côtés. \n
+    Assise, lascive, sur votre canapé, Wish vous aidera à vous sentir hors du commun. \n
+    Le saviez-vous ? Grâce au hashtag #wish, une photo de vous mangeant du muesli peut récolter 650 like ! \n
+    Promotion : pour toute commande avant le 6 juillet, discographie de AIR et filmographie de Sofia Coppola pour un euro ! \n
+    Ce Hubot est destiné aux avant-gardistes amoureux des beaux objets et en quête d’exception.",
+  gender: "male",
+  skin_color: "white",
+  model: "Wish",
+  manufacturer: "Atsugi Robotics",
+  year: DateTime.new(2013,01,01),
+  origin: "France",
+  category: "Sport coach",
+  weight: 35,
+  height: 182,
+  autonomy: 8,
+  charging_time: 2,
+  turing_test_score: 47,
+  price_per_hour: 300,
+  composition: "Plastic (56 %), metal (2 %), synthetic materials (23 %), kevlar (19 %)",
+  maintenance: "By hand",
+  user_id: user6.id
+)
+hubot14 = Hubot.create!(
+  name: "Kevin",
+  age: 26,
+  description: "SÉRIE LIMITÉE (200 exemplaires seulement) \n\n
+    Designée par Ora Ïto, haleine senteur coriandre, équipée d’un audioguide de tous les musées d’art contemporain d’Europe (+ MOMA), Wish est LE bot people. Elle rentre dans tous les clubs et connaît par leur prénom tous les autres Hubot de luxe existants. Avec Wish, finies les files d’attente et les videurs irrespectueux ! Grâce à ses connexions, elle vous ouvrira toutes les portes. \n\n
+    Mais Wish ne changera pas seulement vos soirées. Certes, ce Hubot de luxe vous permet d’être invité chaque année à l’anniversaire de Karl Lagerfeld, mais il sait également faire de chaque instant de votre morne quotidien un moment d’exception. Wish documentera votre vie sur son compte Instagram (97 000 followers dès l’achat) et fera sa plus belle duckface à vos côtés. \n
+    Assise, lascive, sur votre canapé, Wish vous aidera à vous sentir hors du commun. \n
+    Le saviez-vous ? Grâce au hashtag #wish, une photo de vous mangeant du muesli peut récolter 650 like ! \n
+    Promotion : pour toute commande avant le 6 juillet, discographie de AIR et filmographie de Sofia Coppola pour un euro ! \n
+    Ce Hubot est destiné aux avant-gardistes amoureux des beaux objets et en quête d’exception.",
+  gender: "male",
+  skin_color: "white",
+  model: "Wish",
+  manufacturer: "Atsugi Robotics",
+  year: DateTime.new(2013,01,01),
+  origin: "Danemark",
+  category: "Sexbot",
+  weight: 35,
+  height: 175,
+  autonomy: 8,
+  charging_time: 2,
+  turing_test_score: 47,
+  price_per_hour: 300,
+  composition: "Plastic (56 %), metal (2 %), synthetic materials (23 %), kevlar (19 %)",
+  maintenance: "By hand",
+  user_id: user6.id
+)
+hubot15 = Hubot.create!(
+  name: "Rihanna",
+  age: 23,
+  description: "SÉRIE LIMITÉE (200 exemplaires seulement) \n\n
+    Designée par Ora Ïto, haleine senteur coriandre, équipée d’un audioguide de tous les musées d’art contemporain d’Europe (+ MOMA), Wish est LE bot people. Elle rentre dans tous les clubs et connaît par leur prénom tous les autres Hubot de luxe existants. Avec Wish, finies les files d’attente et les videurs irrespectueux ! Grâce à ses connexions, elle vous ouvrira toutes les portes. \n\n
+    Mais Wish ne changera pas seulement vos soirées. Certes, ce Hubot de luxe vous permet d’être invité chaque année à l’anniversaire de Karl Lagerfeld, mais il sait également faire de chaque instant de votre morne quotidien un moment d’exception. Wish documentera votre vie sur son compte Instagram (97 000 followers dès l’achat) et fera sa plus belle duckface à vos côtés. \n
+    Assise, lascive, sur votre canapé, Wish vous aidera à vous sentir hors du commun. \n
+    Le saviez-vous ? Grâce au hashtag #wish, une photo de vous mangeant du muesli peut récolter 650 like ! \n
+    Promotion : pour toute commande avant le 6 juillet, discographie de AIR et filmographie de Sofia Coppola pour un euro ! \n
+    Ce Hubot est destiné aux avant-gardistes amoureux des beaux objets et en quête d’exception.",
+  gender: "female",
+  skin_color: "white",
+  model: "Wish",
+  manufacturer: "Atsugi Robotics",
+  year: DateTime.new(2013,01,01),
+  origin: "USA",
+  category: "Sexbot",
+  weight: 35,
+  height: 170,
+  autonomy: 8,
+  charging_time: 2,
+  turing_test_score: 47,
+  price_per_hour: 300,
+  composition: "Plastic (56 %), metal (2 %), synthetic materials (23 %), kevlar (19 %)",
+  maintenance: "By hand",
+  user_id: user6.id
+)
+hubot16 = Hubot.create!(
+  name: "Fany",
   age: 25,
   description: "SÉRIE LIMITÉE (200 exemplaires seulement) \n\n
     Designée par Ora Ïto, haleine senteur coriandre, équipée d’un audioguide de tous les musées d’art contemporain d’Europe (+ MOMA), Wish est LE bot people. Elle rentre dans tous les clubs et connaît par leur prénom tous les autres Hubot de luxe existants. Avec Wish, finies les files d’attente et les videurs irrespectueux ! Grâce à ses connexions, elle vous ouvrira toutes les portes. \n\n
@@ -188,4 +431,273 @@ hubot7 = Hubot.create!(
   maintenance: "By hand",
   user_id: user6.id
 )
-
+hubot17 = Hubot.create!(
+  name: "Julia",
+  age: 22,
+  description: "SÉRIE LIMITÉE (200 exemplaires seulement) \n\n
+    Designée par Ora Ïto, haleine senteur coriandre, équipée d’un audioguide de tous les musées d’art contemporain d’Europe (+ MOMA), Wish est LE bot people. Elle rentre dans tous les clubs et connaît par leur prénom tous les autres Hubot de luxe existants. Avec Wish, finies les files d’attente et les videurs irrespectueux ! Grâce à ses connexions, elle vous ouvrira toutes les portes. \n\n
+    Mais Wish ne changera pas seulement vos soirées. Certes, ce Hubot de luxe vous permet d’être invité chaque année à l’anniversaire de Karl Lagerfeld, mais il sait également faire de chaque instant de votre morne quotidien un moment d’exception. Wish documentera votre vie sur son compte Instagram (97 000 followers dès l’achat) et fera sa plus belle duckface à vos côtés. \n
+    Assise, lascive, sur votre canapé, Wish vous aidera à vous sentir hors du commun. \n
+    Le saviez-vous ? Grâce au hashtag #wish, une photo de vous mangeant du muesli peut récolter 650 like ! \n
+    Promotion : pour toute commande avant le 6 juillet, discographie de AIR et filmographie de Sofia Coppola pour un euro ! \n
+    Ce Hubot est destiné aux avant-gardistes amoureux des beaux objets et en quête d’exception.",
+  gender: "female",
+  skin_color: "white",
+  model: "Wish",
+  manufacturer: "Atsugi Robotics",
+  year: DateTime.new(2013,01,01),
+  origin: "France",
+  category: "Personal shopper",
+  weight: 35,
+  height: 168,
+  autonomy: 8,
+  charging_time: 2,
+  turing_test_score: 47,
+  price_per_hour: 300,
+  composition: "Plastic (56 %), metal (2 %), synthetic materials (23 %), kevlar (19 %)",
+  maintenance: "By hand",
+  user_id: user6.id
+)
+hubot18 = Hubot.create!(
+  name: "Antonio",
+  age: 35,
+  description: "SÉRIE LIMITÉE (200 exemplaires seulement) \n\n
+    Designée par Ora Ïto, haleine senteur coriandre, équipée d’un audioguide de tous les musées d’art contemporain d’Europe (+ MOMA), Wish est LE bot people. Elle rentre dans tous les clubs et connaît par leur prénom tous les autres Hubot de luxe existants. Avec Wish, finies les files d’attente et les videurs irrespectueux ! Grâce à ses connexions, elle vous ouvrira toutes les portes. \n\n
+    Mais Wish ne changera pas seulement vos soirées. Certes, ce Hubot de luxe vous permet d’être invité chaque année à l’anniversaire de Karl Lagerfeld, mais il sait également faire de chaque instant de votre morne quotidien un moment d’exception. Wish documentera votre vie sur son compte Instagram (97 000 followers dès l’achat) et fera sa plus belle duckface à vos côtés. \n
+    Assise, lascive, sur votre canapé, Wish vous aidera à vous sentir hors du commun. \n
+    Le saviez-vous ? Grâce au hashtag #wish, une photo de vous mangeant du muesli peut récolter 650 like ! \n
+    Promotion : pour toute commande avant le 6 juillet, discographie de AIR et filmographie de Sofia Coppola pour un euro ! \n
+    Ce Hubot est destiné aux avant-gardistes amoureux des beaux objets et en quête d’exception.",
+  gender: "male",
+  skin_color: "white",
+  model: "Wish",
+  manufacturer: "Atsugi Robotics",
+  year: DateTime.new(2013,01,01),
+  origin: "Porto-Rico",
+  category: "Guardian",
+  weight: 35,
+  height: 170,
+  autonomy: 8,
+  charging_time: 2,
+  turing_test_score: 47,
+  price_per_hour: 300,
+  composition: "Plastic (56 %), metal (2 %), synthetic materials (23 %), kevlar (19 %)",
+  maintenance: "By hand",
+  user_id: user6.id
+)
+hubot19 = Hubot.create!(
+  name: "Maeva",
+  age: 25,
+  description: "SÉRIE LIMITÉE (200 exemplaires seulement) \n\n
+    Designée par Ora Ïto, haleine senteur coriandre, équipée d’un audioguide de tous les musées d’art contemporain d’Europe (+ MOMA), Wish est LE bot people. Elle rentre dans tous les clubs et connaît par leur prénom tous les autres Hubot de luxe existants. Avec Wish, finies les files d’attente et les videurs irrespectueux ! Grâce à ses connexions, elle vous ouvrira toutes les portes. \n\n
+    Mais Wish ne changera pas seulement vos soirées. Certes, ce Hubot de luxe vous permet d’être invité chaque année à l’anniversaire de Karl Lagerfeld, mais il sait également faire de chaque instant de votre morne quotidien un moment d’exception. Wish documentera votre vie sur son compte Instagram (97 000 followers dès l’achat) et fera sa plus belle duckface à vos côtés. \n
+    Assise, lascive, sur votre canapé, Wish vous aidera à vous sentir hors du commun. \n
+    Le saviez-vous ? Grâce au hashtag #wish, une photo de vous mangeant du muesli peut récolter 650 like ! \n
+    Promotion : pour toute commande avant le 6 juillet, discographie de AIR et filmographie de Sofia Coppola pour un euro ! \n
+    Ce Hubot est destiné aux avant-gardistes amoureux des beaux objets et en quête d’exception.",
+  gender: "female",
+  skin_color: "white",
+  model: "Wish",
+  manufacturer: "Atsugi Robotics",
+  year: DateTime.new(2013,01,01),
+  origin: "Sweden",
+  category: "Collector",
+  weight: 35,
+  height: 170,
+  autonomy: 8,
+  charging_time: 2,
+  turing_test_score: 47,
+  price_per_hour: 300,
+  composition: "Plastic (56 %), metal (2 %), synthetic materials (23 %), kevlar (19 %)",
+  maintenance: "By hand",
+  user_id: user6.id
+)
+hubot20 = Hubot.create!(
+  name: "Manuel",
+  age: 45,
+  description: "SÉRIE LIMITÉE (200 exemplaires seulement) \n\n
+    Designée par Ora Ïto, haleine senteur coriandre, équipée d’un audioguide de tous les musées d’art contemporain d’Europe (+ MOMA), Wish est LE bot people. Elle rentre dans tous les clubs et connaît par leur prénom tous les autres Hubot de luxe existants. Avec Wish, finies les files d’attente et les videurs irrespectueux ! Grâce à ses connexions, elle vous ouvrira toutes les portes. \n\n
+    Mais Wish ne changera pas seulement vos soirées. Certes, ce Hubot de luxe vous permet d’être invité chaque année à l’anniversaire de Karl Lagerfeld, mais il sait également faire de chaque instant de votre morne quotidien un moment d’exception. Wish documentera votre vie sur son compte Instagram (97 000 followers dès l’achat) et fera sa plus belle duckface à vos côtés. \n
+    Assise, lascive, sur votre canapé, Wish vous aidera à vous sentir hors du commun. \n
+    Le saviez-vous ? Grâce au hashtag #wish, une photo de vous mangeant du muesli peut récolter 650 like ! \n
+    Promotion : pour toute commande avant le 6 juillet, discographie de AIR et filmographie de Sofia Coppola pour un euro ! \n
+    Ce Hubot est destiné aux avant-gardistes amoureux des beaux objets et en quête d’exception.",
+  gender: "male",
+  skin_color: "white",
+  model: "Wish",
+  manufacturer: "Atsugi Robotics",
+  year: DateTime.new(2013,01,01),
+  origin: "Mexico",
+  category: "Guardian",
+  weight: 35,
+  height: 180,
+  autonomy: 8,
+  charging_time: 2,
+  turing_test_score: 47,
+  price_per_hour: 300,
+  composition: "Plastic (56 %), metal (2 %), synthetic materials (23 %), kevlar (19 %)",
+  maintenance: "By hand",
+  user_id: user6.id
+)
+hubot21 = Hubot.create!(
+  name: "Ruby",
+  age: 25,
+  description: "SÉRIE LIMITÉE (200 exemplaires seulement) \n\n
+    Designée par Ora Ïto, haleine senteur coriandre, équipée d’un audioguide de tous les musées d’art contemporain d’Europe (+ MOMA), Wish est LE bot people. Elle rentre dans tous les clubs et connaît par leur prénom tous les autres Hubot de luxe existants. Avec Wish, finies les files d’attente et les videurs irrespectueux ! Grâce à ses connexions, elle vous ouvrira toutes les portes. \n\n
+    Mais Wish ne changera pas seulement vos soirées. Certes, ce Hubot de luxe vous permet d’être invité chaque année à l’anniversaire de Karl Lagerfeld, mais il sait également faire de chaque instant de votre morne quotidien un moment d’exception. Wish documentera votre vie sur son compte Instagram (97 000 followers dès l’achat) et fera sa plus belle duckface à vos côtés. \n
+    Assise, lascive, sur votre canapé, Wish vous aidera à vous sentir hors du commun. \n
+    Le saviez-vous ? Grâce au hashtag #wish, une photo de vous mangeant du muesli peut récolter 650 like ! \n
+    Promotion : pour toute commande avant le 6 juillet, discographie de AIR et filmographie de Sofia Coppola pour un euro ! \n
+    Ce Hubot est destiné aux avant-gardistes amoureux des beaux objets et en quête d’exception.",
+  gender: "female",
+  skin_color: "white",
+  model: "Wish",
+  manufacturer: "Atsugi Robotics",
+  year: DateTime.new(2013,01,01),
+  origin: "Egypt",
+  category: "Collector",
+  weight: 35,
+  height: 170,
+  autonomy: 8,
+  charging_time: 2,
+  turing_test_score: 47,
+  price_per_hour: 300,
+  composition: "Plastic (56 %), metal (2 %), synthetic materials (23 %), kevlar (19 %)",
+  maintenance: "By hand",
+  user_id: user6.id
+)
+hubot22 = Hubot.create!(
+  name: "Diane",
+  age: 25,
+  description: "SÉRIE LIMITÉE (200 exemplaires seulement) \n\n
+    Designée par Ora Ïto, haleine senteur coriandre, équipée d’un audioguide de tous les musées d’art contemporain d’Europe (+ MOMA), Wish est LE bot people. Elle rentre dans tous les clubs et connaît par leur prénom tous les autres Hubot de luxe existants. Avec Wish, finies les files d’attente et les videurs irrespectueux ! Grâce à ses connexions, elle vous ouvrira toutes les portes. \n\n
+    Mais Wish ne changera pas seulement vos soirées. Certes, ce Hubot de luxe vous permet d’être invité chaque année à l’anniversaire de Karl Lagerfeld, mais il sait également faire de chaque instant de votre morne quotidien un moment d’exception. Wish documentera votre vie sur son compte Instagram (97 000 followers dès l’achat) et fera sa plus belle duckface à vos côtés. \n
+    Assise, lascive, sur votre canapé, Wish vous aidera à vous sentir hors du commun. \n
+    Le saviez-vous ? Grâce au hashtag #wish, une photo de vous mangeant du muesli peut récolter 650 like ! \n
+    Promotion : pour toute commande avant le 6 juillet, discographie de AIR et filmographie de Sofia Coppola pour un euro ! \n
+    Ce Hubot est destiné aux avant-gardistes amoureux des beaux objets et en quête d’exception.",
+  gender: "female",
+  skin_color: "white",
+  model: "Wish",
+  manufacturer: "Atsugi Robotics",
+  year: DateTime.new(2013,01,01),
+  origin: "USA",
+  category: "Family bot",
+  weight: 35,
+  height: 170,
+  autonomy: 8,
+  charging_time: 2,
+  turing_test_score: 47,
+  price_per_hour: 300,
+  composition: "Plastic (56 %), metal (2 %), synthetic materials (23 %), kevlar (19 %)",
+  maintenance: "By hand",
+  user_id: user6.id
+)
+hubot23 = Hubot.create!(
+  name: "Rachel",
+  age: 28,
+  description: "SÉRIE LIMITÉE (200 exemplaires seulement) \n\n
+    Designée par Ora Ïto, haleine senteur coriandre, équipée d’un audioguide de tous les musées d’art contemporain d’Europe (+ MOMA), Wish est LE bot people. Elle rentre dans tous les clubs et connaît par leur prénom tous les autres Hubot de luxe existants. Avec Wish, finies les files d’attente et les videurs irrespectueux ! Grâce à ses connexions, elle vous ouvrira toutes les portes. \n\n
+    Mais Wish ne changera pas seulement vos soirées. Certes, ce Hubot de luxe vous permet d’être invité chaque année à l’anniversaire de Karl Lagerfeld, mais il sait également faire de chaque instant de votre morne quotidien un moment d’exception. Wish documentera votre vie sur son compte Instagram (97 000 followers dès l’achat) et fera sa plus belle duckface à vos côtés. \n
+    Assise, lascive, sur votre canapé, Wish vous aidera à vous sentir hors du commun. \n
+    Le saviez-vous ? Grâce au hashtag #wish, une photo de vous mangeant du muesli peut récolter 650 like ! \n
+    Promotion : pour toute commande avant le 6 juillet, discographie de AIR et filmographie de Sofia Coppola pour un euro ! \n
+    Ce Hubot est destiné aux avant-gardistes amoureux des beaux objets et en quête d’exception.",
+  gender: "female",
+  skin_color: "white",
+  model: "Wish",
+  manufacturer: "Atsugi Robotics",
+  year: DateTime.new(2013,01,01),
+  origin: "Sweden",
+  category: "Sexbot",
+  weight: 35,
+  height: 170,
+  autonomy: 8,
+  charging_time: 2,
+  turing_test_score: 47,
+  price_per_hour: 300,
+  composition: "Plastic (56 %), metal (2 %), synthetic materials (23 %), kevlar (19 %)",
+  maintenance: "By hand",
+  user_id: user6.id
+)
+hubot24 = Hubot.create!(
+  name: "Amy",
+  age: 20,
+  description: "SÉRIE LIMITÉE (200 exemplaires seulement) \n\n
+    Designée par Ora Ïto, haleine senteur coriandre, équipée d’un audioguide de tous les musées d’art contemporain d’Europe (+ MOMA), Wish est LE bot people. Elle rentre dans tous les clubs et connaît par leur prénom tous les autres Hubot de luxe existants. Avec Wish, finies les files d’attente et les videurs irrespectueux ! Grâce à ses connexions, elle vous ouvrira toutes les portes. \n\n
+    Mais Wish ne changera pas seulement vos soirées. Certes, ce Hubot de luxe vous permet d’être invité chaque année à l’anniversaire de Karl Lagerfeld, mais il sait également faire de chaque instant de votre morne quotidien un moment d’exception. Wish documentera votre vie sur son compte Instagram (97 000 followers dès l’achat) et fera sa plus belle duckface à vos côtés. \n
+    Assise, lascive, sur votre canapé, Wish vous aidera à vous sentir hors du commun. \n
+    Le saviez-vous ? Grâce au hashtag #wish, une photo de vous mangeant du muesli peut récolter 650 like ! \n
+    Promotion : pour toute commande avant le 6 juillet, discographie de AIR et filmographie de Sofia Coppola pour un euro ! \n
+    Ce Hubot est destiné aux avant-gardistes amoureux des beaux objets et en quête d’exception.",
+  gender: "female",
+  skin_color: "white",
+  model: "Wish",
+  manufacturer: "Atsugi Robotics",
+  year: DateTime.new(2013,01,01),
+  origin: "Sweden",
+  category: "Social",
+  weight: 35,
+  height: 170,
+  autonomy: 8,
+  charging_time: 2,
+  turing_test_score: 47,
+  price_per_hour: 300,
+  composition: "Plastic (56 %), metal (2 %), synthetic materials (23 %), kevlar (19 %)",
+  maintenance: "By hand",
+  user_id: user6.id
+)
+hubot25 = Hubot.create!(
+  name: "Juan-Carlos",
+  age: 20,
+  description: "SÉRIE LIMITÉE (200 exemplaires seulement) \n\n
+    Designée par Ora Ïto, haleine senteur coriandre, équipée d’un audioguide de tous les musées d’art contemporain d’Europe (+ MOMA), Wish est LE bot people. Elle rentre dans tous les clubs et connaît par leur prénom tous les autres Hubot de luxe existants. Avec Wish, finies les files d’attente et les videurs irrespectueux ! Grâce à ses connexions, elle vous ouvrira toutes les portes. \n\n
+    Mais Wish ne changera pas seulement vos soirées. Certes, ce Hubot de luxe vous permet d’être invité chaque année à l’anniversaire de Karl Lagerfeld, mais il sait également faire de chaque instant de votre morne quotidien un moment d’exception. Wish documentera votre vie sur son compte Instagram (97 000 followers dès l’achat) et fera sa plus belle duckface à vos côtés. \n
+    Assise, lascive, sur votre canapé, Wish vous aidera à vous sentir hors du commun. \n
+    Le saviez-vous ? Grâce au hashtag #wish, une photo de vous mangeant du muesli peut récolter 650 like ! \n
+    Promotion : pour toute commande avant le 6 juillet, discographie de AIR et filmographie de Sofia Coppola pour un euro ! \n
+    Ce Hubot est destiné aux avant-gardistes amoureux des beaux objets et en quête d’exception.",
+  gender: "male",
+  skin_color: "white",
+  model: "Wish",
+  manufacturer: "Atsugi Robotics",
+  year: DateTime.new(2013,01,01),
+  origin: "Brazil",
+  category: "Sexbot",
+  weight: 35,
+  height: 170,
+  autonomy: 8,
+  charging_time: 2,
+  turing_test_score: 47,
+  price_per_hour: 300,
+  composition: "Plastic (56 %), metal (2 %), synthetic materials (23 %), kevlar (19 %)",
+  maintenance: "By hand",
+  user_id: user6.id
+)
+hubot26 = Hubot.create!(
+  name: "Annita",
+  age: 18,
+  description: "SÉRIE LIMITÉE (200 exemplaires seulement) \n\n
+    Designée par Ora Ïto, haleine senteur coriandre, équipée d’un audioguide de tous les musées d’art contemporain d’Europe (+ MOMA), Wish est LE bot people. Elle rentre dans tous les clubs et connaît par leur prénom tous les autres Hubot de luxe existants. Avec Wish, finies les files d’attente et les videurs irrespectueux ! Grâce à ses connexions, elle vous ouvrira toutes les portes. \n\n
+    Mais Wish ne changera pas seulement vos soirées. Certes, ce Hubot de luxe vous permet d’être invité chaque année à l’anniversaire de Karl Lagerfeld, mais il sait également faire de chaque instant de votre morne quotidien un moment d’exception. Wish documentera votre vie sur son compte Instagram (97 000 followers dès l’achat) et fera sa plus belle duckface à vos côtés. \n
+    Assise, lascive, sur votre canapé, Wish vous aidera à vous sentir hors du commun. \n
+    Le saviez-vous ? Grâce au hashtag #wish, une photo de vous mangeant du muesli peut récolter 650 like ! \n
+    Promotion : pour toute commande avant le 6 juillet, discographie de AIR et filmographie de Sofia Coppola pour un euro ! \n
+    Ce Hubot est destiné aux avant-gardistes amoureux des beaux objets et en quête d’exception.",
+  gender: "female",
+  skin_color: "white",
+  model: "Wish",
+  manufacturer: "Atsugi Robotics",
+  year: DateTime.new(2013,01,01),
+  origin: "Sweden",
+  category: "Personal shopper",
+  weight: 35,
+  height: 170,
+  autonomy: 8,
+  charging_time: 2,
+  turing_test_score: 47,
+  price_per_hour: 300,
+  composition: "Plastic (56 %), metal (2 %), synthetic materials (23 %), kevlar (19 %)",
+  maintenance: "By hand",
+  user_id: user6.id
+)
