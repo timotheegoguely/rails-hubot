@@ -17,3 +17,13 @@
 <hr>
 
 <%= link_to "← Back", hubots_path, class: "btn btn-default" %>
+
+
+
+
+<%= simple_form_for [@hubot, @booking] do |f| %>
+  <%= f.input :check_in %>
+  <%= f.input :check_out %>
+  <%= f.button :submit %>
+<% end %>
+
