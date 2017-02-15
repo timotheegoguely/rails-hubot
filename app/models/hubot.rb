@@ -16,12 +16,12 @@ class Hubot < ApplicationRecord
   validates :skin_color, inclusion: { in: ["white","asian","brown","black"], message:"%{value} is not a valid skin color", allow_nil: false }
 
   CATEGORIES = [
-    "Sport coach",
-    "Guardian",
-    "Family Bot",
+    "Coach",
+    "Guard",
+    "Housemaid",
     "Personal shopper",
     "Sexbot",
-    "Social",
+    "Veterinary",
     "Collector"
   ]
 end
