@@ -18,6 +18,12 @@ gem 'autoprefixer-rails'
 gem 'devise'
 gem 'geocoder'
 
+# Datepicker
+gem 'momentjs-rails', '>= 2.9.0'
+gem 'bootstrap3-datetimepicker-rails', '~> 4.14.30'
+gem 'validates_timeliness', '~> 4.0'
+
+
 group :development, :test do
   gem 'binding_of_caller'
   gem 'better_errors'
