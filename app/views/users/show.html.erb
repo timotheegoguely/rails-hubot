@@ -2,8 +2,10 @@
   <%= @user.first_name ? @user.first_name : 'anonymous' %> <%= @user.last_name ? @user.last_name : '' %>
 <% end %>
 
-
 <div class="container" style="padding-top: 50px">
+
+  <%= link_to "← Back", :back, class: "btn btn-default" %>
+
   <h1>
     <%= @user.first_name ? @user.first_name : 'Anonymous' %> <%= @user.last_name ? @user.last_name : '' %>
   </h1>
@@ -13,13 +15,14 @@
     </div>
     <div class="col-md-10" style="background: #F8F7F7">
       <span>
-        <i class="fa fa-envelope-o" aria-hidden="true"></i>   <%= @user.email %>
+        <i class="fa fa-envelope-o" aria-hidden="true"></i> <%= @user.email %>
         <% if @user.phone_number %>
-             |   <i class="fa fa-mobile" aria-hidden="true"></i>   <%= @user.phone_number %>
+             |   <i class="fa fa-mobile" aria-hidden="true"></i> <%= @user.phone_number %>
         <% end %>
       </span>
       <p><%= @user.description %></p>
     </div>
+    <%= link_to "Edit", edit_user_registration_path(@user), class: "btn btn-primary" %>
   </div>
 
   <% if @user.hubots.count > 0 %>
@@ -59,7 +62,7 @@
   <%= javascript_tag do %>
     $(document).ready(function() {
       var coord = <%= raw @user_coordinates.to_json %>;
-      alert('User coordinates are ' + coord.lat + ', ' + coord.lng);
+      console.log('User coordinates are ' + coord.lat + ', ' + coord.lng);
     });
   <% end %>
 <% end %>

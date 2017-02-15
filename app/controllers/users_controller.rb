@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
 
-  skip_before_action :authenticate_user!, only: [:show, :hubots ]
+  skip_before_action :authenticate_user!, only: [ :show, :hubots ]
   before_action :set_user, only: [ :show, :hubots ]
 
   # GET /users/:id
