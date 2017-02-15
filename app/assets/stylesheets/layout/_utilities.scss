@@ -10,12 +10,18 @@
   padding-bottom: 5em;
 }
 
+.wrapper {
+  display: flex;
+  width: 100vw;
+  min-height: calc(100vh - 70px);
+}
+
 // Backgrounds
 .bg-black {
   background: #4a4a4a;
 }
 .bg-grey {
-  background: #aeaeae;
+  background: #fafafa;
 }
 .bg-blue {
   background: #00a3e1;
