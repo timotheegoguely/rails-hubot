@@ -1,23 +1,28 @@
 <% content_for(:title_tag) do %>
-  Hubots list
+  Hubots
 <% end %>
 
 
 <div class="container">
+<h1>Hubots list</h1>
+  <%= link_to 'Add a new Hubot', new_hubot_path, class: "btn btn-default" %>
   <div class="row">
-    <div class="card">
-      <h1>Hubots list</h1>
-      <% @hubots.each do |hubot| %>
-        <h2><%= hubot.name %></h2>
-        <%= link_to 'Hubot description', hubot_path(hubot) %> <br>
-        <%= link_to 'Hubot edit', edit_hubot_path(hubot) %> <br>
-        <%= link_to 'Delete', hubot_path(hubot), method: :delete, data: {confirm: "Do you really want to delete your Hubot ?"} %>
-      <% end %>
+    <% @hubots.each do |hubot| %>
+      <div class="col-xs-12 col-sm-4" style="padding: 20px">
+        <%= link_to hubot_path(hubot) do %>
+          <div class="card" style="background: #5FC5C5">
+            <div class="card-category"><%= hubot.category %></div>
+            <div class="card-description">
+              <h2><%= hubot.name %></h2>
+              <p><%= hubot.model %><br><%= hubot.manufacturer %></p>
+            </div>
+            <%= image_tag "avatars/#{rand(1..10)}.jpg", class:"card-user avatar-xlarge" %>
+            <!-- <a class="card-link" href="" ></a> -->
+          </div>
+        <% end %>
+      </div>
+    <% end %>
 
-      <hr>
-
-      <%= link_to 'Add a new Hubot', new_hubot_path, class: "btn btn-default" %>
-    </div>
   </div>
 </div>
 
