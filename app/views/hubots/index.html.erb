@@ -5,22 +5,31 @@
 
 <div class="container">
 <h1>Hubots list</h1>
+
   <%= link_to 'Add a new Hubot', new_hubot_path, class: "btn btn-default" %>
+
   <div class="row">
+
     <% @hubots.each do |hubot| %>
-      <div class="col-xs-12 col-sm-4" style="padding: 20px">
-        <%= link_to hubot_path(hubot) do %>
-          <div class="card" style="background: #5FC5C5">
-            <div class="card-category"><%= hubot.category %></div>
-            <div class="card-description">
-              <h2><%= hubot.name %></h2>
-              <p><%= hubot.model %><br><%= hubot.manufacturer %></p>
-            </div>
-            <%= image_tag "avatars/#{rand(1..10)}.jpg", class:"card-user avatar-xlarge" %>
-            <!-- <a class="card-link" href="" ></a> -->
+
+      <div class="col-xs-6 col-sm-4 col-md-3">
+        <div class="card">
+          <!--<div class="card-category">Category</div>-->
+          <div class="card-image" style="background: linear-gradient(to bottom, rgba(0,0,0,0.1) 33%, rgba(0,0,0,0.2) 100%), url(<%= asset_path "avatars/#{rand(1..10)}.jpg" %>);">
+            <span class="card-top-left"><%= hubot.model %></span>
+            <span class="card-top-right btn btn-default btn-xs"><%= hubot.category %></span>
           </div>
-        <% end %>
+          <div class="card-description">
+            <!-- Button trigger modal -->
+            <!-- <button type="button" class="btn btn-primary pull-right" data-toggle="modal" data-target="#myModal">Book</button> -->
+            <h3><%= hubot.name %></h3>
+          </div>
+
+          <%= link_to '', hubot_path(hubot), class: "card-link" %>
+
+        </div>
       </div>
+
     <% end %>
 
   </div>

@@ -1,5 +1,5 @@
-User.destroy_all
 Hubot.destroy_all
+User.destroy_all
 
 
 user1 = User.create!(email: "john@doe.com", password:"123456", first_name:"John", last_name:"Doe", phone_number:"+33 6 28 48 39 11", address:"98, avenue du Marechal Juin", zipcode:"50000", city:"Saint-Lô", gender:"male", description:"Nullam id dolor id nibh ultricies vehicula ut id elit.", birth_date: DateTime.new(1990,1,1), owner: true)
