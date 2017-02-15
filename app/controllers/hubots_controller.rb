@@ -11,6 +11,7 @@ class HubotsController < ApplicationController
 
   def show
     @hubot = Hubot.find(params[:id])
+    @booking = Booking.new
   end
 
   def new

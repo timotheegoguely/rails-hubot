@@ -23,12 +23,23 @@
             </select>
           </div>
           <div class="form-group col-xs-6 col-sm-3" id="check_in">
-            <label for="check_in" class="sr-only">Check in</label>
-            <input type="input" class="form-control input-lg" id="check_in" placeholder="Check In">
+            <div class='input-group date' id='datetimepicker'>
+              <label for="check_in" class="sr-only">Check in</label>
+              <input type="text" class="form-control input-lg datetimepicker" id="check_in" placeholder="Check In">
+              <span class="input-group-addon">
+                <span class="fa fa-calendar"></span>
+              </span>
+            </div>
           </div>
+
           <div class="form-group col-xs-6 col-sm-3" id="check_out">
-            <label for="check_out" class="sr-only">Check out</label>
-            <input type="input" class="form-control input-lg" id="check_out" placeholder="Check Out">
+            <div class='input-group date' id='datetimepicker'>
+              <label for="check_out" class="sr-only">Check out</label>
+              <input type="text" class="form-control input-lg datetimepicker" id="check_out" placeholder="Check Out">
+              <span class="input-group-addon">
+                <span class="fa fa-calendar"></span>
+              </span>
+            </div>
           </div>
           <div class="form-group col-xs-12 col-sm-2" id="search">
             <button type="submit" class="btn btn-lg btn-primary">Search</button>
@@ -86,3 +97,16 @@
     </div>
   </div>
 </div>
+
+<script type="text/javascript">
+  $(function () {
+    $('#datetimepicker').datetimepicker({
+      icons: {
+        time: "fa fa-clock-o",
+        date: "fa fa-calendar",
+        up: "fa fa-arrow-up",
+        down: "fa fa-arrow-down"
+      }
+    });
+  });
+</script>
