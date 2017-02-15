@@ -1,6 +1,6 @@
 <div class="banner">
   <div class="banner-background">
-    <%= (4...14).each do |number| %>
+    <% (4...14).each do |number| %>
       <%= link_to hubot_path(number) do %>
         <div class="banner-img" style="background-image: linear-gradient(-225deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.2) 100%), url(<%= asset_path "avatars/#{number-3}.jpg" %>);"></div>
       <% end %>
@@ -39,5 +39,50 @@
 
     </div>
 
+  </div>
+</div>
+
+<div class="wrapper" id="intro">
+  <div class="container padded">
+    <div class="row">
+      <div class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 text-center">
+        <h3>Intro</h3>
+        <p>Nullam quis risus eget urna mollis ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="features wrapper-flex">
+  <div class="feature container-flex">
+    <div class="feature-img flex" style="background-image: url(<%= asset_path "banners/5_fauvea.jpg" %>);"></div>
+    <div class="feature-content" id="fauvea">
+      <h3>Feature Title</h3>
+      <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+    </div>
+  </div>
+
+  <div class="feature container-flex switch-order">
+    <div class="feature-img flex" style="background-image: url(<%= asset_path "banners/7_jumbojim.jpg" %>);"></div>
+    <div class="feature-content" id="jumbojim">
+      <h3>Feature Title</h3>
+      <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+    </div>
+  </div>
+
+    <div class="feature container-flex">
+    <div class="feature-img flex" style="background-image: url(<%= asset_path "banners/9_louie.jpg" %>);"></div>
+    <div class="feature-content" id="louie">
+      <h3>Feature Title</h3>
+      <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+    </div>
+  </div>
+
+  <div class="feature container-flex switch-order">
+    <div class="feature-img flex" style="background-image: url(<%= asset_path "banners/8_karl.jpg" %>);"></div>
+    <div class="feature-content" id="karl">
+      <h3>Feature Title</h3>
+      <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+    </div>
   </div>
 </div>
