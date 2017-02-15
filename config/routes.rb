@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   devise_for :users
   root to: 'pages#home'
 
@@ -9,7 +10,9 @@ Rails.application.routes.draw do
   end
 
   resources :hubots, only: [ :index, :show, :new, :create, :edit, :update, :destroy ] do
-    resources :bookings, only: [ :create, :show ]
+    resources :bookings, only: [ :create, :show ] do
+      resources :reviews, only: [ :new, :create ]
+    end
   end
   get 'search', to: 'hubots#search'
 end
