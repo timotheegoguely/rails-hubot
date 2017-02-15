@@ -32,9 +32,6 @@
 
       <div class="col-md-offset-2 col-md-8 text-center">
         <h4><%= @user.first_name ? @user.first_name : 'Anonymous' %> <%= @user.last_name ? @user.last_name : '' %>'s best hubot (in reviews)</h4>
-        <%= link_to hubots_user_path do %>
-          Show all <%= @user.first_name ? @user.first_name : 'Anonymous' %> <%= @user.last_name ? @user.last_name : '' %>'s hubots
-        <% end %>
       </div>
     </div>
     <p>
