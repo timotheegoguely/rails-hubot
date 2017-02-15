@@ -60,3 +60,10 @@
     </div>
   </div>
 </div>
+
+<% @booking.reviews.each do |review| %>
+  <p>"<%= review.content %>"</p>
+  <p>rating: <%= review.rating %></p>
+<% end %>
+
+<%= link_to 'Rate this Hubot' %>
