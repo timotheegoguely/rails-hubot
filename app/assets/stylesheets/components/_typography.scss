@@ -4,20 +4,34 @@ body {
 
 // Headings
 h1 { font-size: 5rem; font-weight: 700 }
-h2 { font-size: 4rem; font-weight: 300 }
+h2 { font-size: 4rem; font-weight: 300; text-transform: uppercase; }
 h3 { font-size: 3rem; font-weight: 400 }
-h4 { font-size: 2rem; font-weight: 300 }
+h4 { font-size: 2rem; font-weight: 300; text-transform: uppercase; }
+h5 { font-size: 16px; font-weight: 400; margin-top: 0; }
+h6 { font-size: 14px; font-weight: 400; margin-top: 0; }
 
-h1, h2, h3, h4 {
-  letter-spacing: 0.05em;
+h1, h2, h3, h4, h5, h6 {
+  letter-spacing: 0.03em;
   margin-bottom: .75em;
-  line-height: 1.25;
+  line-height: 1.4;
 }
 
-h2, h3, h4 {
-  text-transform: uppercase;
+h6 {
+  font-family: 'Roboto-Mono', monospace;
+
 }
 
 hr {
-  border-color: rgba(0,0,0,.25);
+  border-color: rgba(0,0,0,.1);
+  margin: 32px 0;
+}
+
+p {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.618;
+}
+
+ul, ol {
+  list-style: none;
+  padding-left: 0;
 }
