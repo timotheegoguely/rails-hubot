@@ -87,6 +87,11 @@
 
   <% end %>
 
+<% my_boot = Hubot.find(16) %>
+<%= link_to "Accept", hubot_booking_path([my_boot, my_boot.bookings.first ], booking_action: "accept_booking", hubot_id: my_boot.id, booking_id: my_boot.bookings.first.id), method: :patch, class: 'btn btn-success' %>
+
+<%= link_to "Refuse", hubot_booking_path([my_boot, my_boot.bookings.first ], booking_action: "reject_booking", hubot_id: my_boot.id, booking_id: my_boot.bookings.first.id), method: :patch, class: 'btn btn-danger' %>
+<%= my_boot.bookings.first.status %>
 
 
 <% content_for(:after_js) do %>
