@@ -29,10 +29,24 @@
             <h3>My profile infos</h3>
           </a>
           <a class="tab" data-target="#bookings">
-            <h3>My bookings</h3>
+            <h3>
+            My bookings
+            <% if @user.bookings.count > 0 %>
+              (<%= @user.bookings.count %>)
+            <% end %>
+            </h3>
           </a>
           <a class="tab" data-target="#hubots">
             <h3>My hubots</h3>
+            <% if @user.hubots.count > 0 %>
+              (<%= @user.hubots.count %>)
+            <% end %>
+            <% @user.hubots.each do |hubot| %>
+              <% if hubot.bookings.count > 0 %>
+                <p><%= hubot.bookings.count %> booked</p>
+              <% end %>
+
+            <% end %>
 
 
 
@@ -95,6 +109,21 @@
           <div class="tab-content hidden" id="hubots">
 
             <% @user.hubots.each do |hubot| %>
+              <% if hubot.bookings.count > 0 %>
+                <div class="col-xs-6 col-sm-4 col-md-3">
+                  <%= render 'shared/hubot', hubot: booking.hubot %>
+                  <% my_boot = Hubot.last %>
+                  <%= link_to "Accept", hubot_booking_path([my_boot, my_boot.bookings.first ], booking_action: "accept_booking", hubot_id: my_boot.id, booking_id: my_boot.bookings.first.id), method: :patch, class: 'btn btn-success' %>
+
+                    <%= link_to "Refuse", hubot_booking_path([my_boot, my_boot.bookings.first ], booking_action: "reject_booking", hubot_id: my_boot.id, booking_id: my_boot.bookings.first.id), method: :patch, class: 'btn btn-danger' %>
+                    <%= my_boot.bookings.first.status %>
+                </div>
+              <% end %>
+
+            <% end %>
+
+
+            <% @user.hubots.each do |hubot| %>
               <div class="col-xs-6 col-sm-4 col-md-3">
                 <%= render 'shared/hubot', hubot: hubot %>
               </div>
@@ -114,11 +143,7 @@
 
 <% end %>
 
-<% my_boot = Hubot.last %>
-<%= link_to "Accept", hubot_booking_path([my_boot, my_boot.bookings.first ], booking_action: "accept_booking", hubot_id: my_boot.id, booking_id: my_boot.bookings.first.id), method: :patch, class: 'btn btn-success' %>
 
-<%= link_to "Refuse", hubot_booking_path([my_boot, my_boot.bookings.first ], booking_action: "reject_booking", hubot_id: my_boot.id, booking_id: my_boot.bookings.first.id), method: :patch, class: 'btn btn-danger' %>
-<%= my_boot.bookings.first.status %>
 
 
 <% content_for(:after_js) do %>
