@@ -1,5 +1,6 @@
 class User < ApplicationRecord
   has_many :hubots, dependent: :destroy
+  has_many :reviews, through: :bookings
   has_many :bookings
 
   # Include default devise modules. Others available are:
