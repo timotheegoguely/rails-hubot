@@ -1,6 +1,7 @@
 class Hubot < ApplicationRecord
   # Association
   belongs_to :user
+  has_many :bookings
 
   # Validations
   validates :name, presence: true, allow_blank: false
