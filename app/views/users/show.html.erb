@@ -70,9 +70,18 @@
           </div>
           <div class="tab-content hidden" id="bookings">
             <p>my bookings</p>
+
+
+
           </div>
           <div class="tab-content hidden" id="hubots">
-            <p>My hubots</p>
+            <ul>
+
+            <% @user.hubots.each do |hubot| %>
+              <%= render 'shared/hubot', hubot: hubot %>
+            <% end %>
+
+            </ul>
           </div>
 
       </div>
