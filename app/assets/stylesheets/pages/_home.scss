@@ -1,11 +1,3 @@
-.padded {
-  padding: 80px 0px;
-}
-
-.wrapper {
-  width: 100vw;
-}
-
 .wrapper-flex {
   display: flex;
   width: 100vw;
@@ -39,24 +31,32 @@
 }
 
 #intro {
-  background-color: $brand-color;
-  color: white;
-  h3 {
+  background-color: $light-orange;
+  color: $brand-color;
+  h2 {
     margin-top: 0px;
+    margin-bottom: 1em;
+  }
+  p {
+    margin-bottom: 2em;
   }
 }
 
 #fauvea {
-  background-color: rgba(234,236,235,0);
+  color: $blue;
+  background-color: $light-pink;
 }
 #jumbojim {
-  background-color: rgba(251,242,235,0);
+  color: $purple;
+  background-color: $light-yellow;
 }
 #louie {
-  background-color: rgba(208,225,225,0);
+  color: $yellow;
+  background-color: $light-purple;
 }
 #karl {
-  background-color: rgba(237,221,207,0);
+  color: $orange;
+  background-color: $light-green;
 }
 
 
