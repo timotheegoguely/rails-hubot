@@ -33,6 +33,10 @@
           </a>
           <a class="tab" data-target="#hubots">
             <h3>My hubots</h3>
+
+
+
+
           </a>
 
         </div>
@@ -108,9 +112,9 @@
       <%= @user.first_name ? @user.first_name : 'Anonymous' %> <%= @user.last_name ? @user.last_name : '' %>
     </h1>
 
-  <% end %>
+<% end %>
 
-<% my_boot = Hubot.find(16) %>
+<% my_boot = Hubot.last %>
 <%= link_to "Accept", hubot_booking_path([my_boot, my_boot.bookings.first ], booking_action: "accept_booking", hubot_id: my_boot.id, booking_id: my_boot.bookings.first.id), method: :patch, class: 'btn btn-success' %>
 
 <%= link_to "Refuse", hubot_booking_path([my_boot, my_boot.bookings.first ], booking_action: "reject_booking", hubot_id: my_boot.id, booking_id: my_boot.bookings.first.id), method: :patch, class: 'btn btn-danger' %>
