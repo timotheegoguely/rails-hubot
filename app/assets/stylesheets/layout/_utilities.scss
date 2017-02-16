@@ -6,14 +6,17 @@
 
 // Paddings
 .padded {
-  padding-top: 5em;
-  padding-bottom: 5em;
+  padding: 5rem 0;
 }
 
+// Wrappers
 .wrapper {
   display: flex;
   width: 100vw;
   min-height: calc(100vh - 70px);
+}
+.wrapper-small {
+  min-height: 128px;
 }
 
 // Backgrounds
