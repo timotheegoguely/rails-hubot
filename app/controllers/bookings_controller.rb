@@ -25,9 +25,7 @@ class BookingsController < ApplicationController
   end
 
   def update
-    ""
     booking = Booking.find(params[:booking_id])
-    # binding.pry
     if params[:booking_action] == "accept_booking"
       booking.update(status: "accepted")
     elsif params[:booking_action] == "reject_booking"
