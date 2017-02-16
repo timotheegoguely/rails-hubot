@@ -70,14 +70,9 @@
   </div> <!-- /.container -->
 </div> <!-- /.wrapper -->
 
-<%# @booking.reviews.each do |review| %>
-  <!-- <p>" --><%#= review.content %><!-- "</p> -->
-  <!-- <p>rating: --> <%#= review.rating %><!-- </p> -->
-<%# end %>
+<hr>
 
 <%#= link_to 'Rate this Hubot', new_hubot_booking_review_path(@hubot, @booking) %>
-
-<hr>
 
 <% @hubot.reviews.each do |review| %>
   <%= review.content %>
