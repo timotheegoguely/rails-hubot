@@ -18,11 +18,11 @@ class Hubot < ApplicationRecord
 
   CATEGORIES = [
     "Sport coach",
-    "Guardian",
-    "Family Bot",
+    "Guard",
+    "Housemaid",
     "Personal shopper",
     "Sexbot",
-    "Social",
+    "Veterinary",
     "Collector"
   ]
 end

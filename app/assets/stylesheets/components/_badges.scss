@@ -3,7 +3,7 @@
   font-size: 25px;
   line-height: 30px;
   width: 30px;
-  color: grey;
+  color: $gray;
 }
 .badge {
   position: absolute;
@@ -21,13 +21,13 @@
   border-radius: 50%;
 }
 .badge-red {
-  background: #EE5F5B;
+  background: $magenta;
 }
 .badge-green {
-  background: #32B796;
+  background: $light-green;
 }
 .badge-blue {
-  background: #469AE0;
+  background: $blue;
 }
 .badge-black {
   background: black;

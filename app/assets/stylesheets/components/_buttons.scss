@@ -1,0 +1,27 @@
+.btn {
+  position: relative;
+  padding: 0.75em 1em;
+  transition: all 0.1s ease;
+  text-transform: uppercase;
+  border-width: 1px;
+  i {
+    position: absolute;
+    left: 1em;
+    top: 19%;
+  }
+}
+.btn-rounded {
+  border-radius: 32px;
+}
+.btn-atsugi {
+  padding: 0.5em 2em 0.5em 4em;
+  border: 1px solid rgba(92,203,186,.3);
+  border-radius: 0px;
+  color: $brand-color;
+  background-color: $light-orange;
+  &:hover {
+    color: $light-orange;
+    background-color: $brand-color;
+    border: 1px solid $brand-color;
+  }
+}
