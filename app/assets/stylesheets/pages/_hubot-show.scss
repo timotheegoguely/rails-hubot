@@ -12,10 +12,19 @@
 .hubot-description {
   color: rgba(0,0,0,.8);
 }
-
+.hubot-infos {
+  position: relative;
+}
 .hubot-details {
-  .detail {
-    display: inline-block;
-    min-width: 10em;
+  h6, ul {
+    font-size: 14px;
+    line-height: 1.618;
   }
+}
+.hubot-avatar {
+  padding: 0;
+}
+.hubot-booking {
+  padding: 16px;
+  background-color: #fff;
 }
