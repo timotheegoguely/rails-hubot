@@ -1,14 +1,15 @@
-<div class="col-xs-6 col-sm-4 col-md-3">
-  <div class="card">
-    <!--<div class="card-category">Category</div>-->
-    <img class="card-image" style="background: linear-gradient(to bottom, rgba(0,0,0,0.1) 33%, rgba(0,0,0,0.2) 100%), url(<%= asset_path "avatars/#{rand(1..10)}.jpg" %>);">
-    <span class="card-top-left"><%= hubot.model %></span>
-    <span class="card-top-right btn btn-default btn-xs"><%= hubot.category %></span>
-    <div class="card-description">
-      <!-- Button trigger modal -->
-      <!-- <button type="button" class="btn btn-primary pull-right" data-toggle="modal" data-target="#myModal">Book</button> -->
-      <h3><%= hubot.name %></h3>
+<div class="card">
+  <!--<div class="card-category">Category</div>-->
+  <div class="card-image" style="background: linear-gradient(to bottom, rgba(0,0,0,0.1) 33%, rgba(0,0,0,0.2) 100%), url(<%= asset_path "avatars/#{rand(1..10)}.jpg" %>);">
+    <span class="card-top-left model"><%= hubot.model %></span>
+    <span class="card-top-right price">$<%= hubot.price_per_hour %>/h</span>
+  </div>
+  <div class="card-description">
+    <div class="card-top-right rating text-center" title="Rating">
+      <span class="rating-unit"><%= rand(3..5) %></span><span class="rating-decimal">.<%= rand(0..5) %></span>
     </div>
+    <h3><%= hubot.name %></h3>
+    <span class="category"><%= hubot.category %><span>
   </div>
 
   <%= link_to '', hubot_path(hubot), class: "card-link" %>

@@ -3,6 +3,7 @@ class Hubot < ApplicationRecord
   belongs_to :user
   has_many :reviews, through: :bookings
   has_many :bookings
+
   # Validations
   validates :name, presence: true, allow_blank: false
   validates :category, presence: true, allow_blank: false
