@@ -6,6 +6,14 @@ class UsersController < ApplicationController
   # GET /users/:id
   def show
     @user_coordinates = { lat: @user.latitude, lng: @user.longitude }
+
+    # pendings = []
+    # @user.hubots.each do |hubot|
+    #   pendings << hubot.bookings.find_by(status:"pending")
+
+    # end
+    # @pending = 0
+
   end
 
   # GET /users/:id/hubots
