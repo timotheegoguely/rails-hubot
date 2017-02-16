@@ -44,7 +44,7 @@
       <div class="modal-body">
         Please choose your dates
 
-        <%= simple_form_for [@hubot, @booking], html: { class: 'form-horizontal' }, wrapper: :horizontal_form do |f| %>
+        <%= simple_form_for [@hubot, @new_booking], html: { class: 'form-horizontal' }, wrapper: :horizontal_form do |f| %>
             <%= f.error_notification %>
 
             <%= f.input :check_in %>
@@ -66,4 +66,4 @@
   <p>rating: <%= review.rating %></p>
 <% end %>
 
-<%= link_to 'Rate this Hubot' %>
+<%= link_to 'Rate this Hubot', new_hubot_booking_review_path(@hubot, @booking) %>

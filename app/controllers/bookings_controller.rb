@@ -7,7 +7,7 @@ class BookingsController < ApplicationController
     @booking.total_price = (@booking.check_out - @booking.check_in) * @hubot.price_per_hour
 
     if @booking.save
-      redirect_to user_booking_path(current_user)
+      redirect_to user_path(current_user)
     else
       render "show"
     end

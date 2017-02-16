@@ -7,6 +7,7 @@ Rails.application.routes.draw do
     member do
       get "hubots", to: "users#hubots"
     end
+    resources :reviews, only: [ :new, :create ]
   end
 
   resources :hubots, only: [ :index, :show, :new, :create, :edit, :update, :destroy ] do
@@ -14,5 +15,6 @@ Rails.application.routes.draw do
       resources :reviews, only: [ :new, :create ]
     end
   end
+
   get 'search', to: 'hubots#search'
 end
