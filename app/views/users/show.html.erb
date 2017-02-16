@@ -2,72 +2,105 @@
   <%= @user.first_name ? @user.first_name : 'anonymous' %> <%= @user.last_name ? @user.last_name : '' %>
 <% end %>
 
+<%= link_to "← Back", :back, class: "btn btn-default " %>
 
+<% if user_signed_in? %>
 
-<div class="container" style="padding-top: 50px">
+  <div class="container"">
 
-  <%= link_to "← Back", :back, class: "btn btn-default" %>
-
-  <h1>
-    <%= @user.first_name ? @user.first_name : 'Anonymous' %> <%= @user.last_name ? @user.last_name : '' %>
-  </h1>
-  <div class="row">
-    <div class="col-md-2 ">
-      <%= image_tag "johndoe.jpg", class:"avatar-xxlarge" %>
-    </div>
-    <div class="col-md-10" style="background: #F8F7F7">
-      <span>
-        <i class="fa fa-envelope-o" aria-hidden="true"></i> <%= @user.email %>
-        <% if @user.phone_number %>
-             |   <i class="fa fa-mobile" aria-hidden="true"></i> <%= @user.phone_number %>
-        <% end %>
-      </span>
-      <p><%= @user.description %></p>
-    </div>
-    <%= link_to "Edit", edit_user_registration_path(@user), class: "btn btn-primary" %>
-  </div>
-
-  <% if @user.hubots.count > 0 %>
-    <div class="row" style="padding-top: 50px">
-
-      <div class="col-md-offset-2 col-md-8 text-center">
-        <h4><%= @user.first_name ? @user.first_name : 'Anonymous' %> <%= @user.last_name ? @user.last_name : '' %>'s best hubot (in reviews)</h4>
-      </div>
-    </div>
-    <p>
-      <% @user.bookings.each do |booking| %>
-        <%= booking.total_price %>
-      <% end %>
-    </p>
-
-    <div class="row">
-      <div class="col-md-offset-3 col-md-6">
-        <div class="card" style="background-image: linear-gradient(rgba(100,200,0,0.3), rgba(350,100,0,0.2)); margin: 50px;">
-          <div class="card-category"><%= @user.hubots[0].category %></div>
-          <div class="card-description">
-            <h2><%= @user.hubots[0].name %></h2>
-            <p><%= @user.hubots[0].model %><br><%= @user.hubots[0].manufacturer %></p>
-          </div>
-          <%= image_tag "hubot.jpg", class:"card-user avatar-xxlarge" %>
-          <a class="card-link" href="#" ></a>
-
+      <div class="row">
+        <div class="col-md-1">
+          <%= image_tag "johndoe.jpg", class:"avatar-xlarge" %>
+        </div>
+        <div class="col-md-11">
+          <h1>
+            Welcome <%= @user.first_name %> <%= @user.last_name %> !
+          </h1>
         </div>
       </div>
 
-    </div>
+      <!-- tabs headers -->
+
+      <div class="row">
+
+        <div class="tabs">
+
+          <a class="tab active" data-target="#profile">
+            <h3>My profile infos</h3>
+          </a>
+          <a class="tab" data-target="#bookings">
+            <h3>My bookings</h3>
+          </a>
+          <a class="tab" data-target="#hubots">
+            <h3>My hubots</h3>
+          </a>
+
+        </div>
+
+      </div>
 
 
-  <% else %>
-    <h4><%= @user.first_name ? @user.first_name : 'Anonymous' %> <%= @user.last_name ? @user.last_name : '' %> has no hubot to rent :'( </h4>
+      <!-- tabs contents -->
+
+      <div class="row">
+
+          <div class="tab-content" id="profile">
+
+            <h4>About you</h4>
+            <p><%= @user.description %></p>
+            <h4>Your infos</h4>
+            <table class="table-striped">
+            <tr>
+              <td>email</td>
+              <td><%= @user.email %></td>
+            </tr>
+            <tr>
+              <td>Phone</td>
+              <td><%= @user.phone_number %></td>
+            </tr>
+            <tr>
+              <td>Address</td>
+              <td><%= @user.address %></td>
+            </tr>
+          </table>
+
+
+
+
+          </div>
+          <div class="tab-content hidden" id="bookings">
+            <p>my bookings</p>
+          </div>
+          <div class="tab-content hidden" id="hubots">
+            <p>My hubots</p>
+          </div>
+
+      </div>
+
+  </div>
+
+<% else %>
+
+    <h1>
+      <%= @user.first_name ? @user.first_name : 'Anonymous' %> <%= @user.last_name ? @user.last_name : '' %>
+    </h1>
+
   <% end %>
 
-</div>
+
 
 <% content_for(:after_js) do %>
   <%= javascript_tag do %>
     $(document).ready(function() {
       var coord = <%= raw @user_coordinates.to_json %>;
       console.log('User coordinates are ' + coord.lat + ', ' + coord.lng);
+
+      $('.tab').on('click', function(event) {
+        $('.tab').removeClass('active');
+        $(this).addClass('active');
+        $(".tab-content").addClass('hidden');
+        $($(this).data('target')).removeClass('hidden');
+      });
     });
   <% end %>
 <% end %>
