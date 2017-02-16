@@ -6,26 +6,15 @@
 
 // Paddings
 .padded {
-  padding-top: 5em;
-  padding-bottom: 5em;
+  padding: 5rem 0;
 }
 
-.padded-small {
-  padding-top: 5px;
-  padding-bottom: 5px;
-}
-
-.marged-small {
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
+// Wrappers
 .wrapper {
   display: flex;
   width: 100vw;
   min-height: calc(100vh - 70px);
 }
-
 .wrapper-small {
   min-height: 128px;
 }
