@@ -10,7 +10,9 @@
 
   <div class="row">
     <% @hubots.each do |hubot| %>
-      <%= render 'shared/hubot', hubot: hubot %>
+      <div class="col-xs-6 col-sm-4 col-md-3">
+        <%= render 'shared/hubot', hubot: hubot %>
+      </div>
     <% end %>
   </div>
 </div>
