@@ -69,10 +69,29 @@
 
           </div>
           <div class="tab-content hidden" id="bookings">
-            <p>my bookings</p>
+            <% @user.bookings.each do |booking| %>
+
+              <p>
+                Your booked <%= booking.hubot.name %> <br>
+                From: <%= booking.check_in %> <br>
+                To: <%= booking.check_out %> <br>
+                Total price: $<%= booking.total_price %> <br>
+                Owner: <%= link_to booking.hubot.user.first_name, user_path(booking.hubot.user) %>
+              </p>
+              <%= render 'shared/hubot', hubot: booking.hubot %>
+              <hr>
+
+            <% end %>
+
+
+
           </div>
           <div class="tab-content hidden" id="hubots">
-            <p>My hubots</p>
+
+            <% @user.hubots.each do |hubot| %>
+              <%= render 'shared/hubot', hubot: hubot %>
+            <% end %>
+
           </div>
 
       </div>
@@ -87,6 +106,11 @@
 
   <% end %>
 
+<% my_boot = Hubot.find(16) %>
+<%= link_to "Accept", hubot_booking_path([my_boot, my_boot.bookings.first ], booking_action: "accept_booking", hubot_id: my_boot.id, booking_id: my_boot.bookings.first.id), method: :patch, class: 'btn btn-success' %>
+
+<%= link_to "Refuse", hubot_booking_path([my_boot, my_boot.bookings.first ], booking_action: "reject_booking", hubot_id: my_boot.id, booking_id: my_boot.bookings.first.id), method: :patch, class: 'btn btn-danger' %>
+<%= my_boot.bookings.first.status %>
 
 
 <% content_for(:after_js) do %>
