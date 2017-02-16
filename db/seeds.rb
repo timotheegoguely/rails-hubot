@@ -1,3 +1,5 @@
+Review.destroy_all
+Booking.destroy_all
 Hubot.destroy_all
 User.destroy_all
 
@@ -348,7 +350,7 @@ hubot13 = Hubot.create!(
   price_per_hour: 300,
   composition: "Plastic (56 %), metal (2 %), synthetic materials (23 %), kevlar (19 %)",
   maintenance: "By hand",
-  user_id: user6.id
+  user_id: user1.id
 )
 hubot14 = Hubot.create!(
   name: "Kevin",
@@ -375,7 +377,7 @@ hubot14 = Hubot.create!(
   price_per_hour: 300,
   composition: "Plastic (56 %), metal (2 %), synthetic materials (23 %), kevlar (19 %)",
   maintenance: "By hand",
-  user_id: user6.id
+  user_id: user1.id
 )
 hubot15 = Hubot.create!(
   name: "Rihanna",
@@ -402,7 +404,7 @@ hubot15 = Hubot.create!(
   price_per_hour: 300,
   composition: "Plastic (56 %), metal (2 %), synthetic materials (23 %), kevlar (19 %)",
   maintenance: "By hand",
-  user_id: user6.id
+  user_id: user2.id
 )
 hubot16 = Hubot.create!(
   name: "Fany",
@@ -429,7 +431,7 @@ hubot16 = Hubot.create!(
   price_per_hour: 300,
   composition: "Plastic (56 %), metal (2 %), synthetic materials (23 %), kevlar (19 %)",
   maintenance: "By hand",
-  user_id: user6.id
+  user_id: user3.id
 )
 hubot17 = Hubot.create!(
   name: "Julia",
@@ -456,7 +458,7 @@ hubot17 = Hubot.create!(
   price_per_hour: 300,
   composition: "Plastic (56 %), metal (2 %), synthetic materials (23 %), kevlar (19 %)",
   maintenance: "By hand",
-  user_id: user6.id
+  user_id: user3.id
 )
 hubot18 = Hubot.create!(
   name: "Antonio",
@@ -483,7 +485,7 @@ hubot18 = Hubot.create!(
   price_per_hour: 300,
   composition: "Plastic (56 %), metal (2 %), synthetic materials (23 %), kevlar (19 %)",
   maintenance: "By hand",
-  user_id: user6.id
+  user_id: user2.id
 )
 hubot19 = Hubot.create!(
   name: "Maeva",
@@ -510,7 +512,7 @@ hubot19 = Hubot.create!(
   price_per_hour: 300,
   composition: "Plastic (56 %), metal (2 %), synthetic materials (23 %), kevlar (19 %)",
   maintenance: "By hand",
-  user_id: user6.id
+  user_id: user2.id
 )
 hubot20 = Hubot.create!(
   name: "Manuel",
@@ -537,7 +539,7 @@ hubot20 = Hubot.create!(
   price_per_hour: 300,
   composition: "Plastic (56 %), metal (2 %), synthetic materials (23 %), kevlar (19 %)",
   maintenance: "By hand",
-  user_id: user6.id
+  user_id: user2.id
 )
 hubot21 = Hubot.create!(
   name: "Ruby",
@@ -564,7 +566,7 @@ hubot21 = Hubot.create!(
   price_per_hour: 300,
   composition: "Plastic (56 %), metal (2 %), synthetic materials (23 %), kevlar (19 %)",
   maintenance: "By hand",
-  user_id: user6.id
+  user_id: user2.id
 )
 hubot22 = Hubot.create!(
   name: "Diane",
@@ -591,7 +593,7 @@ hubot22 = Hubot.create!(
   price_per_hour: 300,
   composition: "Plastic (56 %), metal (2 %), synthetic materials (23 %), kevlar (19 %)",
   maintenance: "By hand",
-  user_id: user6.id
+  user_id: user2.id
 )
 hubot23 = Hubot.create!(
   name: "Rachel",
@@ -618,7 +620,7 @@ hubot23 = Hubot.create!(
   price_per_hour: 300,
   composition: "Plastic (56 %), metal (2 %), synthetic materials (23 %), kevlar (19 %)",
   maintenance: "By hand",
-  user_id: user6.id
+  user_id: user2.id
 )
 hubot24 = Hubot.create!(
   name: "Amy",
@@ -645,7 +647,7 @@ hubot24 = Hubot.create!(
   price_per_hour: 300,
   composition: "Plastic (56 %), metal (2 %), synthetic materials (23 %), kevlar (19 %)",
   maintenance: "By hand",
-  user_id: user6.id
+  user_id: user1.id
 )
 hubot25 = Hubot.create!(
   name: "Juan-Carlos",
@@ -672,7 +674,7 @@ hubot25 = Hubot.create!(
   price_per_hour: 300,
   composition: "Plastic (56 %), metal (2 %), synthetic materials (23 %), kevlar (19 %)",
   maintenance: "By hand",
-  user_id: user6.id
+  user_id: user1.id
 )
 hubot26 = Hubot.create!(
   name: "Annita",
@@ -699,5 +701,5 @@ hubot26 = Hubot.create!(
   price_per_hour: 300,
   composition: "Plastic (56 %), metal (2 %), synthetic materials (23 %), kevlar (19 %)",
   maintenance: "By hand",
-  user_id: user6.id
+  user_id: user1.id
 )

@@ -4,34 +4,14 @@
 
 
 <div class="container">
-<h1>Hubots list</h1>
+<h1>All hubots</h1>
 
   <%= link_to 'Add a new Hubot', new_hubot_path, class: "btn btn-default" %>
 
   <div class="row">
-
     <% @hubots.each do |hubot| %>
-
-      <div class="col-xs-6 col-sm-4 col-md-3">
-        <div class="card">
-          <!--<div class="card-category">Category</div>-->
-          <div class="card-image" style="background: linear-gradient(to bottom, rgba(0,0,0,0.1) 33%, rgba(0,0,0,0.2) 100%), url(<%= asset_path "avatars/#{rand(1..10)}.jpg" %>);">
-            <span class="card-top-left"><%= hubot.model %></span>
-            <span class="card-top-right btn btn-default btn-xs"><%= hubot.category %></span>
-          </div>
-          <div class="card-description">
-            <!-- Button trigger modal -->
-            <!-- <button type="button" class="btn btn-primary pull-right" data-toggle="modal" data-target="#myModal">Book</button> -->
-            <h3><%= hubot.name %></h3>
-          </div>
-
-          <%= link_to '', hubot_path(hubot), class: "card-link" %>
-
-        </div>
-      </div>
-
+        <%= render 'shared/hubot', hubot: hubot %>
     <% end %>
-
   </div>
 </div>
 
