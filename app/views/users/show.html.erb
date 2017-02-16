@@ -78,7 +78,9 @@
                 Total price: $<%= booking.total_price %> <br>
                 Owner: <%= link_to booking.hubot.user.first_name, user_path(booking.hubot.user) %>
               </p>
-              <%= render 'shared/hubot', hubot: booking.hubot %>
+              <div class="col-xs-6 col-sm-4 col-md-3">
+                <%= render 'shared/hubot', hubot: booking.hubot %>
+              </div>
               <hr>
 
             <% end %>
@@ -89,7 +91,9 @@
           <div class="tab-content hidden" id="hubots">
 
             <% @user.hubots.each do |hubot| %>
-              <%= render 'shared/hubot', hubot: hubot %>
+              <div class="col-xs-6 col-sm-4 col-md-3">
+                <%= render 'shared/hubot', hubot: hubot %>
+              </div>
             <% end %>
 
           </div>
