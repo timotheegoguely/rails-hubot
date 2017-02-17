@@ -1,5 +1,6 @@
 class HubotsController < ApplicationController
   skip_before_action :authenticate_user!, only: [ :index, :search, :show ]
+  before_action :get_search_params, only: [ :search, :show ]
 
   def search
     @hubots = Hubot.where("category LIKE ?", params[:category])
@@ -13,6 +14,7 @@ class HubotsController < ApplicationController
     @hubot = Hubot.find(params[:id])
     @new_booking = Booking.new
     @new_review = Review.new
+    @hours = ( DateTime.strptime(@checkout, '%m/%d/%Y %H:%M %p').to_i - DateTime.strptime(@checkin, '%m/%d/%Y %H:%M %p').to_i ).fdiv(3600)
     # if
     # @booking =
   end
@@ -54,5 +56,11 @@ class HubotsController < ApplicationController
     params.require(:hubot).permit(:name, :category, :manufacturer, :model, :age,
                                   :turing_test_score, :price_per_hour, :autonomy,
                                   :charging_time, :gender, :skin_color, :photo, :photo_cache)
+  end
+
+  def get_search_params
+    @category = params["category"]
+    @checkin = params["check_in"]
+    @checkout = params["check_out"]
   end
 end

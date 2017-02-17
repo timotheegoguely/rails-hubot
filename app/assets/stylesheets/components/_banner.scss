@@ -26,24 +26,6 @@
   > .row > div { // .col-xs-12
     padding: 0;
   }
-  form {
-    .form-group {
-      padding: 0px;
-      margin-bottom: 0px;
-      select, input, button {
-        padding: 0px 16px;
-        height: 64px;
-      }
-      select {
-        border-radius: 0;
-        -webkit-appearance: none;
-        padding: 0px 16px;
-      }
-    }
-    #search button {
-      width: 100%;
-    }
-  }
 }
 .banner-background {
   position: absolute;
