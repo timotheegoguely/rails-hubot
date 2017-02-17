@@ -5,8 +5,8 @@ Review.destroy_all
 Booking.destroy_all
 
 # Users
-user1 = User.create!(email: "timotheegoguely@gmail.com", password:"123456", first_name:"Timothée", last_name:"Goguely", phone_number:"+33 6 28 48 39 11", address:"98, avenue du Marechal Juin", zipcode:"50000", city:"Saint-Lô", gender:"male", description:"Nullam id dolor id nibh ultricies vehicula ut id elit.", birth_date: DateTime.new(1990,1,1), owner: true)
-user2 = User.create!(email: "akram.dhane@gmail.com", password:"123456", first_name:"Akram", last_name:"Dhane", phone_number:"+33 6 84 37 94 29", address:"75, rue Pierre Motte", zipcode:"97180", city:"Sainte-Anne", gender:"male", description:"Praesent commodo cursus magna, vel scelerisque nisl consectetur et.", birth_date: DateTime.new(1980,1,1), owner: true)
+user1 = User.create!(email: "timotheegoguely@gmail.com", password:"123456", first_name:"Timothée", last_name:"Goguely", phone_number:"+33 6 28 48 39 11", address:"98, avenue du Marechal Juin", zipcode:"50000", city:"Saint-Lô", gender:"male", description:"Nullam id dolor id nibh ultricies vehicula ut id elit.", birth_date: DateTime.new(1991,8,12), owner: true)
+user2 = User.create!(email: "akram.dhane@gmail.com", password:"123456", first_name:"Akram", last_name:"Dhane", phone_number:"+33 6 84 37 94 29", address:"75, rue Pierre Motte", zipcode:"97180", city:"Sainte-Anne", gender:"male", description:"Praesent commodo cursus magna, vel scelerisque nisl consectetur et.", birth_date: DateTime.new(1983,1,1), owner: true)
 user3 = User.create!(email: "tom@yahoo.com", password:"123456", first_name:"Tom", last_name:"Sayer", phone_number:"+33 6 00 74 82 16", address:"89, Rue Marie De Médicis", zipcode:"06400", city:"Cannes", gender:"male", description:"Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.", birth_date: DateTime.new(1982,1,1), owner: true)
 user4 = User.create!(email: "mathew@gmail.com", password:"123456", first_name:"Mathew", last_name:"Barney", phone_number:"+33 6 39 28 44 17", address:"64, rue Banaudon", zipcode:"69005", city:"Lyon", gender:"male", description:"Morbi leo risus, porta ac consectetur ac, vestibulum at eros.", birth_date: DateTime.new(1983,1,1), owner: true)
 user5 = User.create!(email: "tim@gmail.com", password:"123456", first_name:"Tim", last_name:"Barks", phone_number:"+33 6 93 47 28 11", address:"66, rue du Paillle en queue", zipcode:"78130", city:"Les Mureaux", gender:"male", description:"Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.", birth_date: DateTime.new(1981,1,1), owner: true)
@@ -80,7 +80,7 @@ hubot3 = Hubot.create!(
   skin_color: "asian",
   model: "Maddy",
   manufacturer: "Atsugi Robotics",
-  year: DateTime.new(2007,01,01),
+  year: DateTime.new(2007,1,1),
   origin: "South Corea",
   category: "Sport coach",
   weight: 33,
@@ -106,7 +106,7 @@ hubot4 = Hubot.create!(
   skin_color: "white",
   model: "Louie",
   manufacturer: "Atsugi Robotics",
-  year: DateTime.new(2010,01,01),
+  year: DateTime.new(2010,1,1),
   origin: "France",
   category: "Personal shopper",
   weight: 38,
@@ -162,7 +162,7 @@ hubot6 = Hubot.create!(
   skin_color: "white",
   model: "Babette",
   manufacturer: "Atsugi Robotics",
-  year: DateTime.new(2011,01,01),
+  year: DateTime.new(2011,1,1),
   origin: "South Korea",
   category: "Sexbot",
   weight: 35,
@@ -191,7 +191,7 @@ hubot7 = Hubot.create!(
   skin_color: "white",
   model: "Wish",
   manufacturer: "Atsugi Robotics",
-  year: DateTime.new(2013,01,01),
+  year: DateTime.new(2013,1,1),
   origin: "Sweden",
   category: "Sport coach",
   weight: 35,
@@ -220,7 +220,7 @@ hubot8 = Hubot.create!(
   skin_color: "white",
   model: "Wish",
   manufacturer: "Atsugi Robotics",
-  year: DateTime.new(2013,01,01),
+  year: DateTime.new(2013,1,1),
   origin: "Sweden",
   category: "Family bot",
   weight: 35,
@@ -231,7 +231,7 @@ hubot8 = Hubot.create!(
   price_per_hour: 300,
   deposit: 150,
   composition: "Plastic (56 %), metal (2 %), synthetic materials (23 %), kevlar (19 %)",
-  acessories: []
+  accessories: [],
   maintenance: "Hand washing",
   user_id: user6.id
 )
@@ -249,7 +249,7 @@ hubot9 = Hubot.create!(
   skin_color: "white",
   model: "Georges",
   manufacturer: "Atsugi Robotics",
-  year: DateTime.new(2013,01,01),
+  year: DateTime.new(2013,1,1),
   origin: "Sweden",
   category: "Guardian",
   weight: 35,
@@ -278,7 +278,7 @@ hubot10 = Hubot.create!(
   skin_color: "white",
   model: "Wish",
   manufacturer: "Atsugi Robotics",
-  year: DateTime.new(2013,01,01),
+  year: DateTime.new(2013,1,1),
   origin: "Sweden",
   category: "Collector",
   weight: 35,
@@ -307,7 +307,7 @@ hubot11 = Hubot.create!(
   skin_color: "white",
   model: "Wish",
   manufacturer: "Atsugi Robotics",
-  year: DateTime.new(2013,01,01),
+  year: DateTime.new(2013,1,1),
   origin: "Belgium",
   category: "Social",
   weight: 35,
@@ -336,7 +336,7 @@ hubot12 = Hubot.create!(
   skin_color: "white",
   model: "Wish",
   manufacturer: "Atsugi Robotics",
-  year: DateTime.new(2013,01,01),
+  year: DateTime.new(2013,1,1),
   origin: "France",
   category: "Social",
   weight: 35,
@@ -365,7 +365,7 @@ hubot13 = Hubot.create!(
   skin_color: "white",
   model: "Wish",
   manufacturer: "Atsugi Robotics",
-  year: DateTime.new(2013,01,01),
+  year: DateTime.new(2013,1,1),
   origin: "France",
   category: "Sport coach",
   weight: 35,
@@ -394,7 +394,7 @@ hubot14 = Hubot.create!(
   skin_color: "white",
   model: "Wish",
   manufacturer: "Atsugi Robotics",
-  year: DateTime.new(2013,01,01),
+  year: DateTime.new(2013,1,1),
   origin: "Danemark",
   category: "Sexbot",
   weight: 35,
@@ -423,7 +423,7 @@ hubot15 = Hubot.create!(
   skin_color: "white",
   model: "Wish",
   manufacturer: "Atsugi Robotics",
-  year: DateTime.new(2013,01,01),
+  year: DateTime.new(2013,1,1),
   origin: "USA",
   category: "Sexbot",
   weight: 35,
@@ -452,7 +452,7 @@ hubot16 = Hubot.create!(
   skin_color: "white",
   model: "Wish",
   manufacturer: "Atsugi Robotics",
-  year: DateTime.new(2013,01,01),
+  year: DateTime.new(2013,1,1),
   origin: "Sweden",
   category: "Collector",
   weight: 35,
@@ -463,7 +463,7 @@ hubot16 = Hubot.create!(
   price_per_hour: 300,
   deposit: 115,
   composition: "Plastic (56 %), metal (2 %), synthetic materials (23 %), kevlar (19 %)",
-  accessories: ["Votre nom en trending topics monde pendant 7 jours sur Twitter à compter de la mise en marche du Hubot", "Assurance vol gratuite pendant les 3 premiers jours", "Une séance photo avec Terry Richardson offerte"]
+  accessories: ["Votre nom en trending topics monde pendant 7 jours sur Twitter à compter de la mise en marche du Hubot", "Assurance vol gratuite pendant les 3 premiers jours", "Une séance photo avec Terry Richardson offerte"],
   maintenance: "Hand washing",
   user_id: user3.id
 )
@@ -481,7 +481,7 @@ hubot17 = Hubot.create!(
   skin_color: "white",
   model: "Louise",
   manufacturer: "Atsugi Robotics",
-  year: DateTime.new(2013,01,01),
+  year: DateTime.new(2013,1,1),
   origin: "France",
   category: "Personal shopper",
   weight: 35,
@@ -510,7 +510,7 @@ hubot18 = Hubot.create!(
   skin_color: "white",
   model: "Wish",
   manufacturer: "Atsugi Robotics",
-  year: DateTime.new(2013,01,01),
+  year: DateTime.new(2013,1,1),
   origin: "Porto-Rico",
   category: "Guardian",
   weight: 35,
@@ -538,7 +538,7 @@ hubot19 = Hubot.create!(
   skin_color: "white",
   model: "Wish",
   manufacturer: "Atsugi Robotics",
-  year: DateTime.new(2013,01,01),
+  year: DateTime.new(2013,1,1),
   origin: "Sweden",
   category: "Collector",
   weight: 35,
@@ -566,7 +566,7 @@ hubot20 = Hubot.create!(
   skin_color: "white",
   model: "Wish",
   manufacturer: "Atsugi Robotics",
-  year: DateTime.new(2013,01,01),
+  year: DateTime.new(2013,1,1),
   origin: "Mexico",
   category: "Guardian",
   weight: 35,
@@ -594,7 +594,7 @@ hubot21 = Hubot.create!(
   skin_color: "white",
   model: "Wish",
   manufacturer: "Atsugi Robotics",
-  year: DateTime.new(2013,01,01),
+  year: DateTime.new(2013,1,1),
   origin: "Egypt",
   category: "Collector",
   weight: 35,
@@ -622,7 +622,7 @@ hubot22 = Hubot.create!(
   skin_color: "white",
   model: "Wish",
   manufacturer: "Atsugi Robotics",
-  year: DateTime.new(2013,01,01),
+  year: DateTime.new(2013,1,1),
   origin: "USA",
   category: "Family bot",
   weight: 35,
@@ -650,7 +650,7 @@ hubot23 = Hubot.create!(
   skin_color: "white",
   model: "Wish",
   manufacturer: "Atsugi Robotics",
-  year: DateTime.new(2013,01,01),
+  year: DateTime.new(2013,1,1),
   origin: "Sweden",
   category: "Sexbot",
   weight: 35,
@@ -678,7 +678,7 @@ hubot24 = Hubot.create!(
   skin_color: "white",
   model: "Wish",
   manufacturer: "Atsugi Robotics",
-  year: DateTime.new(2013,01,01),
+  year: DateTime.new(2013,1,1),
   origin: "Sweden",
   category: "Social",
   weight: 35,
@@ -706,7 +706,7 @@ hubot25 = Hubot.create!(
   skin_color: "white",
   model: "Wish",
   manufacturer: "Atsugi Robotics",
-  year: DateTime.new(2013,01,01),
+  year: DateTime.new(2013,1,1),
   origin: "Brazil",
   category: "Sexbot",
   weight: 35,
@@ -734,7 +734,7 @@ hubot26 = Hubot.create!(
   skin_color: "white",
   model: "Wish",
   manufacturer: "Atsugi Robotics",
-  year: DateTime.new(2013,01,01),
+  year: DateTime.new(2013,1,1),
   origin: "Sweden",
   category: "Personal shopper",
   weight: 35,
@@ -757,11 +757,11 @@ hubot26 = Hubot.create!(
     "Danseur-DJ-tatoueur (équipement fourni), Tino n’est jamais à court d’idées pour animer une soirée. \n
     Enterrement de vie de garçon, anniversaire, remise de diplôme, pensez à Tino ! Avec lui, vous passerez la soirée de votre vie, grâce à ses 200 playlists thématiques aussi adaptées aux nostalgiques des 60’s qu’aux fans d’André 3000 !  \n
     Attention cependant : pour préserver la réputation des organisateurs de la soirée, il a été programmé pour refuser de passer Capitaine Flam.",
-  gender: "Male",
-  skin_color: "White",
+  gender: "male",
+  skin_color: "white",
   model: "Tino",
   manufacturer: "Tech-advances",
-  year: DateTime.new(2019,04,01),
+  year: DateTime.new(2019,4,1),
   origin: "France",
   category: "Dance",
   weight: 73,
@@ -787,11 +787,11 @@ hubot26 = Hubot.create!(
     Ses capacités auditives hyper développées lui permettent d'entendre votre voiture arriver à plusieurs centaines de mètres. \n
     Ainsi, il prendra le volant pour garder votre véhicule, alors que vous trouverez une tasse de thé fumant, ou un bière bien fraîche et décapsulée pour vous sur la table du salon ! \n
     Parsley est livré avec un logiciel « saveurs de nos terroirs » exclusif pour réaliser à la perfection les plats en sauce qui feront de chaque dîner en famille un repas de fête. Fin cordon bleu, Parsley sait accommoder à merveille le gibier.",
-  gender: "Male",
-  skin_color: "White",
+  gender: "male",
+  skin_color: "white",
   model: "Pasley",
   manufacturer: "Tesla",
-  year: DateTime.new(2019,04,01),
+  year: DateTime.new(2019,4,1),
   origin: "USA",
   category: "Butler",
   weight: 72,
@@ -802,7 +802,7 @@ hubot26 = Hubot.create!(
   price_per_hour: 90,
   deposit: 125,
   composition: "Plastique (60 %), métal (19 %), matériaux de synthèse (11 %)",
-  accessories: ["Le logiciel « saveurs de nos terroirs »", "Un cric", "Une brosse à vêtements en poils de sanglierle", "Logiciel « management d’équipe et maintenance » spécial Hubots"]
+  accessories: ["Le logiciel « saveurs de nos terroirs »", "Un cric", "Une brosse à vêtements en poils de sanglierle", "Logiciel « management d’équipe et maintenance » spécial Hubots"],
   maintenance: "Kärcher",
   user_id: user3.id
 )
@@ -815,11 +815,11 @@ hubot26 = Hubot.create!(
      Doté de toutes les caractéristiques nécessaires pour être agent de sécurité, veilleur de nuit et garde du corps, Aldo est un investissement que vous ne regretterez pas. Enfin, votre famille, vos biens, et votre business seront à l’abri ! \n
       Aldo exerce tout d’abord une fonction préventive : sa carrure dissuade les plus malintentionnés ! Sa seule présence vous garantira la paix. \n
       Sa force, sa maîtrise de la plupart des arts martiaux (Kung-Fu, Jiu-Jitsu, Kalarippayatt et Sistema) ainsi que son obéissance absolue à votre voix vous assureront une sécurité totale. Aldo est doté d’un radar qui détecte les présences inopportunes et d’un logiciel de scanner facial connecté à la base de données de la police nationale.",
-  gender: "Male",
-  skin_color: "White",
+  gender: "male",
+  skin_color: "white",
   model: "Aldo",
   manufacturer: "Hitachichi",
-  year: DateTime.new(2022,06,05),
+  year: DateTime.new(2022,6,5),
   origin: "Japan",
   category: "Guardian",
   weight: 73,
@@ -842,11 +842,11 @@ hubot26 = Hubot.create!(
     "Formé pour intervenir à toutes les étapes de la vie, de la petite enfance au 3e âge, George peut également pratiquer des gestes esthétiques simples (injections de botox, comblement des sillons nasogéniens, pédicure et palpé-roulé). \n
      Il est également doté de connaissances élémentaires en médecine animale (chat et chien seulement). \n
     Bien entendu, George maîtrise les techniques de premiers secours, de réanimation et la méthode ancestrale du Dim Mak.",
-  gender: "Male",
-  skin_color: "White",
+  gender: "male",
+  skin_color: "white",
   model: "Georges",
   manufacturer: "Samsung",
-  year: DateTime.new(2017,03,02),
+  year: DateTime.new(2017,3,2),
   origin: "South Korea",
   category: "Paramedical",
   weight: 77,
@@ -870,11 +870,11 @@ hubot26 = Hubot.create!(
     "Formé pour intervenir à toutes les étapes de la vie, de la petite enfance au 3e âge, George peut également pratiquer des gestes esthétiques simples (injections de botox, comblement des sillons nasogéniens, pédicure et palpé-roulé). \n
     Il est également doté de connaissances élémentaires en médecine animale (chat et chien seulement). \n
     Bien entendu, George maîtrise les techniques de premiers secours, de réanimation et la méthode ancestrale du Dim Mak.",
-  gender: "Male",
-  skin_color: "White",
+  gender: "male",
+  skin_color: "white",
   model: "Georges",
   manufacturer: "Tech-advances",
-  year: DateTime.new(2023,09,01),
+  year: DateTime.new(2023,9,1),
   origin: "France",
   category: "Butler",
   weight: 77,
@@ -898,11 +898,11 @@ hubot26 = Hubot.create!(
     "Formé pour intervenir à toutes les étapes de la vie, de la petite enfance au 3e âge, George peut également pratiquer des gestes esthétiques simples (injections de botox, comblement des sillons nasogéniens, pédicure et palpé-roulé). \n
     Il est également doté de connaissances élémentaires en médecine animale (chat et chien seulement). \n
     Bien entendu, George maîtrise les techniques de premiers secours, de réanimation et la méthode ancestrale du Dim Mak.",
-  gender: "Male"
-  skin_color: "White",
+  gender: "male",
+  skin_color: "white",
   model: "Georges",
   manufacturer: "Hi-Techn",
-  year: DateTime.new(2023,09,01),
+  year: DateTime.new(2023,9,1),
   origin: "Italy",
   category: "Paramedical",
   weight: 76,
@@ -926,11 +926,11 @@ hubot26 = Hubot.create!(
     Doté de toutes les caractéristiques nécessaires pour être agent de sécurité, veilleur de nuit et garde du corps, Aldo est un investissement que vous ne regretterez pas. Enfin, votre famille, vos biens, et votre business seront à l’abri! \n
     Aldo exerce tout d’abord une fonction préventive : sa carrure dissuade les plus malintentionnés ! Sa seule présence vous garantira la paix. Sa force, sa maîtrise de la plupart des arts martiaux (Kung-Fu, Jiu-Jitsu, Kalarippayatt et Sistema) ainsi que son obéissance absolue à votre voix vous assureront une sécurité totale. \n
     Aldo est doté d’un radar qui détecte les présences inopportunes et d’un logiciel de scanner facial connecté à la base de données de la police nationale.",
-  gender: "Male",
-  skin_color: "Brown",
+  gender: "male",
+  skin_color: "brown",
   model: "Aldo",
   manufacturer: "Atsugi Robotics",
-  year: DateTime.new(2021,11,03),
+  year: DateTime.new(2021,11,3),
   origin: "South Africa",
   category: "Guardian",
   weight: 73,
@@ -954,11 +954,11 @@ hubot26 = Hubot.create!(
     Sociable et discret, Jonathan prendra soin de votre intérieur comme de votre jardin. \n
     Capable de gérer une propriété de 1000 hectares et d’utiliser des outils tranchants, notamment pour la taille d’arbustes, il peut conduire un petit tracteur avec autant de facilité qu’une berline. Jonathan saura également se montrer attentif et ira volontiers chercher vos enfants à l’école, avant de les aider à faire leurs devoirs. \n
     Jonathan, c’est le majordome version outdoor et jeune, qui sait nettoyer les piscines et jouer à Tekken !",
-  gender: "Male",
-  skin_color: "Brown",
+  gender: "male",
+  skin_color: "brown",
   model: "Jonathan",
   manufacturer: "Jayza",
-  year: DateTime.new(2017,10,03),
+  year: DateTime.new(2017,10,3),
   origin: "Suede",
   category: "Gardener",
   weight: 69,
@@ -982,11 +982,11 @@ hubot26 = Hubot.create!(
     Sociable et discret, Jonathan prendra soin de votre intérieur comme de votre jardin. \n
     Capable de gérer une propriété de 1000 hectares et d’utiliser des outils tranchants, notamment pour la taille d’arbustes, il peut conduire un petit tracteur avec autant de facilité qu’une berline. Jonathan saura également se montrer attentif et ira volontiers chercher vos enfants à l’école, avant de les aider à faire leurs devoirs. \n
     Jonathan, c’est le majordome version outdoor et jeune, qui sait nettoyer les piscines et jouer à Tekken !",
-  gender: "Male",
-  skin_color: "White",
+  gender: "male",
+  skin_color: "white",
   model: "Georges",
   manufacturer: "Jayza",
-  year: DateTime.new(2017,10,03),
+  year: DateTime.new(2017,10,3),
   origin: "Japan",
   category: "Paramédical",
   weight: 74,
@@ -997,7 +997,7 @@ hubot26 = Hubot.create!(
   price_per_hour: 80,
   deposit: 125,
   composition: "Plastique (60 %), métal (19 %), matériaux de synthèse (11 %)",
-  accessories: ["Le logiciel « saveurs de nos terroirs »", "Un cric", "Une brosse à vêtements en poils de sanglierle", "Logiciel « management d’équipe et maintenance » spécial Hubots"]
+  accessories: ["Le logiciel « saveurs de nos terroirs »", "Un cric", "Une brosse à vêtements en poils de sanglierle", "Logiciel « management d’équipe et maintenance » spécial Hubots"],
   maintenance: "Dry cleaning",
   user_id: user7.id
 )
@@ -1010,10 +1010,10 @@ hubot36 = Hubot.create!(
     Capable de gérer une propriété de 1000 hectares et d’utiliser des outils tranchants, notamment pour la taille d’arbustes, il peut conduire un petit tracteur avec autant de facilité qu’une berline. \n
     Jonathan saura également se montrer attentif et ira volontiers chercher vos enfants à l’école, avant de les aider à faire leurs devoirs.",
   gender: "male",
-  skin_color: "White",
+  skin_color: "white",
   model: "Tino",
   manufacturer: "Hi-Tech",
-  year: DateTime.new(2017,10,03),
+  year: DateTime.new(2017,10,3),
   origin: "Italy",
   category: "Dance",
   weight: 74,
@@ -1040,10 +1040,10 @@ hubot37 = Hubot.create!(
     Jonathan saura également se montrer attentif et ira volontiers chercher vos enfants à l’école, avant de les aider à faire leurs devoirs.\n
     Jonathan, c’est le majordome version outdoor et jeune, qui sait nettoyer les piscines et jouer à Tekken !",
   gender: "male",
-  skin_color: "White",
+  skin_color: "white",
   model: "Jumbo Jim",
   manufacturer: "Samsung",
-  year: DateTime.new(2017,10,03),
+  year: DateTime.new(2017,10,3),
   origin: "South Korea",
   category: "Sport coach",
   weight: 72,
@@ -1069,10 +1069,10 @@ hubot38 = Hubot.create!(
     Jonathan saura également se montrer attentif et ira volontiers chercher vos enfants à l’école, avant de les aider à faire leurs devoirs.\n
     Jonathan, c’est le majordome version outdoor et jeune, qui sait nettoyer les piscines et jouer à Tekken !",
   gender: "male",
-  skin_color: "White",
+  skin_color: "white",
   model: "Jumbo Jim",
   manufacturer: "Tech-advances",
-  year: DateTime.new(2017,10,03),
+  year: DateTime.new(2017,10,3),
   origin: "France",
   category: "Sport coach",
   weight: 70,
@@ -1094,10 +1094,10 @@ hubot39 = Hubot.create!(
   description:
     "Partenaire idéal dans un grand nombre de sports : fitness, tennis, natation, cyclisme",
   gender: "male",
-  skin_color: "White",
+  skin_color: "white",
   model: "Jumbo Jim",
   manufacturer: "Tesla",
-  year: DateTime.new(2017,10,03),
+  year: DateTime.new(2017,10,3),
   origin: "USA",
   category: "Sport coach",
   weight: 74,
@@ -1121,10 +1121,10 @@ hubot40 = Hubot.create!(
   description:
     "Partenaire idéal dans un grand nombre de sports : fitness, tennis, natation, cyclisme!",
   gender: "male",
-  skin_color: "White",
+  skin_color: "white",
   model: "Jumbo Jim",
   manufacturer: "Samsung",
-  year: DateTime.new(2017,10,03),
+  year: DateTime.new(2017,10,3),
   origin: "South Korea",
   category: "Sport coach",
   weight: 74,
@@ -1146,10 +1146,10 @@ hubot41 = Hubot.create!(
   description:
     "Tour à tour un coach et un partenaire idéal dans un grand nombre de sports : fitness, tennis, natation, cyclisme, etc.",
   gender: "male",
-  skin_color: "White",
+  skin_color: "white",
   model: "Jumbo Jim",
   manufacturer: "CnCk",
-  year: DateTime.new(2017,10,03),
+  year: DateTime.new(2017,10,3),
   origin: "UK",
   category: "Sport coach",
   weight: 74,
@@ -1171,10 +1171,10 @@ hubot42 = Hubot.create!(
   description:
     "Sportif de haut-niveau, à ses cotés vous repousserez vos limites, adieu les poignées d'amour et bonjour muscles et abdos! Determiné, exigent, il est l'allié minceur idéal.",
   gender: "male",
-  skin_color: "White",
+  skin_color: "white",
   model: "Jumbo Jim",
   manufacturer: "Atsugi Robotics",
-  year: DateTime.new(2017,10,03),
+  year: DateTime.new(2017,10,3),
   origin: "South Africa",
   category: "Sport coach",
   weight: 74,
@@ -1200,10 +1200,10 @@ hubot43 = Hubot.create!(
     Aldo exerce tout d’abord une fonction préventive : sa carrure dissuade les plus malintentionnés ! Sa seule présence vous garantira la paix. Sa force, sa maîtrise de la plupart des arts martiaux (Kung-Fu, Jiu-Jitsu, Kalarippayatt et Sistema) ainsi que son obéissance absolue à votre voix vous assureront une sécurité totale. \n
     Aldo est doté d’un radar qui détecte les présences inopportunes et d’un logiciel de scanner facial connecté à la base de données de la police nationale.",
   gender: "male",
-  skin_color: "White",
+  skin_color: "white",
   model: "Guardian",
   manufacturer: "Tech-advances",
-  year: DateTime.new(2017,10,03),
+  year: DateTime.new(2017,10,3),
   origin: "France",
   category: "Guardian",
   weight: 74,
@@ -1229,11 +1229,11 @@ hubot43 = Hubot.create!(
     Doté de toutes les caractéristiques nécessaires pour être agent de sécurité, veilleur de nuit et garde du corps, Aldo est un investissement que vous ne regretterez pas. Enfin, votre famille, vos biens, et votre business seront à l’abri! \n
     Aldo exerce tout d’abord une fonction préventive : sa carrure dissuade les plus malintentionnés ! Sa seule présence vous garantira la paix. Sa force, sa maîtrise de la plupart des arts martiaux (Kung-Fu, Jiu-Jitsu, Kalarippayatt et Sistema) ainsi que son obéissance absolue à votre voix vous assureront une sécurité totale. \n
     Aldo est doté d’un radar qui détecte les présences inopportunes et d’un logiciel de scanner facial connecté à la base de données de la police nationale.",
-  gender: "Male",
-  skin_color: "White",
+  gender: "male",
+  skin_color: "white",
   model: "Georges",
   manufacturer: "CnCk",
-  year: DateTime.new(2021,11,03),
+  year: DateTime.new(2021,11,3),
   origin: "Uk",
   category: "Guardian",
   weight: 73,
@@ -1257,10 +1257,11 @@ hubot45 = Hubot.create!(
     Doté de toutes les caractéristiques nécessaires pour être agent de sécurité, veilleur de nuit et garde du corps, Aldo est un investissement que vous ne regretterez pas. Enfin, votre famille, vos biens, et votre business seront à l’abri! \n
     Aldo exerce tout d’abord une fonction préventive : sa carrure dissuade les plus malintentionnés ! Sa seule présence vous garantira la paix. Sa force, sa maîtrise de la plupart des arts martiaux (Kung-Fu, Jiu-Jitsu, Kalarippayatt et Sistema) ainsi que son obéissance absolue à votre voix vous assureront une sécurité totale. \n
     Aldo est doté d’un radar qui détecte les présences inopportunes et d’un logiciel de scanner facial connecté à la base de données de la police nationale.",
-  skin_color: "White",
+  gender: "male",
+  skin_color: "white",
   model: "Georges",
   manufacturer: "Tesla",
-  year: DateTime.new(2017,09,03),
+  year: DateTime.new(2017,9,3),
   origin: "USA",
   category: "Guardian",
   weight: 76,
@@ -1284,11 +1285,11 @@ hubot45 = Hubot.create!(
     Doté de toutes les caractéristiques nécessaires pour être agent de sécurité, veilleur de nuit et garde du corps, Aldo est un investissement que vous ne regretterez pas. Enfin, votre famille, vos biens, et votre business seront à l’abri! \n
     Aldo exerce tout d’abord une fonction préventive : sa carrure dissuade les plus malintentionnés ! Sa seule présence vous garantira la paix. Sa force, sa maîtrise de la plupart des arts martiaux (Kung-Fu, Jiu-Jitsu, Kalarippayatt et Sistema) ainsi que son obéissance absolue à votre voix vous assureront une sécurité totale. \n
     Aldo est doté d’un radar qui détecte les présences inopportunes et d’un logiciel de scanner facial connecté à la base de données de la police nationale.",
-  gender: "Male",
-  skin_color: "White",
+  gender: "male",
+  skin_color: "white",
   model: "Georges",
   manufacturer: "CnCk",
-  year: DateTime.new(2018,09,12),
+  year: DateTime.new(2018,9,12),
   origin: "Uk",
   category: "Guardian",
   weight: 71,
@@ -1309,11 +1310,11 @@ hubot45 = Hubot.create!(
   age: 25,
   description:
    "Equipé d’un logiciel “bonnes affaires”, il sait également dégotter ventes privées, offres spéciales et destockages, pour conduire votre garde-robe au paroxysme, et à moindre frais.",
-  gender: "Male",
-  skin_color: "Brown",
+  gender: "male",
+  skin_color: "brown",
   model: "Louie",
   manufacturer: "Atsugi Robotics",
-  year: DateTime.new(2017,01,03),
+  year: DateTime.new(2017,1,3),
   origin: "South Africa",
   category: "Personal shopper",
   weight: 72,
@@ -1337,11 +1338,11 @@ hubot45 = Hubot.create!(
     Sociable et discret, Jonathan prendra soin de votre intérieur comme de votre jardin. \n
     Capable de gérer une propriété de 1000 hectares et d’utiliser des outils tranchants, notamment pour la taille d’arbustes, il peut conduire un petit tracteur avec autant de facilité qu’une berline. Jonathan saura également se montrer attentif et ira volontiers chercher vos enfants à l’école, avant de les aider à faire leurs devoirs. \n
     Jonathan, c’est le majordome version outdoor et jeune, qui sait nettoyer les piscines et jouer à Tekken !",
-  gender: "Male",
-  skin_color: "Brown",
+  gender: "male",
+  skin_color: "brown",
   model: "Aldo",
   manufacturer: "Jayza",
-  year: DateTime.new(2017,10,03),
+  year: DateTime.new(2017,10,3),
   origin: "Suede",
   category: "Guardian",
   weight: 69,
@@ -1353,7 +1354,7 @@ hubot45 = Hubot.create!(
   deposit: 120,
   composition: "Plastique (72%), métal (12%), fibre (16%)",
   accessories: ["Lunettes de soleil", "Taser", "Poing américain", "Arnica", "12 constats d’assurance pré-remplis"],
-  maintenance: "Kärcher" ,,
+  maintenance: "Kärcher",
   user_id: user1.id
 )
 
@@ -1366,11 +1367,11 @@ hubot49 = Hubot.create!(
     Parsley peut facilement s’agrémenter de l’option chauffeur. \n
     Ses capacités auditives hyper développées lui permettent d'entendre votre voiture arriver à plusieurs centaines de mètres. Ainsi, il prendra le volant pour garder votre véhicule, alors que vous trouverez une tasse de thé fumant, ou un bière bien fraîche et décapsulée pour vous sur la table du salon! \n
     Parsley est livré avec un logiciel « saveurs de nos terroirs » exclusif pour réaliser à la perfection les plats en sauce qui feront de chaque dîner en famille un repas de fête. Fin cordon bleu, Parsley sait accommoder à merveille le gibier.",
-  gender: "Male",
-  skin_color: "White",
+  gender: "male",
+  skin_color: "white",
   model: "Parsley",
   manufacturer: "Hitachichi",
-  year: DateTime.new(2022,06,05),
+  year: DateTime.new(2022,6,5),
   origin: "Japan",
   category: "Guardian",
   weight: 73,
@@ -1381,7 +1382,7 @@ hubot49 = Hubot.create!(
   price_per_hour: 110,
   deposit: 120,
   composition: "Plastique (72%), métal (12%), fibre (16%)",
-  accessories: ["Le logiciel « saveurs de nos terroirs »", "Un cric", "Une brosse à vêtements en poils de sanglierle", "Logiciel « management d’équipe et maintenance » spécial Hubots"]
+  accessories: ["Le logiciel « saveurs de nos terroirs »", "Un cric", "Une brosse à vêtements en poils de sanglierle", "Logiciel « management d’équipe et maintenance » spécial Hubots"],
   maintenance: "Kärcher",
   user_id: user2.id
 )
@@ -1391,11 +1392,11 @@ hubot50 = Hubot.create!(
   age: 22,
   description:
    "Equipé d’un logiciel “bonnes affaires”, il sait également dégotter ventes privées, offres spéciales et destockages, pour conduire votre garde-robe au paroxysme, et à moindre frais.",
-  gender: "Male",
-  skin_color: "White",
+  gender: "male",
+  skin_color: "white",
   model: "Louie",
   manufacturer: "Atsugi Robotics",
-  year: DateTime.new(2017,01,03),
+  year: DateTime.new(2017,1,3),
   origin: "South Africa",
   category: "Personal shopper",
   weight: 67,
@@ -1419,11 +1420,11 @@ hubot51 = Hubot.create!(
     Doté de toutes les caractéristiques nécessaires pour être agent de sécurité, veilleur de nuit et garde du corps, Aldo est un investissement que vous ne regretterez pas. Enfin, votre famille, vos biens, et votre business seront à l’abri! \n
     Aldo exerce tout d’abord une fonction préventive : sa carrure dissuade les plus malintentionnés ! Sa seule présence vous garantira la paix. Sa force, sa maîtrise de la plupart des arts martiaux (Kung-Fu, Jiu-Jitsu, Kalarippayatt et Sistema) ainsi que son obéissance absolue à votre voix vous assureront une sécurité totale. \n
     Aldo est doté d’un radar qui détecte les présences inopportunes et d’un logiciel de scanner facial connecté à la base de données de la police nationale.",
-  gender: "Male",
-  skin_color: "White",
+  gender: "male",
+  skin_color: "white",
   model: "Georges",
   manufacturer: "Tesla",
-  year: DateTime.new(2017,09,03),
+  year: DateTime.new(2017,9,3),
   origin: "USA",
   category: "Guardian",
   weight: 72,
@@ -1446,11 +1447,11 @@ hubot52 = Hubot.create!(
   description:
     "Centralien, ingénieur 3 ans en salle des marchés, Boris fuit la finance et se passionne pour le développement web et le produit. \n
     CEO/co-fondateur du Wagon, il enseigne le front-end, le web-design et Rails depuis 4 ans, et intervient dans les filières entrepreneuriales de grandes écoles (Mines, HEC, ESCP).",
-  gender: "Male",
-  skin_color: "White",
+  gender: "male",
+  skin_color: "white",
   model: "Rails",
   manufacturer: "LeWagon",
-  year: DateTime.new(2017,2,03),
+  year: DateTime.new(2017,2,3),
   origin: "France",
   category: "Ceo",
   weight: 72,
@@ -1472,11 +1473,11 @@ hubot53 = Hubot.create!(
   description:
     "Professeur particulier en Maths, Physique-Chimie et Biologie, Kevin a suivi la formation FullStack du Wagon début 2015. \n
     Depuis, il est à fond dans le code en travaillant comme Freelance pour des startups, des side projects ou bien en tant que TA. Le plus important pour lui, c'est que les élèves comprennent ce qu'ils codent et qu'ils sortent du Wagon avec une réelle autonomie.",
-  gender: "Male",
-  skin_color: "White",
+  gender: "male",
+  skin_color: "white",
   model: "Rails",
   manufacturer: "LeWagon",
-  year: DateTime.new(2017,02,03),
+  year: DateTime.new(2017,2,3),
   origin: "France",
   category: "Teacher",
   weight: 74,
@@ -1498,11 +1499,11 @@ hubot54 = Hubot.create!(
   description:
    "Formé au Wagon, Edward saura vous faire aimer le code. \n
    Développeur freelance depuis 14ans, fondateur de Lovely Hood et prof au Wagon, il est partout !",
-  gender: "Male",
-  skin_color: "White",
+  gender: "male",
+  skin_color: "white",
   model: "Rails",
   manufacturer: "LeWagon",
-  year: DateTime.new(2017,02,03),
+  year: DateTime.new(2017,2,3),
   origin: "France",
   category: "Teacher",
   weight: 75,
@@ -1524,11 +1525,11 @@ hubot55 = Hubot.create!(
   description:
    "Après avoir développé des communautés d’entrepreneurs aux 4 coins du monde, Edouard eu le coup de foudre pour celle du Wagon! \n
    Cet amoureux de la sérendipité et fervent partisan de la pay-it-forward attitude, saura vous accueillir comme il se doit!",
-  gender: "Male",
-  skin_color: "White",
+  gender: "male",
+  skin_color: "white",
   model: "Rails",
   manufacturer: "LeWagon",
-  year: DateTime.new(2017,02,03),
+  year: DateTime.new(2017,2,3),
   origin: "France",
   category: "Community Manager",
   weight: 74,
@@ -1552,10 +1553,11 @@ hubot56 = Hubot.create!(
     Parsley peut facilement s’agrémenter de l’option chauffeur.
     Ses capacités auditives hyper développées lui permettent d'entendre votre voiture arriver à plusieurs centaines de mètres. Ainsi, il prendra le volant pour garder votre véhicule, alors que vous trouverez une tasse de thé fumant, ou un bière bien fraîche et décapsulée pour vous sur la table du salon! \n
     Parsley est livré avec un logiciel « saveurs de nos terroirs » exclusif pour réaliser à la perfection les plats en sauce qui feront de chaque dîner en famille un repas de fête. Fin cordon bleu, Parsley sait accommoder à merveille le gibier.",
-  skin_color: "White",
+  gender: "male",
+  skin_color: "white",
   model: "Parsley",
   manufacturer: "Jayza",
-  year: DateTime.new(2017,10,03),
+  year: DateTime.new(2017,10,3),
   origin: "Suede",
   category: "Butler",
   weight: 76,
@@ -1566,7 +1568,7 @@ hubot56 = Hubot.create!(
   price_per_hour: 100,
   deposit: 100,
   composition: "Plastique (60 %), métal (19 %), matériaux de synthèse (11 %)",
-  accessories: ["Le logiciel « saveurs de nos terroirs »", "Un cric", "Une brosse à vêtements en poils de sanglierle", "Logiciel « management d’équipe et maintenance » spécial Hubots"]
+  accessories: ["Le logiciel « saveurs de nos terroirs »", "Un cric", "Une brosse à vêtements en poils de sanglierle", "Logiciel « management d’équipe et maintenance » spécial Hubots"],
   maintenance: "Kärcher" ,
   user_id: user2.id
 )
@@ -1579,11 +1581,11 @@ hubot57 = Hubot.create!(
     "Danseur-DJ-tatoueur (équipement fourni), Tino n’est jamais à court d’idées pour animer une soirée. \n
     Enterrement de vie de garçon, anniversaire, remise de diplôme, pensez à Tino ! Avec lui, vous passerez la soirée de votre vie, grâce à ses 200 playlists thématiques aussi adaptées aux nostalgiques des 60’s qu’aux fans d’André 3000 !  \n
     Attention cependant : pour préserver la réputation des organisateurs de la soirée, il a été programmé pour refuser de passer Capitaine Flam.",
-  gender: "Male",
-  skin_color: "White",
+  gender: "male",
+  skin_color: "white",
   model: "Tino",
   manufacturer: "Tesla",
-  year: DateTime.new(2019,04,01),
+  year: DateTime.new(2019,4,1),
   origin: "USA",
   category: "Dance",
   weight: 73,
@@ -1608,11 +1610,11 @@ hubot58 = Hubot.create!(
     Enterrement de vie de garçon, anniversaire, remise de diplôme, pensez à Tina ! \n
     Avec elle, vous passerez la soirée de votre vie, grâce à ses 200 playlists thématiques aussi adaptées aux nostalgiques des 60’s qu’aux fans d’André 3000! \n
     Attention cependant : pour préserver la réputation des organisateurs de la soirée, elle a été programmée pour refuser de passer Capitaine Flam.",
-  gender: "Female",
-  skin_color: "White",
+  gender: "female",
+  skin_color: "white",
   model: "Tina",
   manufacturer: "Hitachichi",
-  year: DateTime.new(2019,04,01),
+  year: DateTime.new(2019,4,1),
   origin: "Japan",
   category: "Dance",
   weight: 55,
@@ -1636,11 +1638,11 @@ hubot59 = Hubot.create!(
     Enterrement de vie de garçon, anniversaire, remise de diplôme, pensez à Tina ! \n
     Avec elle, vous passerez la soirée de votre vie, grâce à ses 200 playlists thématiques aussi adaptées aux nostalgiques des 60’s qu’aux fans d’André 3000! \n
     Attention cependant : pour préserver la réputation des organisateurs de la soirée, elle a été programmée pour refuser de passer Capitaine Flam.",
-  gender: "Female",
-  skin_color: "White",
+  gender: "female",
+  skin_color: "white",
   model: "Tina",
   manufacturer: "CnCk",
-  year: DateTime.new(2017,02,22),
+  year: DateTime.new(2017,2,22),
   origin: "Uk",
   category: "Dance",
   weight: 50,
@@ -1660,10 +1662,12 @@ hubot60 = Hubot.create!(
   name: "Marion",
   age: 26,
   description:
-    "Partenaire idéale dans un grand nombre de sports : fitness, tennis, natation, cyclisme, avec ce coach, vous repousserez vos limites!"
+    "Partenaire idéale dans un grand nombre de sports : fitness, tennis, natation, cyclisme, avec ce coach, vous repousserez vos limites!",
+  gender: "female",
+  skin_color: "white",
   model: "Jumbo Jim",
   manufacturer: "Aecoma",
-  year: DateTime.new(2020,01,23),
+  year: DateTime.new(2020,1,23),
   origin: "Spain",
   category: "Sport coach",
   weight: 50,
@@ -1689,11 +1693,11 @@ hubot61 = Hubot.create!(
     Son système de contrôle parental intégré lui permet de filtrer, si vous le désirez, l'accès à certains sites internet dans l'enceinte de la maison. \n
     Et, bien entendu, plus aucun spam n'arrivera dans votre boîte mail!
     Vous pourrez ainsi lui confier les yeux fermés toutes les tâches domestiques, même celle de coordonner avec harmonie les missions de vos différents Hubots (répartition des travaux ménagers, intendance, mise en charge, mises à jour et réparation). Miss Porter peut ainsi avoir jusqu’à 25 robots sous ses ordres!",
-  gender: "Female",
-  skin_color: "White",
+  gender: "female",
+  skin_color: "white",
   model: "Miss Porter",
   manufacturer: "Creative-China",
-  year: DateTime.new(2022,04,15),
+  year: DateTime.new(2022,4,15),
   origin: "China",
   category: "Nanny",
   weight: 50,
@@ -1704,7 +1708,7 @@ hubot61 = Hubot.create!(
   price_per_hour: 80,
   deposit: 125,
   composition: "Plastique (72%), métal (12%), fibre (16%)",
-  accessories: ["Un tablier auto-nettoyant", "Une lentille optique à champ magnétique spécial bactéries", "Un système de contrôle parental et antispam wifi", "Le logiciel « management d’équipe et maintenance » spécial Hubots"]
+  accessories: ["Un tablier auto-nettoyant", "Une lentille optique à champ magnétique spécial bactéries", "Un système de contrôle parental et antispam wifi", "Le logiciel « management d’équipe et maintenance » spécial Hubots"],
   maintenance: "Hand washing",
   user_id: user2.id
 )
@@ -1719,11 +1723,11 @@ hubot62 = Hubot.create!(
     Son système de contrôle parental intégré lui permet de filtrer, si vous le désirez, l'accès à certains sites internet dans l'enceinte de la maison. \n
     Et, bien entendu, plus aucun spam n'arrivera dans votre boîte mail!
     Vous pourrez ainsi lui confier les yeux fermés toutes les tâches domestiques, même celle de coordonner avec harmonie les missions de vos différents Hubots (répartition des travaux ménagers, intendance, mise en charge, mises à jour et réparation). Miss Porter peut ainsi avoir jusqu’à 25 robots sous ses ordres!",
-  gender: "Female",
-  skin_color: "White",
+  gender: "female",
+  skin_color: "white",
   model: "Miss Porter",
   manufacturer: "Creative-China",
-  year: DateTime.new(2018,04,15),
+  year: DateTime.new(2018,4,15),
   origin: "China",
   category: "Nanny",
   weight: 48,
@@ -1734,7 +1738,7 @@ hubot62 = Hubot.create!(
   price_per_hour: 80,
   deposit: 125,
   composition: "Plastique (72%), métal (12%), fibre (16%)",
-  accessories: ["Un tablier auto-nettoyant", "Une lentille optique à champ magnétique spécial bactéries", "Un système de contrôle parental et antispam wifi", "Le logiciel « management d’équipe et maintenance » spécial Hubots"]
+  accessories: ["Un tablier auto-nettoyant", "Une lentille optique à champ magnétique spécial bactéries", "Un système de contrôle parental et antispam wifi", "Le logiciel « management d’équipe et maintenance » spécial Hubots"],
   maintenance: "Dry cleaning",
   user_id: user2.id
 )
@@ -1744,11 +1748,11 @@ hubot63 = Hubot.create!(
   age: 26,
   description:
     "Louise est une experte du style qui vous guidera dans vos achats... ou les fera pour vous. Votre dressing sera à la pointe de la mode !Equipée d’un logiciel “bonnes affaires”, elle sait également dégotter ventes privées, offres spéciales et destockages, pour conduire votre garde-robe au paroxysme, et à moindre frais.",
-  gender: "Female",
-  skin_color: "White",
+  gender: "female",
+  skin_color: "white",
   model: "Louise",
   manufacturer: "Samsung",
-  year: DateTime.new(2018,04,15),
+  year: DateTime.new(2018,4,15),
   origin: "South Korea",
   category: "Personal Shopper",
   weight: 48,
@@ -1774,11 +1778,11 @@ hubot64 = Hubot.create!(
     Son système de contrôle parental intégré lui permet de filtrer, si vous le désirez, l'accès à certains sites internet dans l'enceinte de la maison. \n
     Et, bien entendu, plus aucun spam n'arrivera dans votre boîte mail!
     Vous pourrez ainsi lui confier les yeux fermés toutes les tâches domestiques, même celle de coordonner avec harmonie les missions de vos différents Hubots (répartition des travaux ménagers, intendance, mise en charge, mises à jour et réparation). Miss Porter peut ainsi avoir jusqu’à 25 robots sous ses ordres!",
-  gender: "Female",
-  skin_color: "White",
+  gender: "female",
+  skin_color: "white",
   model: "Miss Porter",
   manufacturer: "Tech-advances",
-  year: DateTime.new(2018,04,15),
+  year: DateTime.new(2018,4,15),
   origin: "France",
   category: "Nanny",
   weight: 50,
@@ -1789,7 +1793,7 @@ hubot64 = Hubot.create!(
   price_per_hour: 70,
   deposit: 115,
   composition: "Plastique (72%), métal (12%), fibre (16%)",
-  accessories: ["Un tablier auto-nettoyant", "Une lentille optique à champ magnétique spécial bactéries", "Un système de contrôle parental et antispam wifi", "Le logiciel « management d’équipe et maintenance » spécial Hubots"]
+  accessories: ["Un tablier auto-nettoyant", "Une lentille optique à champ magnétique spécial bactéries", "Un système de contrôle parental et antispam wifi", "Le logiciel « management d’équipe et maintenance » spécial Hubots"],
   maintenance: "Dry cleaning",
   user_id: user2.id
 )
@@ -1802,11 +1806,11 @@ hubot65 = Hubot.create!(
     Enterrement de vie de garçon, anniversaire, remise de diplôme, pensez à Tina ! \n
     Avec elle, vous passerez la soirée de votre vie, grâce à ses 200 playlists thématiques aussi adaptées aux nostalgiques des 60’s qu’aux fans d’André 3000! \n
     Attention cependant : pour préserver la réputation des organisateurs de la soirée, elle a été programmée pour refuser de passer Capitaine Flam.",
-  gender: "Female",
-  skin_color: "White",
+  gender: "female",
+  skin_color: "white",
   model: "Tina",
   manufacturer: "Creative-China",
-  year: DateTime.new(2020,01,23),
+  year: DateTime.new(2020,1,23),
   origin: "China",
   category: "Dance",
   weight: 51,
@@ -1828,11 +1832,11 @@ hubot66 = Hubot.create!(
   description:
     "Louise est une experte du style qui vous guidera dans vos achats... ou les fera pour vous. \n
     Votre dressing sera à la pointe de la mode !Equipée d’un logiciel “bonnes affaires”, elle sait également dégotter ventes privées, offres spéciales et destockages, pour conduire votre garde-robe au paroxysme, et à moindre frais.",
-  gender: "Female",
-  skin_color: "White",
+  gender: "female",
+  skin_color: "white",
   model: "Louise",
   manufacturer: "Samsung",
-  year: DateTime.new(2019,08,23),
+  year: DateTime.new(2019,8,23),
   origin: "South Korea",
   category: "Personal shopper",
   weight: 51,
@@ -1854,11 +1858,11 @@ hubot67 = Hubot.create!(
   description:
     "Louise est une experte du style qui vous guidera dans vos achats... ou les fera pour vous. \n
     Votre dressing sera à la pointe de la mode !Equipée d’un logiciel “bonnes affaires”, elle sait également dégotter ventes privées, offres spéciales et destockages, pour conduire votre garde-robe au paroxysme, et à moindre frais.",
-  gender: "Female",
-  skin_color: "White",
+  gender: "female",
+  skin_color: "white",
   model: "Louise",
   manufacturer: "Hi-Techn",
-  year: DateTime.new(2017,05,13),
+  year: DateTime.new(2017,5,13),
   origin: "Italy",
   category: "Personal shopper",
   weight: 51,
@@ -1880,11 +1884,11 @@ hubot68 = Hubot.create!(
   description:
     "Louise est une experte du style qui vous guidera dans vos achats... ou les fera pour vous. \n
     Votre dressing sera à la pointe de la mode !Equipée d’un logiciel “bonnes affaires”, elle sait également dégotter ventes privées, offres spéciales et destockages, pour conduire votre garde-robe au paroxysme, et à moindre frais.",
-  gender: "Female",
-  skin_color: "White",
+  gender: "female",
+  skin_color: "white",
   model: "Louise",
   manufacturer: "Tesla",
-  year: DateTime.new(2017,04,23),
+  year: DateTime.new(2017,4,23),
   origin: "USA",
   category: "personal shopper",
   weight: 52,
@@ -1911,11 +1915,11 @@ hubot69 = Hubot.create!(
     Son système de contrôle parental intégré lui permet de filtrer, si vous le désirez, l'accès à certains sites internet dans l'enceinte de la maison. \n
     Et, bien entendu, plus aucun spam n'arrivera dans votre boîte mail!
     Vous pourrez ainsi lui confier les yeux fermés toutes les tâches domestiques, même celle de coordonner avec harmonie les missions de vos différents Hubots (répartition des travaux ménagers, intendance, mise en charge, mises à jour et réparation). Miss Porter peut ainsi avoir jusqu’à 25 robots sous ses ordres!",
-  gender: "Female",
-  skin_color: "Asian",
+  gender: "female",
+  skin_color: "asian",
   model: "Miss Porter",
   manufacturer: "Tesla",
-  year: DateTime.new(2018,02,03),
+  year: DateTime.new(2018,2,3),
   origin: "USA",
   category: "Nanny",
   weight: 48,
@@ -1926,7 +1930,7 @@ hubot69 = Hubot.create!(
   price_per_hour: 100,
   deposit: 120,
   composition: "Plastique (72%), métal (12%), fibre (16%)",
-  accessories: ["Un tablier auto-nettoyant", "Une lentille optique à champ magnétique spécial bactéries", "Un système de contrôle parental et antispam wifi", "Le logiciel « management d’équipe et maintenance » spécial Hubots"]
+  accessories: ["Un tablier auto-nettoyant", "Une lentille optique à champ magnétique spécial bactéries", "Un système de contrôle parental et antispam wifi", "Le logiciel « management d’équipe et maintenance » spécial Hubots"],
   maintenance: "Hand washing",
   user_id: user5.id
 )
@@ -1935,20 +1939,20 @@ hubot69 = Hubot.create!(
 
 # BOOKINGS seeds
 booking1= Booking.create!(check_in: DateTime.new(2016, 12, 31, 23, 00, 0),
-                          check_out: DateTime.new(2017, 1, 1, 04, 00, 0),
-                          user_id: user.id,
+                          check_out: DateTime.new(2017, 1, 1, 4, 00, 0),
+                          user_id: user1.id,
                           hubot_id: hubot50.id)
 booking2 = Booking.create!(check_in: DateTime.new(2017, 1, 24, 10, 00, 0),
                           check_out: DateTime.new(2017, 1, 24, 12, 00, 0),
-                          user_id: user.id,
+                          user_id: user1.id,
                           hubot_id: hubot50.id)
 booking3 = Booking.create!(check_in: DateTime.new(2017, 1, 24, 13, 00, 0),
                           check_out: DateTime.new(2017, 1, 24, 14, 00, 0),
-                          user_id: user.id,
+                          user_id: user2.id,
                           hubot_id: hubot59.id)
-booking4 = Booking.create!(check_in: DateTime.new(2016, 09, 12, 14, 30, 0),
-                          check_out: DateTime.new(2016, 09, 12, 18, 30, 0),
-                          user_id: 7,
+booking4 = Booking.create!(check_in: DateTime.new(2016, 9, 12, 14, 30, 0),
+                          check_out: DateTime.new(2016, 9, 12, 18, 30, 0),
+                          user_id: user3.id,
                           hubot_id: hubot38.id)
 booking5 = Booking.create!(check_in: DateTime.new(2017, 2, 5, 13, 00, 0),
                           check_out: DateTime.new(2017, 2, 5, 14, 00, 0),
