@@ -1,5 +1,5 @@
 <% content_for(:title_tag) do %>
-  <%= @user.first_name ? @user.first_name : 'anonymous' %> <%= @user.last_name ? @user.last_name : '' %>
+  <%= @user.first_name + @user.last_name %>
 <% end %>
 
 <%= link_to "← Back", :back, class: "btn btn-default btn-back" %>
@@ -22,6 +22,7 @@
     </div>
   </div>
 
+  <!-- #################################################################### -->
   <!-- tabs headers -->
 
   <div class="row">
@@ -55,10 +56,12 @@
     </div>
   </div>
 
-
+  <!-- #################################################################### -->
   <!-- tabs contents -->
 
   <div class="row">
+
+    <!-- ############    PROFILE    ############### -->
 
     <div class="tab-content" id="profile">
       <h4>
@@ -88,9 +91,12 @@
       <%= link_to 'Edit', edit_user_path(@user), class: "btn btn-primary" %>
     </div>
 
+    <!-- ############    BOOKINGS    ############### -->
+
     <div class="tab-content hidden" id="bookings">
       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 
+      <!-- ################################# -->
       <!-- Tag lists -->
 
       <%= link_to "Pending bookings", "#pending-bookings", class: "btn btn-default" %>
@@ -100,97 +106,65 @@
       <% end %>
       </div>
 
-      <!-- Pending hubots booked by current_user (waiting for acceptance from the owner) -->
+      <!-- ################################# -->
+      <!-- Pending bookings of current_user (waiting for acceptance from owner) -->
 
-      <h4 id="pending-bookings">Your pendind bookings</h4>
-      <p>(required action from hubot's owner)</p>
+      <h4 id="pending-bookings">Your pendind bookings (<%= @user_pending_bookings.count %>)</h4>
 
-      <% @user.bookings.each do |booking| %>
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-          <div class="col-xs-6 col-sm-4 col-md-3">
-            <%= render 'shared/hubot', hubot: booking.hubot %>
-          </div>
-          <div class="col-xs-6 col-sm-8 col-md-9">
-            <span><strong>Date of booking:</strong> <%= booking.created_at %></span><br>
-            <span><strong>From:</strong> <%= booking.check_in %></span><br>
-            <span><strong>To:</strong> <%= booking.check_out %></span><br>
-            <span><strong>Duration:</strong> <%= booking.check_out - booking.check_in %></span><br>
-            <span><strong>Total price:</strong> $<%= booking.total_price %></span><br><br>
-            <span><strong>Status:</strong> <%= booking.status %></span><br><br>
-            <strong>Owner:</strong><br>
-            <%= link_to user_path(booking.hubot.user) do %>
-              <%= image_tag "johndoe.jpg", class:"avatar" %>
-              <%= booking.hubot.user.first_name %>
-            <% end %>
-            <br>
-            <%= link_to "Owner's reviews" %>
-            <br>
-            <%= link_to "Hubot's reviews" %>
-
-          </div>
-        </div>
+      <% @user_pending_bookings.each do |booking| %>
+        <%= render 'shared/hubot_booking_details', booking: booking %>
       <% end %>
 
-      <!-- Currently booked hubots by current_user -->
-      <% if @user.bookings.count > 0 %>
-        <h4 id="current-bookings">Your current bookings</h4>
-      <% else %>
-        <p>
-          No booking !
-          <%= link_to "find a Hubot !", hubots_path %>
-        </p>
+      <!-- ################################# -->
+      <!-- Current bookings of current_user -->
+
+      <h4 id="current-bookings">Your Current Bookings (<%= @user_current_bookings.count %>)</h4>
+      <% @user_current_bookings.each do |booking| %>
+        <%= render 'shared/hubot_booking_details', booking: booking %>
+      <% end %>
+      <% if @user_current_bookings.count == 0 %>
+        <p> You have no booking currently!</p>
+        <%= link_to "find a Hubot !", hubots_path, class: "btn btn-default" %>
       <% end %>
 
-      <% @user.bookings.each do |booking| %>
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-          <div class="col-xs-6 col-sm-4 col-md-3">
-            <%= render 'shared/hubot', hubot: booking.hubot %>
-          </div>
-          <div class="col-xs-6 col-sm-8 col-md-9">
-            <span><strong>Date of booking:</strong> <%= booking.created_at %></span><br>
-            <span><strong>From:</strong> <%= booking.check_in %></span><br>
-            <span><strong>To:</strong> <%= booking.check_out %></span><br>
-            <span><strong>Duration:</strong> <%= booking.check_out - booking.check_in %></span><br>
-            <span><strong>Total price:</strong> $<%= booking.total_price %></span><br>
-            Owner: <%= link_to user_path(booking.hubot.user) do %>
-              <%= image_tag "johndoe.jpg", class:"avatar" %>
-              <%= booking.hubot.user.first_name %>
-            <% end %>
-          </div>
-        </div>
+      <!-- ################################# -->
+      <!-- Current bookings of current_user -->
+
+      <h4 id="old-bookings">Your Old Bookings (<%= @user_old_bookings.count %>)</h4>
+      <% @user_old_bookings.each do |booking| %>
+        <%= render 'shared/hubot_booking_details', booking: booking %>
       <% end %>
+      <% if @user_old_bookings.count == 0 %>
+        <p> You have no old bookings yet!</p>
+      <% end %>
+
+
     </div>
 
-    <!-- Pending bookings for hubots -->
-
-    <!-- Currently booked hubots -->
-      <!-- TODO -->
-
-    <!-- All hubots -->
+    <!-- ############    HUBOTS    ############### -->
 
     <div class="tab-content hidden" id="hubots">
-      <h4>All my hubots :</h4>
-      <% @user.hubots.each do |hubot| %>
-      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-        <div class="col-xs-6 col-sm-4 col-md-3">
-          <%= render 'shared/hubot', hubot: hubot %>
-        </div>
-        <div class="col-xs-6 col-sm-8 col-md-9">
-          <% hubot.bookings.each do |booking| %>
-            <p><strong>Created at:</strong> <%= booking.created_at %></p>
-            <p><strong>Total price:</strong> <%= booking.total_price %></p>
-            <p><strong>Client:</strong> <%= booking.user.first_name %></p>
-            <p><strong>Booking status:</strong> <%= booking.status %></p>
-          <% end %>
-        </div>
 
+      <!-- Pending bookings for hubots -->
+        <!-- TODO -->
+
+      <!-- Currently booked hubots -->
+        <!-- TODO -->
+
+      <!-- All hubots -->
+
+      <h4><%= @user == current_user ? "My" : @user.first_name + "'s" %> hubots :</h4>
+        <% @user.hubots.each do |hubot| %>
+          <div class="col-xs-6 col-sm-4 col-md-3">
+            <%= render 'shared/hubot', hubot: hubot %>
+          </div>
+        <% end %>
     </div>
-      <% end %>
+
   </div>
 </div>
 
-
-
+<!-- ################################ -->
 
 <% content_for(:after_js) do %>
   <%= javascript_tag do %>
