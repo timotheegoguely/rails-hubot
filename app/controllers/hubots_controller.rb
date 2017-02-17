@@ -1,5 +1,5 @@
 class HubotsController < ApplicationController
-  # skip_before_action :authenticate_user!, only: [ :index, :search, :show ]
+  skip_before_action :authenticate_user!, only: [ :index, :search, :show ]
   before_action :get_search_params, only: [ :search, :show ]
 
   def search
