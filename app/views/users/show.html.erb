@@ -81,6 +81,8 @@
           <td><%= @user_coordinates[:lat] %>, <%= @user_coordinates[:lng] %></td>
         </tr>
       </table>
+      <hr>
+      <%= link_to 'Edit', edit_user_path(@user), class: "btn btn-primary" %>
     </div>
 
     <div class="tab-content hidden" id="bookings">
