@@ -8,9 +8,9 @@
   <div class="row">
     <div class="col-md-2">
 
-      <%# if @user.photo %>
-        <%#= cl_image_tag @user.photo %>
-      <%# end %>
+      <% if @user.photo %>
+        <%= cl_image_tag @user.photo, class:"avatar avatar-xxlarge" %>
+      <% end %>
 
     </div>
     <div class="col-md-10">
