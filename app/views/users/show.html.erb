@@ -2,8 +2,7 @@
   <%= @user.first_name ? @user.first_name : 'anonymous' %> <%= @user.last_name ? @user.last_name : '' %>
 <% end %>
 
-<%= link_to "← Back", :back, class: "btn btn-default " %>
-
+<%= link_to "← Back", :back, class: "btn btn-default" %>
 <div class="container"">
 
   <div class="row">
@@ -11,9 +10,10 @@
       <%= image_tag "johndoe.jpg", class:"avatar-xlarge" %>
     </div>
     <div class="col-md-11">
-      <h1>
-        Welcome <%= @user.first_name %> <%= @user.last_name %> !
-      </h1>
+        <h1><%= @user.first_name %> <%= @user.last_name %></h1>
+        <% if @user == current_user %>
+          <h3>Welcome to your dashboad !</h3>
+        <% end %>
     </div>
   </div>
 
@@ -23,28 +23,28 @@
     <div class="tabs">
 
       <a class="tab active" data-target="#profile">
-        <h3>My profile infos</h3>
-      </a>
-
-      <a class="tab" data-target="#bookings">
         <h3>
-        My bookings
-        <% if @user.bookings.count > 0 %>
-          (<%= @user.bookings.count %>)
-        <% end %>
+          <%= @user == current_user ? "My profile infos" : "Profile infos" %>
         </h3>
       </a>
+      <% if @user == current_user %>
+        <a class="tab" data-target="#bookings">
+          <h3>
+          My bookings
+          <% if @user.bookings.count > 0 %>
+            (<%= @user.bookings.count %>)
+          <% end %>
+          </h3>
+        </a>
+      <% end %>
 
       <a class="tab" data-target="#hubots">
         <h3>
-          My hubots
+          <%= @user == current_user ? "My hubots" : "Hubots" %>
           <% if @user.hubots.count > 0 %>
             (<%= @user.hubots.count %>)
           <% end %>
         </h3>
-        <% if @pending > 0 %>
-          <p><%= pluralize @pending, "pending book" %></p>
-        <% end %>
       </a>
 
     </div>
@@ -56,9 +56,11 @@
   <div class="row">
 
     <div class="tab-content" id="profile">
-      <h4>About you</h4>
+      <h4>
+        About <%= @user == current_user ? "you" : @user.first_name %>
+      </h4>
       <p><%= @user.description %></p>
-      <h4>Your infos</h4>
+      <h4><%= @user == current_user ? "Your" : @user.first_name + "'s" %> infos</h4>
       <table class="table-striped">
         <tr>
           <td>email</td>
@@ -80,14 +82,58 @@
     </div>
 
     <div class="tab-content hidden" id="bookings">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+      <!-- Tag lists -->
+
+      <%= link_to "Pending bookings", "#pending-bookings", class: "btn btn-default" %>
+      <% if %>
+        <%= link_to "Current bookings", "#current-bookings", class: "btn btn-default" %>
+        <%= link_to "Old bookings", "#old-bookings", class: "btn btn-default" %>
+      <% end %>
+      </div>
+
+      <!-- Pending hubots booked by current_user (waiting for acceptance from the owner) -->
+
+      <h4 id="pending-bookings">Your pendind bookings</h4>
+      <p>(required action from hubot's owner)</p>
+
+      <% @user.bookings.each do |booking| %>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <div class="col-xs-6 col-sm-4 col-md-3">
+            <%= render 'shared/hubot', hubot: booking.hubot %>
+          </div>
+          <div class="col-xs-6 col-sm-8 col-md-9">
+            <span><strong>Date of booking:</strong> <%= booking.created_at %></span><br>
+            <span><strong>From:</strong> <%= booking.check_in %></span><br>
+            <span><strong>To:</strong> <%= booking.check_out %></span><br>
+            <span><strong>Duration:</strong> <%= booking.check_out - booking.check_in %></span><br>
+            <span><strong>Total price:</strong> $<%= booking.total_price %></span><br><br>
+            <span><strong>Status:</strong> <%= booking.status %></span><br><br>
+            <strong>Owner:</strong><br>
+            <%= link_to user_path(booking.hubot.user) do %>
+              <%= image_tag "johndoe.jpg", class:"avatar" %>
+              <%= booking.hubot.user.first_name %>
+            <% end %>
+            <br>
+            <%= link_to "Owner's reviews" %>
+            <br>
+            <%= link_to "Hubot's reviews" %>
+
+          </div>
+        </div>
+      <% end %>
+
+      <!-- Currently booked hubots by current_user -->
       <% if @user.bookings.count > 0 %>
-        <h4>Currently booked Hubots</h4>
+        <h4 id="current-bookings">Your current bookings</h4>
       <% else %>
         <p>
           No booking !
-          <%= link_to "Choose a Hubot", hubots_path %>
+          <%= link_to "find a Hubot !", hubots_path %>
         </p>
       <% end %>
+
       <% @user.bookings.each do |booking| %>
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
           <div class="col-xs-6 col-sm-4 col-md-3">
@@ -105,33 +151,34 @@
             <% end %>
           </div>
         </div>
-        <hr>
       <% end %>
     </div>
 
+    <!-- Pending bookings for hubots -->
+
+    <!-- Currently booked hubots -->
+      <!-- TODO -->
+
+    <!-- All hubots -->
+
     <div class="tab-content hidden" id="hubots">
-
-      <!-- Pending bookings -->
-
+      <h4>All my hubots :</h4>
       <% @user.hubots.each do |hubot| %>
-        <% if hubot.bookings.count > 0 %>
-          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            <div class="col-xs-6 col-sm-4 col-md-3">
-              <%= render 'shared/hubot', hubot: hubot %>
-          </div>
-          <div class="col-xs-6 col-sm-8 col-md-9">
-          </div>
-          </div>
-        <% end %>
-      <% end %>
-
-      <% @user.hubots.each do |hubot| %>
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
         <div class="col-xs-6 col-sm-4 col-md-3">
           <%= render 'shared/hubot', hubot: hubot %>
         </div>
-      <% end %>
-    </div>
+        <div class="col-xs-6 col-sm-8 col-md-9">
+          <% hubot.bookings.each do |booking| %>
+            <p><strong>Created at:</strong> <%= booking.created_at %></p>
+            <p><strong>Total price:</strong> <%= booking.total_price %></p>
+            <p><strong>Client:</strong> <%= booking.user.first_name %></p>
+            <p><strong>Booking status:</strong> <%= booking.status %></p>
+          <% end %>
+        </div>
 
+    </div>
+      <% end %>
   </div>
 </div>
 
