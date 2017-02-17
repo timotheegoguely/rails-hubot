@@ -4,50 +4,131 @@
 
 <div class="wrapper bg-grey padded">
   <div class="container">
-    <%= link_to "Back", root_path, class: "btn btn-default" %>
+
     <div class="row">
 
-      <div class="col-xs-12 col-sm-6 col-md-5 col-lg-4">
-        <%#= image_tag "http://realhumans.arte.tv/atsugirobotics/img/build/01.jpg", class:'avatar avatar-full avatar-square' %>
-        <%= cl_image_tag @hubot.photo, class:'avatar avatar-full avatar-square' %>
-      </div>
+      <aside class="col-xs-12 col-md-4 col-md-offset-1 pull-right fixed-lg">
+        <div class="row">
 
-      <header class="col-xs-12 col-sm-6 col-md-7 col-lg-7 col-lg-offset-1 hubot-meta">
-        <!-- Button trigger modal -->
-        <button type="button" class="btn btn-primary btn-lg pull-right" data-toggle="modal" data-target="#myModal">
-          Book me now !
-        </button>
+          <div class="col-xs-5 col-md-12 hubot-avatar">
+            <%= cl_image_tag @hubot.photo, class:'avatar avatar-full avatar-square' %>
+          </div> <!-- /.hubot-avatar-->
+
+          <div class="col-sm-5 col-md-12 hubot-booking">
+            <form class="form" action="#" method="get">
+              <div class="form-group" id="check_in">
+                <div id='datetimepicker'>
+                  <label for="check_in">Check in</label>
+                  <input type="datetime-local" name="check_in" class="form-control datetimepicker" id="check_in" placeholder="Check In" value="<%= params['check_in'] if params %>">
+                </div>
+              </div>
+
+              <div class="form-group" id="check_out">
+                <div id='datetimepicker'>
+                  <label for="check_out">Check out</label>
+                  <input type="datetime-local" name="check_out" class="form-control datetimepicker" id="check_out" placeholder="Check Out" value="<%= params['check_out'] if params %>">
+                </div>
+              </div>
+              <div class="row">
+                <div class="form-group col-xs-6" id="booking-hours">
+                  <label for="total-hours">Total hours</label>
+                  <input type="time" name="total-hours" class="form-control datetimepicker" id="total-hours" value="" readonly>
+                </div>
+                <div class="form-group col-xs-6" id="booking-deposit">
+                  <label for="deposit">Deposit</label>
+                  <input type="number" name="deposit" class="form-control" id="deposit" value="<%= @hubot.deposit if @hubot.deposit %>" readonly>
+                </div>
+              </div>
+              <div class="form-group" id="book">
+                <!-- Button trigger modal -->
+                <button type="submit" class="btn btn-primary pull-right" data-toggle="modal" data-target="#myModal">Book Now</button>
+                <h4 id="total-price">Total: <strong>$<%= @hubot.price_per_hour %></strong></h4>
+              </div>
+            </form>
+          </div>
+
+        </div> <!-- /.row-->
+      </aside> <!-- /aside-->
+
+
+      <div class="col-xs-12 col-md-7 hubot-infos">
+
+        <%= link_to "<i class='material-icons md-48'>arrow_back</i>".html_safe, :back, class: "btn btn-back" %><br>
 
         <span class="hubot-model"><%= @hubot.model %></span> <span style="opacity: 0.25">|</span>
         <span class="hubot-category"><%= @hubot.category %></span>
         <h1 class="hubot-name"><%= @hubot.name %></h1>
+        <div class="top-right rating rating-large text-center">
+          <span class="rating-unit"><%= rand(3..5) %></span><span class="rating-decimal">.<%= rand(0..5) %></span>
+        </div>
         <span>
           Owner: <%= link_to user_path(@hubot.user) do %>
-            <%= image_tag "johndoe.jpg", class:"avatar" %>
+            <%= image_tag "johndoe.jpg", class:"avatar avatar-large" %>
             <%= @hubot.user.first_name %>
           <% end %>
         </span>
+
         <hr>
+
+        <h3>Description</h3>
         <p class="hubot-description"><%= @hubot.description %></p>
-      </header>
-    </div>
 
-    <div class="row">
-      <div class="col-xs-12 hubot-details">
-        <h3>Details</h3>
+        <hr>
 
-        <ul>
-          <li><span class="detail">Age:</span> <strong><%= @hubot.age %></strong></li>
-          <li><span class="detail">Gender:</span> <strong><%= @hubot.gender %></strong></li>
-          <li><span class="detail">Skin color:</span> <strong><%= @hubot.skin_color %></strong></li>
-          <li><span class="detail">Manufacturer:</span> <strong><%= @hubot.manufacturer %></strong></li>
-          <li><span class="detail">Turing test score:</span> <strong><%= @hubot.turing_test_score %> /100</strong></li>
-          <li><span class="detail">Autonomy:</span> <strong><%= @hubot.autonomy %> hours</strong></li>
-          <li><span class="detail">Charging time:</span> <strong><%= @hubot.charging_time %> hours</strong></li>
-          <li><span class="detail">Price</span> <strong>$<%= @hubot.price_per_hour %>/h</strong></li>
-        </ul>
-      </div>
-    </div>
+        <div class="hubot-details">
+
+          <h3>Details</h3>
+
+          <div class="row">
+            <div class="col-md-2">
+              <h6>Infos</h6>
+            </div> <!-- /.col-->
+            <div class="col-md-5">
+              <ul>
+                <li><span>Age:</span> <strong><%= @hubot.age %></strong></li>
+                <li><span>Gender:</span> <strong><%= @hubot.gender %></strong></li>
+                <li><span>Skin color:</span> <strong><%= @hubot.skin_color %></strong></li>
+                <li><span>Manufacturer:</span> <strong><%= @hubot.manufacturer %></strong></li>
+              </ul>
+            </div> <!-- /.col-->
+            <div class="col-md-5">
+              <ul>
+                <li><span>Turing test score:</span> <strong><%= @hubot.turing_test_score %>%</strong></li>
+                <li><span>Autonomy:</span> <strong><%= @hubot.autonomy %> hours</strong></li>
+                <li><span>Charging time:</span> <strong><%= @hubot.charging_time %> hours</strong></li>
+                <li><span>Price</span> <strong>$<%= @hubot.price_per_hour %>/h</strong></li>
+              </ul>
+            </div>
+          </div> <!-- /.row-->
+
+          <hr>
+
+          <div class="row">
+            <div class="col-md-2">
+              <h6>Accessories</h6>
+            </div> <!-- /.col-->
+            <div class="col-md-5">
+              <ul>
+                <li><span>Accessory 1:</span> </strong></li>
+                <li><span>Accessory 2:</span> </strong></li>
+                <li><span>Accessory 3:</span> </strong></li>
+                <li><span>Accessory 4:</span> </strong></li>
+              </ul>
+            </div> <!-- /.col-->
+            <div class="col-md-5">
+              <ul>
+                <li><span>Accessory 5:</span> </strong></li>
+                <li><span>Accessory 6:</span> </strong></li>
+                <li><span>Accessory 7:</span> </strong></li>
+                <li><span>Accessory 8:</span> </strong></li>
+              </ul>
+            </div> <!-- /.col-->
+          </div> <!-- /.row-->
+
+        </div> <!-- /.hubot-details-->
+
+      </div> <!-- /.hubot-infos-->
+    </div> <!-- /.row-->
 
     <!-- Modal -->
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -66,7 +147,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> <!-- /.modal -->
 
   </div> <!-- /.container -->
 </div> <!-- /.wrapper -->

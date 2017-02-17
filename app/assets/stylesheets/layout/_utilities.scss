@@ -32,3 +32,26 @@
 .bg-dark-blue {
   background: #3b5998;
 }
+
+// Absolute positioning
+$padding: 16px;
+.top-left {
+  position: absolute;
+  left: $padding;
+  top: $padding;
+}
+.top-right {
+  position: absolute;
+  top: $padding;
+  right: $padding;
+}
+.bottom-left {
+  position: absolute;
+  left: $padding;
+  bottom: $padding;
+}
+.bottom-right {
+  position: absolute;
+  bottom: $padding;
+  right: $padding;
+}
