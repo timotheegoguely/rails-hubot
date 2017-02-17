@@ -1,5 +1,9 @@
 <div class="card">
-  <div class="card-image" style="background: linear-gradient(to bottom, rgba(0,0,0,0.1) 33%, rgba(0,0,0,0.2) 100%), url(<%= cl_image_path hubot.photo %>);">
+  <% if hubot.photo? %>
+    <div class="card-image" style="background: linear-gradient(to bottom, rgba(0,0,0,0.1) 33%, rgba(0,0,0,0.2) 100%), url('<%= cl_image_tag hubot.photo.path %>'')">
+  <% else %>
+    <div class="card-image" style="background: linear-gradient(to bottom, rgba(0,0,0,0.1) 33%, rgba(0,0,0,0.2) 100%)">
+  <% end %>
     <span class="top-left model"><%= hubot.model %></span>
     <span class="top-right price">$<%= hubot.price_per_hour %>/h</span>
   </div>
