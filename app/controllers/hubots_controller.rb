@@ -14,7 +14,7 @@ class HubotsController < ApplicationController
     @hubot = Hubot.find(params[:id])
     @new_booking = Booking.new
     @new_review = Review.new
-    @hours = (DateTime.strptime(@checkout, '%m/%d/%Y %H:%M %p') - DateTime.strptime(@checkin, '%m/%d/%Y %H:%M %p')) / 3600000
+    @hours = ( DateTime.strptime(@checkout, '%m/%d/%Y %H:%M %p').to_i - DateTime.strptime(@checkin, '%m/%d/%Y %H:%M %p').to_i ).fdiv(3600)
     # if
     # @booking =
   end
