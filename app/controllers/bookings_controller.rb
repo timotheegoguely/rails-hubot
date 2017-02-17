@@ -1,12 +1,16 @@
 class BookingsController < ApplicationController
   def create
     @hubot = Hubot.find(params[:hubot_id])
-    @booking = Booking.new(booking_params)
+    @booking = Booking.new
+    @booking.check_in = DateTime.strptime(params["check_in"], '%m/%d/%Y %H:%M %p')
+    @booking.check_out = DateTime.strptime(params["check_out"], '%m/%d/%Y %H:%M %p')
+    @booking.hubot = @hubot
     check_in = @booking.check_in
     check_out = @booking.check_out
     @booking.hubot = @hubot
     @booking.user = current_user
-    @booking.total_price = ((check_out - check_in) / 1000) * @hubot.price_per_hour
+    @hours = ( DateTime.strptime(params["check_out"], '%m/%d/%Y %H:%M %p').to_i - DateTime.strptime(params["check_in"], '%m/%d/%Y %H:%M %p').to_i ).fdiv(3600)
+    @booking.total_price = @hours * @hubot.price_per_hour
 
     if @booking.save
       redirect_to user_path(current_user)

@@ -32,7 +32,7 @@
                 <div class="form-group col-xs-6" id="booking-hours">
                   <label for="total-hours">Total time</label>
                   <div class="input-group">
-                    <input type="text" name="total-hours" class="form-control" id="total-hours" value="<%= @hours %>" readonly>
+                    <input type="text" name="total-hours" class="form-control" id="total-hours" value="<%= @hours if @hours %>" readonly>
                     <div class="input-group-addon">h</div>
                   </div>
                 </div>
@@ -47,7 +47,7 @@
               <div class="form-group" id="book">
                 <!-- Button trigger modal -->
                 <button type="button" class="btn btn-primary pull-right" data-toggle="modal" data-target="#myModal">Book Now</button>
-                <h4 id="total-price">Total: <strong>$<%= @hubot.price_per_hour * @hours %></strong></h4>
+                <h4 id="total-price">Total: <strong>$<%= @hubot.price_per_hour * @hours if @hours %></strong></h4>
               </div>
             </form>
           </div>
@@ -150,11 +150,11 @@
             <p class="mono">from <strong><%= @checkin %></strong><br>
               to <strong><%= @checkout %></strong>
             </p>
-            <p class="mono">Total price: <strong>$<%= @hubot.price_per_hour * @hours %></strong></p>
+            <p class="mono">Total price: <strong>$<%= @hubot.price_per_hour * @hours if @hours %></strong></p>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-            <button type="button" class="btn btn-primary">Confirm</button>
+            <%= link_to "Confirm", hubot_bookings_path(@hubot, check_in: @checkin, check_out: @checkout, hubot: @hubot, user: current_user), method: :post, class: "btn btn-primary" %>
           </div>
         </div>
       </div>

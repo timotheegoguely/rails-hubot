@@ -2,13 +2,16 @@
   <%= @user.first_name ? @user.first_name : 'anonymous' %> <%= @user.last_name ? @user.last_name : '' %>
 <% end %>
 
-<%= link_to "← Back", :back, class: "btn btn-default" %>
-<div class="container"">
+<%= link_to "← Back", :back, class: "btn btn-default btn-back" %>
+<div class="container">
 
   <div class="row">
     <div class="col-md-2">
-      <%#= image_tag "johndoe.jpg", class:"avatar avatar-xxlarge" %>
-      <%= cl_image_tag @user.photo, class:"avatar avatar-xxlarge" %>
+
+      <%# if @user.photo %>
+        <%#= cl_image_tag @user.photo %>
+      <%# end %>
+
     </div>
     <div class="col-md-10">
         <h1><%= @user.first_name %> <%= @user.last_name %></h1>
