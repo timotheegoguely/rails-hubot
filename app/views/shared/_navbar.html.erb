@@ -31,10 +31,10 @@
 
     <!-- Profile picture and dropdown -->
     <% if user_signed_in? %>
-      <%= link_to "Rent your hubot !", new_hubot_path, class:'navbar-wagon-item navbar-wagon-button btn' %>
+      <%= link_to "Rent your hubot", new_hubot_path, class:'navbar-wagon-item btn btn-primary btn-atsugi' %>
       <div class="navbar-wagon-item">
         <div class="dropdown">
-          <img src=<%= asset_path "johndoe.jpg" %> class="avatar-large dropdown-toggle" id="navbar-wagon-menu" data-toggle="dropdown">
+          <img src=<%= asset_path "johndoe.jpg" %> class="avatar avatar-medium dropdown-toggle" id="navbar-wagon-menu" data-toggle="dropdown">
           <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
             <li>
               <%= link_to "My account", user_path(current_user) %>
@@ -49,8 +49,8 @@
 
     <!-- Button (call-to-action) -->
     <% else %>
-      <%= link_to "log in", new_user_session_path %>
-      <%= link_to "Create account", new_hubot_path, class:'navbar-wagon-item navbar-wagon-button btn' %>
+      <%= link_to "LOGIN", new_user_session_path %>
+      <%= link_to "Create account", new_hubot_path, class:'navbar-wagon-item btn btn-primary btn-atsugi' %>
     <% end %>
 
 
