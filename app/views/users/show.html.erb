@@ -7,7 +7,8 @@
 
   <div class="row">
     <div class="col-md-2">
-      <%= image_tag "johndoe.jpg", class:"avatar avatar-xxlarge" %>
+      <%#= image_tag "johndoe.jpg", class:"avatar avatar-xxlarge" %>
+      <%= cl_image_tag @user.photo, class:"avatar avatar-xxlarge" %>
     </div>
     <div class="col-md-10">
         <h1><%= @user.first_name %> <%= @user.last_name %></h1>
@@ -61,7 +62,7 @@
         About <%= @user == current_user ? "you" : @user.first_name %>
       </h4>
       <p><%= @user.description %></p>
-      <h4><%= @user == current_user ? "Your" : @user.first_name + "'s" %> infos</h4>
+      <h4><%= @user == current_user ? "Your" : @user.first_name %> infos</h4>
       <table class="table-striped">
         <tr>
           <td>email</td>
