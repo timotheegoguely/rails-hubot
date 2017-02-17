@@ -26,7 +26,7 @@ class HubotsController < ApplicationController
     @hubot = Hubot.new(hubot_params)
     @hubot.user = current_user
     if @hubot.save
-      redirect_to hubots_path(@hubot)
+      redirect_to hubot_path(@hubot)
     else
       render 'new'
     end
@@ -53,6 +53,6 @@ class HubotsController < ApplicationController
   def hubot_params
     params.require(:hubot).permit(:name, :category, :manufacturer, :model, :age,
                                   :turing_test_score, :price_per_hour, :autonomy,
-                                  :charging_time, :gender, :skin_color)
+                                  :charging_time, :gender, :skin_color, :photo, :photo_cache)
   end
 end
