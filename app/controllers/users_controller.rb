@@ -7,10 +7,12 @@ class UsersController < ApplicationController
   def show
     @user_coordinates = { lat: @user.latitude, lng: @user.longitude }
 
-    pending_bookings = @user.bookings.select do |booking|
-      booking.status == "pending"
-    end
-    @pending = pending_bookings.count
+    # @user_pending_bookings =
+    # @user_current_bookings =
+    # @user_old_bookings =
+
+    # @user_pending_requests =
+
   end
 
   # GET /users/:id/hubots
