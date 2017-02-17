@@ -10,23 +10,22 @@
       <aside class="col-xs-12 col-md-4 col-md-offset-1 pull-right fixed-lg">
         <div class="row">
 
-          <div class="col-xs-5 col-md-12 hubot-avatar">
-            <%= image_tag "http://realhumans.arte.tv/atsugirobotics/img/build/01.jpg", class:'avatar avatar-full avatar-square' %>
+          <div class="col-xs-12 col-sm-5 col-md-12 hubot-avatar" style="background-image: url('http://realhumans.arte.tv/atsugirobotics/img/build/01.jpg')">
           </div> <!-- /.hubot-avatar-->
 
-          <div class="col-sm-5 col-md-12 hubot-booking">
+          <div class="col-xs-12 col-sm-7 col-md-12 hubot-booking">
             <form class="form" action="#" method="get">
               <div class="form-group" id="check_in">
                 <div id='datetimepicker'>
                   <label for="check_in">Check in</label>
-                  <input type="datetime-local" name="check_in" class="form-control datetimepicker" id="check_in" placeholder="Check In" value="<%= params['check_in'] if params %>">
+                  <input type="text" style="color:rgba(0,0,0,.6)" name="check_in" class="form-control datetimepicker" id="check_in" placeholder="Check In" value="<%= params['check_in'] if params %>">
                 </div>
               </div>
 
               <div class="form-group" id="check_out">
                 <div id='datetimepicker'>
                   <label for="check_out">Check out</label>
-                  <input type="datetime-local" name="check_out" class="form-control datetimepicker" id="check_out" placeholder="Check Out" value="<%= params['check_out'] if params %>">
+                  <input type="text" style="color:rgba(0,0,0,.6)" name="check_out" class="form-control datetimepicker" id="check_out" placeholder="Check Out" value="<%= params['check_out'] if params %>">
                 </div>
               </div>
               <div class="row">
@@ -41,7 +40,7 @@
               </div>
               <div class="form-group" id="book">
                 <!-- Button trigger modal -->
-                <button type="submit" class="btn btn-primary pull-right" data-toggle="modal" data-target="#myModal">Book Now</button>
+                <button type="button" class="btn btn-primary pull-right" data-toggle="modal" data-target="#myModal">Book Now</button>
                 <h4 id="total-price">Total: <strong>$<%= @hubot.price_per_hour %></strong></h4>
               </div>
             </form>
@@ -101,12 +100,12 @@
             </div>
           </div> <!-- /.row-->
 
-          <hr>
+          <!--<hr>
 
           <div class="row">
             <div class="col-md-2">
               <h6>Accessories</h6>
-            </div> <!-- /.col-->
+            </div>
             <div class="col-md-5">
               <ul>
                 <li><span>Accessory 1:</span> </strong></li>
@@ -114,7 +113,7 @@
                 <li><span>Accessory 3:</span> </strong></li>
                 <li><span>Accessory 4:</span> </strong></li>
               </ul>
-            </div> <!-- /.col-->
+            </div>
             <div class="col-md-5">
               <ul>
                 <li><span>Accessory 5:</span> </strong></li>
@@ -122,10 +121,20 @@
                 <li><span>Accessory 7:</span> </strong></li>
                 <li><span>Accessory 8:</span> </strong></li>
               </ul>
-            </div> <!-- /.col-->
-          </div> <!-- /.row-->
+            </div>
+          </div> -->
 
         </div> <!-- /.hubot-details-->
+
+        <hr>
+
+        <div class="hubot-reviews">
+          <h3>Reviews</h3>
+          <% @hubot.reviews.each do |review| %>
+            <%= review.content %>
+            <%= review.rating %>
+          <% end %>
+        </div>
 
       </div> <!-- /.hubot-infos-->
     </div> <!-- /.row-->
@@ -156,7 +165,3 @@
 
 <%#= link_to 'Rate this Hubot', new_hubot_booking_review_path(@hubot, @booking) %>
 
-<% @hubot.reviews.each do |review| %>
-  <%= review.content %>
-  <%= review.rating %>
-<% end %>
