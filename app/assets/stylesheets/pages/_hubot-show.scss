@@ -23,10 +23,31 @@
 }
 .hubot-avatar {
   padding: 0;
+  min-height: 320px;
+  width: 100%;
+  background-size: cover;
+  background-position: center center;
 }
 .hubot-booking {
   padding: 16px;
   background-color: #fff;
+  height: 320px;
+  #total-price {
+    margin-top: 0;
+    strong {
+      font-size: 32px;
+    }
+  }
+}
+
+aside {
+  margin-bottom: 32px;
+}
+
+@media screen and (min-width: 768px) {
+  .hubot-avatar {
+    max-width: 320px;
+  }
 }
 
 @media screen and (min-width: 992px) {
@@ -34,6 +55,6 @@
     position: fixed;
     right: 5vw;
     top: calc(70px);
-    max-width: 25%;
+    width: 320px;
   }
 }
