@@ -7,7 +7,7 @@
 
     <div class="row">
 
-      <aside class="col-xs-12 col-md-4 col-md-offset-1 pull-right">
+      <aside class="col-xs-12 col-md-4 col-md-offset-1 pull-right fixed-lg">
         <div class="row">
 
           <div class="col-xs-5 col-md-12 hubot-avatar">
@@ -15,10 +15,36 @@
           </div> <!-- /.hubot-avatar-->
 
           <div class="col-sm-5 col-md-12 hubot-booking">
-            <!-- Button trigger modal -->
-            <button type="button" class="btn btn-primary btn-lg pull-right" data-toggle="modal" data-target="#myModal">
-              Book me now !
-            </button>
+            <form class="form" action="#" method="get">
+              <div class="form-group" id="check_in">
+                <div id='datetimepicker'>
+                  <label for="check_in">Check in</label>
+                  <input type="datetime-local" name="check_in" class="form-control datetimepicker" id="check_in" placeholder="Check In" value="<%= params['check_in'] if params %>">
+                </div>
+              </div>
+
+              <div class="form-group" id="check_out">
+                <div id='datetimepicker'>
+                  <label for="check_out">Check out</label>
+                  <input type="datetime-local" name="check_out" class="form-control datetimepicker" id="check_out" placeholder="Check Out" value="<%= params['check_out'] if params %>">
+                </div>
+              </div>
+              <div class="row">
+                <div class="form-group col-xs-6" id="booking-hours">
+                  <label for="total-hours">Total hours</label>
+                  <input type="time" name="total-hours" class="form-control datetimepicker" id="total-hours" value="" readonly>
+                </div>
+                <div class="form-group col-xs-6" id="booking-deposit">
+                  <label for="deposit">Deposit</label>
+                  <input type="number" name="deposit" class="form-control" id="deposit" value="<%= @hubot.deposit if @hubot.deposit %>" readonly>
+                </div>
+              </div>
+              <div class="form-group" id="book">
+                <!-- Button trigger modal -->
+                <button type="submit" class="btn btn-primary pull-right" data-toggle="modal" data-target="#myModal">Book Now</button>
+                <h4 id="total-price">Total: <strong>$<%= @hubot.price_per_hour %></strong></h4>
+              </div>
+            </form>
           </div>
 
         </div> <!-- /.row-->

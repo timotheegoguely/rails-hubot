@@ -28,3 +28,12 @@
   padding: 16px;
   background-color: #fff;
 }
+
+@media screen and (min-width: 992px) {
+  .fixed-lg {
+    position: fixed;
+    right: 5vw;
+    top: calc(70px);
+    max-width: 25%;
+  }
+}
