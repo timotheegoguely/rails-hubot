@@ -12,6 +12,6 @@
     <span class="category"><%= hubot.category %><span>
   </div>
 
-  <%= link_to '', hubot_path(hubot), class: "card-link" %>
+  <%= link_to '', hubot_path(hubot, category: @category, check_in: @checkin, check_out: @checkout), class: "card-link" %>
 
 </div>
