@@ -4,121 +4,127 @@
 
 <%= link_to "← Back", :back, class: "btn btn-default " %>
 
-<% if user_signed_in? %>
+<div class="container"">
 
-  <div class="container"">
+  <div class="row">
+    <div class="col-md-1">
+      <%= image_tag "johndoe.jpg", class:"avatar-xlarge" %>
+    </div>
+    <div class="col-md-11">
+      <h1>
+        Welcome <%= @user.first_name %> <%= @user.last_name %> !
+      </h1>
+    </div>
+  </div>
 
-      <div class="row">
-        <div class="col-md-1">
-          <%= image_tag "johndoe.jpg", class:"avatar-xlarge" %>
-        </div>
-        <div class="col-md-11">
-          <h1>
-            Welcome <%= @user.first_name %> <%= @user.last_name %> !
-          </h1>
-        </div>
+  <!-- tabs headers -->
+
+  <div class="row">
+    <div class="tabs">
+
+      <a class="tab active" data-target="#profile">
+        <h3>My profile infos</h3>
+      </a>
+
+      <a class="tab" data-target="#bookings">
+        <h3>
+        My bookings
+        <% if @user.bookings.count > 0 %>
+          (<%= @user.bookings.count %>)
+        <% end %>
+        </h3>
+      </a>
+
+      <a class="tab" data-target="#hubots">
+        <h3>
+          My hubots
+          <% if @user.hubots.count > 0 %>
+            (<%= @user.hubots.count %>)
+          <% end %>
+        </h3>
+
+        <p>-- TODO pending bookings --</p>
+      </a>
+
+    </div>
+  </div>
+
+
+  <!-- tabs contents -->
+
+  <div class="row">
+
+      <div class="tab-content" id="profile">
+        <h4>About you</h4>
+        <p><%= @user.description %></p>
+        <h4>Your infos</h4>
+        <table class="table-striped">
+          <tr>
+            <td>email</td>
+            <td><%= @user.email %></td>
+          </tr>
+          <tr>
+            <td>Phone</td>
+            <td><%= @user.phone_number %></td>
+          </tr>
+          <tr>
+            <td>Address</td>
+            <td><%= @user.address %></td>
+          </tr>
+        </table>
       </div>
 
-      <!-- tabs headers -->
-
-      <div class="row">
-
-        <div class="tabs">
-
-          <a class="tab active" data-target="#profile">
-            <h3>My profile infos</h3>
-          </a>
-          <a class="tab" data-target="#bookings">
-            <h3>My bookings</h3>
-          </a>
-          <a class="tab" data-target="#hubots">
-            <h3>My hubots</h3>
-
-
-
-
-          </a>
-
-        </div>
-
+      <div class="tab-content hidden" id="bookings">
+        <% if @user.bookings.count > 0 %>
+          <h4>Currently booked Hubots</h4>
+        <% else %>
+          <p>
+            No booking !
+            <%= link_to "Choose a Hubot", hubots_path %>
+          </p>
+        <% end %>
+        <% @user.bookings.each do |booking| %>
+          <div class="col-xs-6 col-sm-4 col-md-3">
+          <p>
+            <%= booking.hubot.name %> <br>
+            From: <%= booking.check_in %> <br>
+            To: <%= booking.check_out %> <br>
+            Total price: $<%= booking.total_price %> <br>
+            Owner: <%= link_to booking.hubot.user.first_name, user_path(booking.hubot.user) %>
+          </p>
+            <%= render 'shared/hubot', hubot: booking.hubot %>
+          </div>
+        <% end %>
       </div>
 
+      <div class="tab-content hidden" id="hubots">
 
-      <!-- tabs contents -->
+        <!-- Pending bookings -->
 
-      <div class="row">
-
-          <div class="tab-content" id="profile">
-
-            <h4>About you</h4>
-            <p><%= @user.description %></p>
-            <h4>Your infos</h4>
-            <table class="table-striped">
-            <tr>
-              <td>email</td>
-              <td><%= @user.email %></td>
-            </tr>
-            <tr>
-              <td>Phone</td>
-              <td><%= @user.phone_number %></td>
-            </tr>
-            <tr>
-              <td>Address</td>
-              <td><%= @user.address %></td>
-            </tr>
-          </table>
-
-
-
-
-          </div>
-          <div class="tab-content hidden" id="bookings">
-            <% @user.bookings.each do |booking| %>
-
-              <p>
-                Your booked <%= booking.hubot.name %> <br>
-                From: <%= booking.check_in %> <br>
-                To: <%= booking.check_out %> <br>
-                Total price: $<%= booking.total_price %> <br>
-                Owner: <%= link_to booking.hubot.user.first_name, user_path(booking.hubot.user) %>
-              </p>
-              <div class="col-xs-6 col-sm-4 col-md-3">
-                <%= render 'shared/hubot', hubot: booking.hubot %>
-              </div>
-              <hr>
-
-            <% end %>
-
-
-
-          </div>
-          <div class="tab-content hidden" id="hubots">
-
-            <% @user.hubots.each do |hubot| %>
+          <% @user.hubots.each do |hubot| %>
+            <% if hubot.bookings.count > 0 %>
               <div class="col-xs-6 col-sm-4 col-md-3">
                 <%= render 'shared/hubot', hubot: hubot %>
               </div>
+
+                <%= link_to "Accept", hubot_booking_path([hubot, hubot.bookings.first ], booking_action: "accept_booking", hubot_id: hubot.id, booking_id: hubot.bookings.first.id), method: :patch, class: 'btn btn-success' %>
+
+                  <%= link_to "Refuse", hubot_booking_path([hubot, hubot.bookings.first ], booking_action: "reject_booking", hubot_id: hubot.id, booking_id: hubot.bookings.first.id), method: :patch, class: 'btn btn-danger' %>
+                  <%= hubot.bookings.first.status %>
             <% end %>
+          <% end %>
 
-          </div>
+          <% @user.hubots.each do |hubot| %>
+            <div class="col-xs-6 col-sm-4 col-md-3">
+              <%= render 'shared/hubot', hubot: hubot %>
+            </div>
+          <% end %>
+        </div>
 
-      </div>
+    </div>
+</div>
 
-  </div>
 
-<% else %>
-
-    <h1>
-      <%= @user.first_name ? @user.first_name : 'Anonymous' %> <%= @user.last_name ? @user.last_name : '' %>
-    </h1>
-
-<% end %>
-
-<% my_boot = Hubot.last %>
-<%= link_to "Accept", hubot_booking_path([my_boot, my_boot.bookings.first ], booking_action: "accept_booking", hubot_id: my_boot.id, booking_id: my_boot.bookings.first.id), method: :patch, class: 'btn btn-success' %>
-
-<%= link_to "Refuse", hubot_booking_path([my_boot, my_boot.bookings.first ], booking_action: "reject_booking", hubot_id: my_boot.id, booking_id: my_boot.bookings.first.id), method: :patch, class: 'btn btn-danger' %>
-<%= my_boot.bookings.first.status %>
 
 
 <% content_for(:after_js) do %>
