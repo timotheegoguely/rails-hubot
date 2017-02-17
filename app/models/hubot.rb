@@ -27,6 +27,15 @@ class Hubot < ApplicationRecord
     "Personal shopper",
     "Sexbot",
     "Veterinary",
-    "Collector"
+    "Family bot",
+    "Collector",
+    "Guardian",
+    "Dance",
+    "Butler",
+    "Paramedical",
+    "Ceo",
+    "Teacher",
+    "Community Manager",
+    "Nanny"
   ]
 end
