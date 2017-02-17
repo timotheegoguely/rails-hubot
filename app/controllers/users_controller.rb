@@ -7,9 +7,10 @@ class UsersController < ApplicationController
   def show
     @user_coordinates = { lat: @user.latitude, lng: @user.longitude }
 
-    # @user_pending_bookings =
-    # @user_current_bookings =
-    # @user_old_bookings =
+    @user_pending_bookings = @user.bookings.where(status: "pending")
+
+    @user_current_bookings = @user.bookings.where(status: "accepted").where("check_out < ?", Time.now)
+    @user_old_bookings = @user.bookings.where(status: "accepted").where("check_out > ?", Time.now)
 
     # @user_pending_requests =
 
