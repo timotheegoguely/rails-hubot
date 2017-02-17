@@ -120,9 +120,6 @@
               <%= render 'shared/hubot', hubot: hubot %>
           </div>
           <div class="col-xs-6 col-sm-8 col-md-9">
-            <%= link_to "Accept", hubot_booking_path([hubot, hubot.bookings.first ], booking_action: "accept_booking", hubot_id: hubot.id, booking_id: hubot.bookings.first.id), method: :patch, class: 'btn btn-success' %>
-            <%= link_to "Refuse", hubot_booking_path([hubot, hubot.bookings.first ], booking_action: "reject_booking", hubot_id: hubot.id, booking_id: hubot.bookings.first.id), method: :patch, class: 'btn btn-danger' %>
-            <%= hubot.bookings.first.status %>
           </div>
           </div>
         <% end %>
