@@ -17,6 +17,8 @@ gem 'simple_form'
 gem 'autoprefixer-rails'
 gem 'devise'
 gem 'geocoder'
+gem 'cloudinary', '1.1.0'
+gem 'carrierwave'
 
 # Datepicker
 gem 'momentjs-rails', '>= 2.9.0'
