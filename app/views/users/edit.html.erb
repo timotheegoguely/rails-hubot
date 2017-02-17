@@ -1,0 +1,15 @@
+<h1>Edit:</h1>
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-offset-2 col-sm-8 panel panel-info">
+
+      <h2>Edit your profile</h2>
+
+      <%= render "users/form", user: @user %>
+
+      <%= link_to "← Back", user_path(@user), class: "btn btn-default" %>
+
+    </div>
+  </div>
+</div>
