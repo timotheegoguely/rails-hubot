@@ -6,14 +6,15 @@
 <div class="container"">
 
   <div class="row">
-    <div class="col-md-1">
-      <%= image_tag "johndoe.jpg", class:"avatar-xlarge" %>
+    <div class="col-md-2">
+      <%= image_tag "johndoe.jpg", class:"avatar avatar-xxlarge" %>
     </div>
-    <div class="col-md-11">
+    <div class="col-md-10">
         <h1><%= @user.first_name %> <%= @user.last_name %></h1>
         <% if @user == current_user %>
           <h3>Welcome to your dashboad !</h3>
         <% end %>
+        <p><%= @user.description %></p>
     </div>
   </div>
 
