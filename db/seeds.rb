@@ -1,8 +1,8 @@
 # Destroy all
-User.destroy_all
-Hubot.destroy_all
 Review.destroy_all
 Booking.destroy_all
+User.destroy_all
+Hubot.destroy_all
 
 # Users
 user1 = User.create!(email: "timotheegoguely@gmail.com", password:"123456", first_name:"Timothée", last_name:"Goguely", phone_number:"+33 6 28 48 39 11", address:"98, avenue du Marechal Juin", zipcode:"50000", city:"Saint-Lô", gender:"male", description:"Nullam id dolor id nibh ultricies vehicula ut id elit.", birth_date: DateTime.new(1991,8,12), owner: true)
