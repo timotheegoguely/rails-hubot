@@ -6,12 +6,14 @@ class ReviewsController < ApplicationController
   end
 
   def create
+    # @booking = Booking.new(params[:booking_id])
     @review = Review.new(review_params)
     @review.booking = @booking
     if @review.save
       redirect_to booking_path(@booking)
     else
       render 'new'
+      # render 'hubots/show'
     end
   end
 

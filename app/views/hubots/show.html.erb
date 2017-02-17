@@ -8,7 +8,8 @@
     <div class="row">
 
       <div class="col-xs-12 col-sm-6 col-md-5 col-lg-4">
-        <%= image_tag "http://realhumans.arte.tv/atsugirobotics/img/build/01.jpg", class:'avatar avatar-full avatar-square' %>
+        <%#= image_tag "http://realhumans.arte.tv/atsugirobotics/img/build/01.jpg", class:'avatar avatar-full avatar-square' %>
+        <%= cl_image_tag @hubot.photo, class:'avatar avatar-full avatar-square' %>
       </div>
 
       <header class="col-xs-12 col-sm-6 col-md-7 col-lg-7 col-lg-offset-1 hubot-meta">
